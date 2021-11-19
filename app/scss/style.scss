@@ -3,3 +3,281 @@
 @import 'reset';
 @import 'global';
 @import 'media';
+
+.header {
+
+  &__top {
+    background: $bd8;
+  }
+
+  &__menu {
+    padding-top: 17px;
+    padding-bottom: 15px;
+  }
+
+  &__bottom {
+    background-color: $bg9;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: $bw;
+  @extend %fOS700;
+  font-size: $sz13;
+  line-height: $lh138;
+
+  &__list-left {
+    display: flex;
+  }
+
+  &__list-right {
+    display: flex;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link-text {
+    outline: transparent;
+    transition: opacity 0.5s ease,
+      color 0.5s ease;
+  }
+
+  &__link-text:focus {
+    box-shadow: 0 0 0 3px $bg1;
+    border-radius: 3px;
+  }
+
+  &__link-text:hover {
+    opacity: 0.7;
+  }
+
+  &__link-text:active {
+    color: $bg2;
+  }
+
+  &__icon {
+    position: relative;
+  }
+
+  &__icon:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &__icon::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -3px;
+    @extend %bg;
+  }
+
+  &__icon--del {
+    padding-left: 45px;
+  }
+
+  &__icon--del::before {
+    width: 32px;
+    height: 23px;
+    background-image: url('../images/icon/icon-del-address.svg');
+  }
+
+  &__icon--tel {
+    padding-left: 34px;
+  }
+
+  &__icon--tel::before {
+    width: 22px;
+    height: 23px;
+    background-image: url('../images/icon/icon-tel.svg');
+  }
+}
+
+
+
+
+.search {
+  background-color: $bw;
+  height: 50px;
+  max-width: 576px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.search__form {
+  position: relative;
+}
+
+.search__input {
+  width: 100%;
+  height: 50px;
+  padding-left: 13px;
+  box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.2);
+  border-radius: 6px;
+  outline: none;
+  @extend %fOS400;
+  background-color: $bw;
+  color: $bd7;
+}
+
+.search__input::placeholder {
+  position: relative;
+  padding-left: 52px;
+}
+
+.search__input::before::placeholder {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icon/search.svg');
+  @extend %bg;
+}
+
+.search__btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 158px;
+  height: 50px;
+  border: none;
+  background: $bd7;
+  border-radius: 0 6px 6px 0;
+  color: $bw;
+  text-transform: uppercase;
+}
+
+
+.menulist {
+  position: relative;
+  margin: auto 15px;
+
+  &__btn {
+    width: 240px;
+    height: 50px;
+    text-align: center;
+    background-color: $bw;
+    border-radius: 6px;
+    color: $bg9;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    outline: transparent;
+    transition: background-color 0.5s ease;
+
+    position: relative;
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 10;
+    left: 0px;
+    top: 50px;
+
+    width: 240px;
+    height: 300px;
+
+    background-color: $bw;
+
+    overflow-y: auto;
+
+    display: block;
+    font-size: $sz16;
+    @extend %fOS400;
+    text-align: left;
+
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    padding: 11px 10px 11px 24px;
+    color: $bd8;
+    line-height: $lh12;
+    border: 1px solid $bd4;
+
+    outline: transparent;
+    transition: border-left 0.5s ease, color 0.5s ease;
+  }
+
+  &__link:focus {
+    box-shadow: 0 0 0 2px $bd3;
+    border-radius: 3px;
+  }
+
+  &__link:hover {
+    border-left: 3px solid $bg9;
+    color: $bg9;
+  }
+
+  &__link:active {
+    color: $bs5;
+  }
+
+  &__btn--active {
+    background-color: $bg2;
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+.btn__icon-nav {
+  width: 20px;
+  height: 1px;
+  left: 0;
+  top: 0;
+  background-color: $bg9;
+  position: relative;
+
+&::before,
+&::after {
+  width: 25px;
+  height: 1px;
+  left: 0;
+  background-color: $bg9;
+  position: absolute;
+  z-index: 15;
+  content: "";
+  transition: top 0.3s ease-in-out, bottom 0.3s ease-in, transform 0.3s ease;
+}
+
+&::before {
+  top: 5px;
+}
+
+&::after {
+  bottom: 5px;
+}
+}
+
+.btn__icon-arrow {
+  width: 8px;
+  height: 4px;
+  @extend %bg;
+  background-image: url('../images/icon/chevron_right.png');
+
+&--active {
+  width: 8px;
+  height: 4px;
+  @extend %bg;
+  background-image: url('../images/icon/chevron_top.png');
+}
+}
+
+.menulist--active .menulist__list--active {
+  display: block;
+}

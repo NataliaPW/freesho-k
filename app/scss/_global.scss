@@ -1,0 +1,19 @@
+body {
+  color: $bd9;
+  font-size: $sz14;
+  line-height: $lh14;
+  @extend %fOS600;
+  background-color: $bw;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+%bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
