@@ -4,6 +4,47 @@
 @import 'global';
 @import 'media';
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  color: $bw;
+  font-size: $sz18;
+  line-height: $lh13;
+  @extend %fOS400;
+
+  background-color: $bg9;
+  border-radius: 6px;
+
+  padding: 12px 24px;
+
+  outline: transparent;
+  transition: background-color 0.5s ease,
+    box-shadow 0.5s ease;
+
+  &:focus {
+    box-shadow: 0 0 0 4px $bg2;
+  }
+
+  &:hover {
+    background-color: $bg7;
+  }
+
+  &:active {
+    box-shadow: inset 0 4px 4px $bd10;
+  }
+}
+
 .header {
 
   &__top {
@@ -54,27 +95,36 @@
     outline: transparent;
     transition: opacity 0.5s ease,
       color 0.5s ease;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $bg1;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: $bg2;
+    }
   }
 
-  &__link-text:focus {
-    box-shadow: 0 0 0 3px $bg1;
-    border-radius: 3px;
-  }
-
-  &__link-text:hover {
-    opacity: 0.7;
-  }
-
-  &__link-text:active {
-    color: $bg2;
-  }
 
   &__icon {
     position: relative;
-  }
 
-  &__icon:not(:last-child) {
-    margin-right: 48px;
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    &--del {
+      padding-left: 45px;
+    }
+
+    &--tel {
+      padding-left: 34px;
+    }
   }
 
   &__icon::before {
@@ -82,27 +132,17 @@
     content: "";
     left: 0;
     top: -3px;
+    height: 23px;
     @extend %bg;
-  }
+    background-size: contain;
 
-  &__icon--del {
-    padding-left: 45px;
-  }
+    &--del::before {
+      background-image: url('../images/icon/icon-del-address.svg');
+    }
 
-  &__icon--del::before {
-    width: 32px;
-    height: 23px;
-    background-image: url('../images/icon/icon-del-address.svg');
-  }
-
-  &__icon--tel {
-    padding-left: 34px;
-  }
-
-  &__icon--tel::before {
-    width: 22px;
-    height: 23px;
-    background-image: url('../images/icon/icon-tel.svg');
+    &--tel::before {
+      background-image: url('../images/icon/icon-tel.svg');
+    }
   }
 }
 
@@ -126,6 +166,11 @@
     transition: background-color 0.5s ease;
 
     position: relative;
+
+    &--active {
+      background-color: $bg2;
+      border-radius: 6px 6px 0 0;
+    }
   }
 
   &__list {
@@ -158,26 +203,22 @@
 
     outline: transparent;
     transition: border-left 0.5s ease, color 0.5s ease;
+
+    &__:focus {
+      box-shadow: 0 0 0 2px $bd3;
+      border-radius: 3px;
+    }
+
+    &__:hover {
+      border-left: 3px solid $bg9;
+      color: $bg9;
+    }
+
+    &__:active {
+      color: $bs5;
+    }
   }
 
-  &__link:focus {
-    box-shadow: 0 0 0 2px $bd3;
-    border-radius: 3px;
-  }
-
-  &__link:hover {
-    border-left: 3px solid $bg9;
-    color: $bg9;
-  }
-
-  &__link:active {
-    color: $bs5;
-  }
-
-  &__btn--active {
-    background-color: $bg2;
-    border-radius: 6px 6px 0 0;
-  }
 }
 
 .btn__icon-nav {
@@ -215,9 +256,6 @@
   background-image: url('../images/icon/chevron_right.png');
 
   &--active {
-    width: 8px;
-    height: 4px;
-    @extend %bg;
     background-image: url('../images/icon/chevron_top.png');
   }
 }
@@ -315,14 +353,6 @@
   }
 
   &__link {
-    /*  width: 50px;
-    height: 50px;
-    text-align: center;
-    align-items: center;
-
-    border: 2px solid #000;
-    border-radius: 3px; */
-
     width: 25px;
     height: 32px;
 
@@ -394,4 +424,137 @@
     border-radius: 50%;
     background-color: $bw;
   }
+}
+
+.slide {
+
+  &__wrapper {
+    @extend %bg;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--vegetables {
+      background-image: url('../images/home_page/frame_1/slider/s1_vegetables.jpg');
+    }
+
+    &--tomato {
+      background-image: url('../images/home_page/frame_1/slider/s2_tomato.jpg');
+    }
+
+    &--greens {
+      background-image: url('../images/home_page/frame_1/slider/s3_greens.jpg');
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    color: $bd5;
+    padding: 24px 15px 24px 24px;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      content: "";
+      background-color: $bd1;
+      border-radius: 4px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__visible {
+    max-width: 900px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: $sz60;
+    line-height: $lh13;
+    @extend %fR900;
+    text-transform: uppercase;
+  }
+
+  &__title--action {
+    @extend %fS700;
+    color: $br9;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: $sz16;
+    @extend %fOS400;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    width: 181px;
+  }
+
+}
+
+.services {
+  background-color: $bs1;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    padding-top: 49px;
+    padding-bottom: 29px;
+  }
+
+   &__item {
+    max-width: 280px;
+    width: 100%;
+    
+    padding-left: 74px;
+    padding-right: 15px;
+    margin-right: 15px;
+
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      left: 0;
+      top: 0;
+      @extend %bg;
+    }
+
+    &--scooter::before {
+      background-image: url('../images/home_page/frame_1/advantages/icon_scooter.svg');
+    }
+
+    &--return-box::before {
+      background-image: url('../images/home_page/frame_1/advantages/icon_return-box.svg');
+    }
+
+    &--clock::before {
+      background-image: url('../images/home_page/frame_1/advantages/icon_clock.svg');
+    }
+  }
+
+  &__name {
+    font-size: $sz16;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+        color: $bd5;
+    @extend %fOS400;
+  }
+
 }
