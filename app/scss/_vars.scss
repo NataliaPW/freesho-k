@@ -1,4 +1,5 @@
 /*font-size*/
+$sz10: 10px;
 $sz12: 12px;
 $sz13: 13px;
 $sz14: 14px;
@@ -24,15 +25,18 @@ $bd6:rgba(49, 53, 43, 0.85);
 $bd5:#505050;
 $bd4:rgba(193, 193, 193, 0.3);
 $bd3:rgba(255, 255, 255, 0.5);
+$bd2:rgba(255, 255, 255, 0.1);
 $bs9:#FFFFFF80;
 $bs5:#C1C1C1;
 $bs1:#F6F6F6;
 $bw:#FFFFFF;
 
 /*line-height*/
+$lh18: 1.8;
 $lh14: 1.4;
 $lh138: 1.38;
 $lh12: 1.2;
+$lh1: 1;
 
 /*font-famili*/
 %fOS300 {

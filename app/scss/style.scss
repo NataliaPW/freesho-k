@@ -17,13 +17,13 @@
 
   &__bottom {
     background-color: $bg9;
-  }
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+    }
   }
 }
 
@@ -299,5 +299,99 @@
     &:active {
       color: $bs9;
     }
+  }
+}
+
+.user {
+  margin-right: 15px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  &__link {
+    /*  width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+
+    border: 2px solid #000;
+    border-radius: 3px; */
+
+    width: 25px;
+    height: 32px;
+
+    @extend %bg;
+    background-size: contain;
+
+    position: relative;
+    outline: transparent;
+    transition: opacity 0.5s ease;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      right: -50%;
+
+      transform: translateY(-50%);
+
+      border: 2px solid transparent;
+      border-radius: 3px;
+
+      outline: transparent;
+      transition: border-color 0.8s ease,
+        opacity 0.8s ease;
+    }
+
+    &:focus::before {
+      background-color: $bd2;
+      box-shadow: inset 0 0 0 3px $bg1;
+    }
+
+    &:hover,
+    &:hover::before,
+    &:active,
+    &:active::before {
+      border-color: $bw;
+      opacity: 0.1;
+    }
+  }
+
+  &__link--user {
+    background-image: url('../images/icon/icon-user.svg');
+  }
+
+  &__link--heart {
+    background-image: url('../images/icon/icon-heart.svg');
+  }
+
+  &__link--cart {
+    background-image: url('../images/icon/icon-cart.svg');
+  }
+
+  &__number {
+    position: absolute;
+    top: -5px;
+    left: -10px;
+
+    color: $br9;
+    font-size: $sz10;
+    line-height: $lh18;
+    @extend %fOS600;
+    text-align: center;
+    align-items: center;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $bw;
   }
 }
