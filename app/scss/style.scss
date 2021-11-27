@@ -67,6 +67,7 @@
 
   &__list-left {
     display: flex;
+    text-align: center;
   }
 
   &__list-right {
@@ -74,7 +75,7 @@
   }
 
   &__link:not(:last-child) {
-    margin-right: 24px;
+    margin-right: 48px;
   }
 
   &__link-text {
@@ -96,7 +97,6 @@
     }
   }
 
-
   &__icon {
     position: relative;
 
@@ -111,16 +111,17 @@
     &--tel {
       padding-left: 34px;
     }
-  }
 
-  &__icon::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: -3px;
-    height: 23px;
-    @extend %bg;
-    background-size: contain;
+    &::before {
+      position: absolute;
+      z-index: 50;
+      content: "";
+      left: 0;
+      top: -3px;
+      height: 23px;
+       @extend %bg;
+      background-size: contain;
+    }
 
     &--del::before {
       background-image: url('../images/icon/icon-del-address.svg');
@@ -204,7 +205,6 @@
       color: $bs5;
     }
   }
-
 }
 
 .btn__icon-nav {
@@ -618,6 +618,14 @@
   &__filter {
     /* @extend %filter; не подключается как класс*/
     position: relative;
+  }
+
+  &__availability{
+display: none;
+  }
+
+  &__stars {
+    display: none;
   }
 
   &__content {
@@ -1091,45 +1099,6 @@
 }
 
 
-
-
-/*-main.promo--------------------------*/
-.promo {
-  text-align: center;
-  background-color: $bs4;
-
-  &__filter {
-    /* @extend %filter; не подключается как класс*/
-    position: relative;
-  }
-
-  &__btn {
-    @extend %btn;
-
-  }
-}
-
-/*-main.brands--------------------------*/
-.brands {
-
-  &__items {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  &__link {
-    background-repeat: no-repeat;
-    max-height: 80px;
-    opacity: 0.5;
-    outline: transparent;
-    transition: opacity 0.5s ease;
-  }
-
-  &__link:hover {
-    opacity: 1;
-  }
-}
-
 /*-footer-------------------------*/
 .footer {
   background-color: $bd7;
@@ -1273,4 +1242,3 @@
     }
   }
 }
-
