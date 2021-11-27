@@ -1,0 +1,113 @@
+/*font-size*/
+$sz10: 10px;
+$sz12: 12px;
+$sz13: 13px;
+$sz14: 14px;
+$sz15: 15px;
+$sz16: 16px;
+$sz18: 18px;
+$sz30: 30px;
+$sz32: 32px;
+$sz60: 60px;
+
+/*color*/
+$bg9:#63A60E;
+$bg8:rgba(99, 166, 14, 0.2);
+$bg7:#4D810C;
+$bg2:#E0EDCF;
+$bg1:#EFF6E7;
+$br9:#CF3E3B;
+$bo9:#FF7A00;
+$by9:#FFB800;
+$bd11:#C4C4C4;
+$bd10:rgba(0, 0, 0, 0.25);
+$bd9:#121212;
+$bd8:#000;
+$bd7:#31352B;
+$bd6:rgba(49, 53, 43, 0.85);
+$bd5:#505050;
+$bd4:rgba(193, 193, 193, 0.3);
+$bd3:rgba(255, 255, 255, 0.5);
+$bd2:rgba(255, 255, 255, 0.1);
+$bd1:rgba(255, 255, 255, 0.8);
+$bs9:#FFFFFF80;
+$bs8:#4F4F4F;
+$bs7:#5A5A5A;
+$bs6:#F3F3F2;
+$bs5:#C1C1C1;
+$bs4:#f5f5f5;
+$bs1:#F6F6F6;
+$bw:#FFFFFF;
+
+/*line-height*/
+/* $lh22: 2.2; */
+$lh18: 1.8;
+$lh16: 1.6;
+$lh14: 1.4;
+$lh138: 1.38;
+$lh136: 1.36;
+$lh13: 1.3;
+$lh12: 1.2;
+$lh1: 1;
+
+/*font-famili*/
+%fOS300 {
+  font-family: 'OpenSans-Light',
+    sans-serif;
+  font-weight: 300;
+}
+
+%fOS400 {
+  font-family: 'OpenSans-Regular',
+    sans-serif;
+  font-weight: 400;
+}
+
+%fOS600 {
+  font-family: 'OpenSans-SemiBold',
+    sans-serif;
+  font-weight: 600;
+}
+
+%fOS700 {
+  font-family: 'OpenSans-Bold',
+    sans-serif;
+  font-weight: 700;
+}
+
+%fR400 {
+  font-family: 'Ruda-Regular',
+    sans-serif;
+  font-weight: 400;
+}
+
+%fR600 {
+  font-family: 'Ruda-SemiBold',
+    sans-serif;
+  font-weight: 600;
+}
+
+%fR700 {
+  font-family: 'Ruda-Bold',
+    sans-serif;
+  font-weight: 700;
+}
+
+%fR900 {
+  font-family: 'Ruda-Black',
+    sans-serif;
+  font-weight: 900;
+}
+
+%fS700 {
+  font-family: 'Signika-Bold',
+    sans-serif;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
