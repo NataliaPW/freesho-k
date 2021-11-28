@@ -75,10 +75,16 @@ $(function () {
   /*скрытие списка*/
 
   $('.btn__visible').on('click', function () {
-    $('.top__invisible').toggleClass('top__invisible--active');
+    $('.card__displaynone-btn').toggleClass('card__displaynone-btn--active');
+  });
+
+   $('.mixitup-control-active').on('click', function () {
+     $('.card__displaynone-btn--active').addClass('card__displaynone-btn--active');
+    $('.card__displaynone-btn--active').removeClass('card__displaynone-btn');
   });
 
   var Mixer = mixitup('.top__content');
+  var Mixer = mixitup('.promo__content');
 
   /*кнопка показать еще*/
 /* size_li = $("#myList li").size();
