@@ -1,0 +1,57 @@
+.banner {
+  padding-top: 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 13px;
+    width: 100%;
+  }
+
+  &__content {
+    @extend %bg;
+    text-transform: uppercase;
+    color: $bd5;
+    @extend %fOS700;
+    padding-top: 76px;
+    padding-bottom: 82px;
+    padding-left: 51px;
+
+
+    &--fruits {
+      padding-left: 35px;
+      color: $bw;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &-subtitle {
+      font-size: $sz12;
+      line-height: $lh1;
+      letter-spacing: 0.9px;
+      margin-bottom: 18px;
+    }
+
+    &-title {
+      max-width: 160px;
+      font-size: $sz30;
+      line-height: $lh14;
+      @extend %fR600;
+      letter-spacing: 0.3px;
+      margin-bottom: 7px;
+
+      &--fruits {
+        max-width: 370px;
+        text-decoration-line: $bd5 2px;
+      }
+    }
+
+    &-link {
+      border-bottom: 2px solid $bd5;
+      padding-bottom: 6px;
+
+      &--fruits {
+        border-bottom-color: $bw;
+      }
+    }
+  }
+}

@@ -85,6 +85,7 @@
 
     &-link {
       margin-right: 12px;
+     width: 33px;
       height: 32px;
       outline: transparent;
       transition: opacity 0.5s ease,
@@ -137,7 +138,7 @@
       justify-content: space-between;
     }
 
-    &-link {
+    &-img {
       @extend %bg;
       background-size: contain;
       width: 100px;

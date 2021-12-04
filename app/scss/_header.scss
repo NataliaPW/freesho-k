@@ -1,4 +1,3 @@
-
 .header {
 
   &__top {
@@ -16,12 +15,18 @@
     &-inner {
       display: flex;
       align-items: center;
-      padding: 23px 0;
+      padding: 25px 0;
     }
   }
 
-  &__logo{
+  &__logo {
     margin-right: 24px;
+
+    &__img {
+      width: 200px;
+      height: 60px;
+      @extend %bg;
+    }
   }
 }
 
@@ -36,21 +41,22 @@
   font-size: $sz13;
   line-height: $lh138;
 
-  &__list-left {
+  &__list {
     display: flex;
     text-align: center;
   }
 
-  &__list-right {
-    display: flex;
-    text-align: right;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &--icon:not(:last-child) {
+      margin-right: 46px;
+    }
   }
 
-  &__link:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__link-text {
+  &__link {
     letter-spacing: 0.45px;
     outline: transparent;
     transition: opacity 0.5s ease,
@@ -72,10 +78,6 @@
 
   &__icon {
     position: relative;
-
-    &:not(:last-child) {
-      margin-right: 46px;
-    }
 
     &--del {
       padding-left: 46px;
@@ -140,7 +142,7 @@
     top: 50px;
 
     width: 240px;
-    height: 300px;
+    max-height: 100vh;
 
     background-color: $bw;
 
@@ -180,7 +182,7 @@
   }
 }
 
-.btn__icon-nav {
+.menulist-btn__icon-nav {
   width: 20px;
   height: 1px;
   left: 0;
@@ -208,14 +210,15 @@
   }
 }
 
-.btn__icon-arrow {
+.menulist-btn__icon-arrow {
   width: 8px;
   height: 4px;
   @extend %bg;
-  background-image: url('../images/icon/chevron_right.png');
+  background-image: url('../images/icon/chevron_right.svg');
+ 
 
   &--active {
-    background-image: url('../images/icon/chevron_top.png');
+    background-image: url('../images/icon/chevron_top.svg');
   }
 }
 
@@ -223,16 +226,13 @@
   display: block;
 }
 
-.search {
-  background-color: $bw;
-  height: 50px;
-  border-radius: 6px;
-  margin-right: 56px;
-
-  &__form {
-    position: relative;
-    width: 576px;
-  }
+.search-form {
+ position: relative;
+ width: 576px;
+ background-color: $bw;
+ height: 50px;
+ border-radius: 6px;
+ margin-right: 56px;
 
   &__input {
     width: 100%;
@@ -247,7 +247,7 @@
     padding-left: 38px;
 
     &::placeholder {
-      padding-left: 38px;
+      padding-left: 16px;
       color: $bd7;
       font-size: $sz14;
       line-height: $lh14;
@@ -300,71 +300,86 @@
 }
 
 .user {
+display: flex;
+justify-content: space-between;
 
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
+ /*? если сделать ul и обвертки из li, то иконки неотображаются */
+&__item:not(:last-child) {
+  margin-right: 37px;
+}
 
-  &__link:not(:last-child) {
+ /*  &__link:not(:last-child) {
     margin-right: 37px;
-  }
+  } */
 
-  &__link {
-    width: 25px;
-    height: 32px;
+  &__item {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
 
-    @extend %bg;
-    background-size: contain;
-
-    position: relative;
+    border: 2px solid transparent;
+    border-radius: 3px;
+   
     outline: transparent;
-    transition: opacity 0.5s ease;
+    transition: border-color 0.8s ease,
+    opacity 0.8s ease;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 50px;
-      height: 50px;
-      top: 50%;
-      right: -50%;
+    position: relative; 
 
-      transform: translateY(-50%);
-
-      border: 2px solid transparent;
-      border-radius: 3px;
-
-      outline: transparent;
-      transition: border-color 0.8s ease,
-        opacity 0.8s ease;
-    }
-
+   
     &:focus::before {
       background-color: $bd2;
       box-shadow: inset 0 0 0 3px $bg1;
     }
 
     &:hover,
-    &:hover::before,
-    &:active,
-    &:active::before {
+    &:active {
       border-color: $bw;
+     /*  background-color: $bw; */
       opacity: 0.1;
     }
   }
 
+   &__link {
+     position: absolute;
+    
+    /*  @extend %bg;
+     background-size: contain; */
+     top: 9px;
+     right: 50%;
+     /* fill: $bw; */
+
+    transform: translateX(50%);
+
+     
+      outline: transparent;
+      transition: opacity 0.8s ease;
+
+      &:hover {
+       /*  border-color: $bw; */
+         fill: $bw;
+        opacity: 1;
+      }
+   }
+
   &__link--user {
     width: 25px;
-    background-image: url('../images/icon/icon-user.svg');
+    height: 32px;
+   /*  background-image: url('../images/icon/icon-user.svg'); */
+   mask: url('../images/sprite.svg#icon-user') center / cover no-repeat;
+   background-color: #fff;
   }
 
   &__link--heart {
     width: 32px;
+    height: 32px;
     background-image: url('../images/icon/icon-heart.svg');
   }
 
   &__link--cart {
     width: 32px;
+    height: 32px;
     background-image: url('../images/icon/icon-cart.svg');
   }
 
@@ -384,5 +399,170 @@
     height: 18px;
     border-radius: 50%;
     background-color: $bw;
+  }
+}
+
+.cart {
+  width: 475px;
+  /* height: 1920px; */
+  @extend %fOS400;
+  letter-spacing: 0.3px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__top {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 27px;
+  }
+
+  &__bottom-content {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  &__title {
+    color: $bd8;
+    font-size: $sz24;
+    line-height: $lh12;
+
+    &--top {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    @extend %fOS300;
+  }
+
+  &__price {
+    @extend %fOS300;
+    font-size: $sz24;
+    line-height: $lh12;
+
+    & span {
+      font-size: $sz18;
+      color: $bd5;
+    }
+  }
+
+  &__btn {
+    display: block;
+    @extend %btn;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  &__btn-close {
+    @extend %btn-close;
+  }
+
+  &__full {
+    max-height: 705px;
+    overflow-y: auto;
+    background-color: $bs1;
+    padding: 12px;
+  }
+
+ /*  &__cards {} */
+
+  &__content {
+    display: grid;
+    grid-template-columns: 115px 300px;
+    max-width: 452px;
+    width: 100%;
+    max-height: 84px;
+    height: 100%;
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.card {
+  padding-bottom: 14px;
+
+  /*  &__box--cart {} */
+
+  &__link--cart {
+    &::before {
+      width: 26%;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &__link-img--cart {
+    width: 81px;
+    height: 60px;
+  }
+
+  &__kodprodukta--cart {
+    display: none;
+  }
+
+  &__link-icon--cart {
+    top: 15px;
+    left: 30px;
+  }
+
+  /* &__content--cart {} */
+
+  &__text--cart {
+    max-width: 170px;
+  }
+
+  /* &__price-info--cart {} */
+
+  &__discount--cart {
+    display: none;
+  }
+
+  /* &__price--cart {}
+
+  &__inner--cart {} */
+
+  &__availability--cart {
+    display: none;
+  }
+
+  &__iconbox--cart {
+    display: none;
+  }
+
+  &__stars--cart {
+    display: none;
+  }
+
+  /* &__stars-one--cart {}
+
+  &__stars-five--cart {} */
+
+  &__btn-heart--cart {
+    display: none;
+  }
+
+  &__btn-close--cart {
+    top: -70px;
+    left: 398px;
+  }
+
+  &__pic--cart {
+    right: 73px;
+    bottom: 14px;
+  }
+
+  &__btn-cart--cart {
+    display: none;
   }
 }

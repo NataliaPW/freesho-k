@@ -7,35 +7,12 @@
 @import 'home_slider';
 @import 'home_advantages';
 @import 'home_top';
+@import 'home_banner';
+@import 'home_promo';
+@import 'home_brands';
+@import 'home_news';
+@import 'card';
 @import 'footer';
+@import 'catalog_style';
+
 @import 'media';
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.section {
-  padding: 72px 0;
-}
-
-.title {
-  font-size: $sz32;
-  letter-spacing: 0.9px;
-  margin-bottom: 30px;
-  @extend %fR600;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-
-
-
