@@ -29,19 +29,19 @@
       height: 50px;
       left: 0;
       top: 0;
-      @extend %bg;
+      background-color: $bg9;
     }
 
     &--scooter::before {
-      background-image: url('../images/home_page/advantages/icon_scooter.svg');
+      mask: url('../images/sprite.svg#icon-scooter') center / cover no-repeat;
     }
 
     &--return-box::before {
-      background-image: url('../images/home_page/advantages/icon_return-box.svg');
+      mask: url('../images/sprite.svg#icon-return-box') center / cover no-repeat;
     }
 
     &--clock::before {
-      background-image: url('../images/home_page/advantages/icon_clock.svg');
+      mask: url('../images/sprite.svg#icon-clock') center / cover no-repeat;
     }
   }
 

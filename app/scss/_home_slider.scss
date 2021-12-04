@@ -1,13 +1,11 @@
-.slider {
- 
-}
-
 .slide {
   position: relative;
   margin-top: 0;
 
   &__wrapper {
-    @extend %bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     min-height: 599px;
     display: flex;
@@ -60,7 +58,6 @@
   }
 
   &__link {
-    @extend %btn;
     width: 181px;
   }
 }

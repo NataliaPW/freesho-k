@@ -3,7 +3,9 @@
   &__items {
     display: flex;
     justify-content: space-around;
-    @extend %bg;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &__link {

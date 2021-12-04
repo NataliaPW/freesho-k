@@ -9,7 +9,9 @@
   }
 
   &__content {
-    @extend %bg;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
     text-transform: uppercase;
     color: $bd5;
     @extend %fOS700;
