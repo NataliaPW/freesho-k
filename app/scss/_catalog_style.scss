@@ -1,0 +1,63 @@
+.mainpage {
+  padding-top: 48px;
+  padding-bottom: 73px;
+
+  &__title {
+    margin-bottom: 48px;
+    font-size: $sz42;
+    line-height: $lh12;
+    @extend %fR700;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__filter {
+    width: 335px;
+  }
+
+  &__filter-title {
+    font-size: $sz24;
+    line-height: $lh12;
+    letter-spacing: 0.3px;
+    @extend %fR400;
+    display: block;
+    width: 300px;
+    border: 1px solid $bs5;
+    border-radius: 6px 6px 0 0;
+    padding: 18px 24px 18px 18px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__filter-container {
+    display: block;
+    width: 300px;
+    border: 1px solid $bs5;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 30px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &__item {
+   display: block;
+   padding: 6px 18px;
+  }
+
+  &__link {
+    font-size: $sz18;
+    line-height: $lh128;
+    @extend %fOS400;
+  }
+
+
+
+}
+
+.catalog__advantage {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
