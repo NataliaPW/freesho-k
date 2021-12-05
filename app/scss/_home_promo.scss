@@ -3,45 +3,33 @@
   background-color: $bs4;
 
   &__filter {
-    /* @extend %filter; не подключается как класс*/
     position: relative;
   }
 
-  &__content {
+  &__full {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 18px;
     left: -30px;
   }
 
-  &__cards {
-    /*  display: grid;
-    grid-template-columns: repeat(2, 1fr);*/
-    width: 300px;
+  &__item {
+    width: 100%;
+    width: calc(100% / 4 - 30px);
+    height: 100%;
+    margin-left: 30px;
+    margin-bottom: 30px;
   }
 
-  &__card-content {
-    /*   display: flex;
-    justify-content: space-between; */
+  &__content {
     display: grid;
     grid-template-columns: 118px 164px;
-    width: calc(300px - 0px);
-    height: calc(124px - 0px);
-  }
-
-  &__availability {
-    top: 75px;
-    left: 135px;
-  }
-
-  &__stars-one {
-    top: 95px;
+    width: 300px;
+    height: 124px;
   }
 
   &__btn {
-    @extend %btn;
-    @extend %bg;
     letter-spacing: 1.1px;
     background-color: $bw;
     border: 1px solid $bg9;
@@ -72,12 +60,95 @@
       display: block;
     }
   }
-
-  &__btn {
-    @extend %btn;
-  }
 }
 
-.mixitup-control-active {
-  color: $bg8;
+.card {
+  padding-bottom: 14px;
+
+  &__box--promo {
+    margin-top: 19px;
+    margin-bottom: 18px;
+  }
+
+  &__link--promo {
+    &::before {
+      width: 39.3%;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &__link-img--promo {
+    width: 100px;
+    height: 75px;
+  }
+
+  &__link-icon--promo {
+    top: 38px;
+    left: 35px;
+  }
+
+  &__kodprodukta--promo {
+    display: none;
+  }
+
+  &__content--promo {
+    height: 99px;
+  }
+
+  &__text--promo {
+    white-space: wrap;
+    max-width: 164px;
+  }
+
+  /* &__price-info--promo{} */
+
+  &__discount--promo {
+    bottom: 12px;
+    right: 70px;
+  }
+
+  /* &__price--promo {}*/
+
+  &__summprice--promo {
+    display: none;
+  }
+
+  /*&__inner--promo {} */
+
+  &__availability--promo {
+    top: 75px;
+    left: 135px;
+  }
+
+  /*  &__iconbox--promo {
+  } */
+
+  /* &__stars--promo {
+  } */
+
+  &__stars-one--promo {
+    right: 13px;
+    bottom: 14px;
+  }
+
+  &__stars-five--promo {
+    display: none !important;
+  }
+
+  &__btn-heart--promo {
+    display: none;
+  }
+
+  &__btn-close--promo {
+    display: none;
+  }
+
+  &__pic--promo {
+    display: none !important;
+  }
+
+  &__btn-cart--promo {
+    display: none;
+  }
 }

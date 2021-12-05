@@ -85,19 +85,55 @@ body {
       right: 0;
       width: 6px;
       height: 10px;
-      @extend %bg;
-      background-image: url('../images/icon/chevron.svg');
+      mask: url('../images/sprite.svg#icon-chevron') center / cover no-repeat;
+      background-color: $bd5;
     }
   }
 }
 
-%bg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.filter {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 51px;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__name {
+    color: $bd5;
+    font-size: $sz15;
+    @extend %fOS700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    outline: transparent;
+    transition: color 0.5s ease,
+      text-decoration-color 0.5s ease;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $bg2;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: $bg9;
+    }
+
+    &:active {
+      text-decoration-color: $bg8;
+    }
+  }
 }
 
-%btn {
+.mixitup-control-active {
+  color: $bg8;
+}
+
+.btn {
   color: $bw;
   font-size: $sz18;
   line-height: $lh13;
@@ -110,7 +146,7 @@ body {
 
   outline: transparent;
   transition: background-color 0.5s ease,
-  box-shadow 0.5s ease;
+    box-shadow 0.5s ease;
 
   &:focus {
     box-shadow: 0 0 0 4px $bg2;
@@ -125,7 +161,7 @@ body {
   }
 }
 
-%btn-close {
+.btn-close {
   width: 40px;
   height: 40px;
   border-radius: 3px;
@@ -176,42 +212,4 @@ body {
   }
 }
 
-%filter {
-  display: flex;
-  justify-content: center;
-  
-  margin-bottom: 51px;
-
-  &__item:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__name {
-    color: $bd5;
-    font-size: $sz15;
-    @extend %fOS700;
-    text-transform: uppercase;
-
-    text-decoration-line: underline;
-    text-decoration-color: transparent;
-    outline: transparent;
-    transition: color 0.5s ease,
-      text-decoration-color 0.5s ease;
-
-   /*  position: relative; */
-
-    &:focus {
-      box-shadow: 0 0 0 3px $bg2;
-      border-radius: 3px;
-    }
-
-    &:hover {
-      color: $bg9;
-    }
-
-    &:active {
-      text-decoration-color: $bg8;
-    }
-  }
-}
 

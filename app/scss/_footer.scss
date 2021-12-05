@@ -6,58 +6,55 @@
   &__contact {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
 
-    &-inner {
-      display: flex;
-      justify-content: space-between;
-    }
+  &__contact-inner {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__logo-img {
     margin-bottom: 30px;
   }
 
+  &__form-title {
+    line-height: $lh1;
+    letter-spacing: 0.45px;
+    margin-bottom: 18px;
+  }
+
   &__form {
     width: 33%;
     margin-right: 10px;
     position: relative;
+  }
 
+  &__form-input {
+    width: 181px;
+    height: 40px;
+    background-color: $bw;
+    padding: 12px;
+    outline: transparent;
+    border-radius: 6px 0 0 6px;
+    color: $bd7;
+    line-height: $lh14;
 
-    &-label {
-      display: block;
+    &::placeholder {
+      padding-left: 10px;
+      color: $bs8;
+      font-size: $sz14;
       line-height: $lh1;
-      letter-spacing: 0.45px;
-      margin-bottom: 18px;
+      @extend %fOS400;
     }
+  }
 
-    &-input {
-      width: 181px;
-      height: 40px;
-      background-color: $bw;
-      padding: 12px;
-      outline: transparent;
-      border-radius: 6px 0 0 6px;
-      color: $bd7;
-      line-height: $lh14;
-
-      &::placeholder {
-        padding-left: 10px;
-        color: $bs8;
-        font-size: $sz14;
-        line-height: $lh1;
-        @extend %fOS400;
-      }
-    }
-
-    &-btn {
-      @extend %btn;
-      position: absolute;
-      font-size: $sz12;
-      line-height: $lh136;
-      @extend %fOS700;
-      border-radius: 0 6px 6px 0;
-      padding: 12px 17px;
-    }
+  &__form-btn {
+    position: absolute;
+    font-size: $sz12;
+    line-height: $lh136;
+    @extend %fOS700;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 17px;
   }
 
   &__info {
@@ -65,48 +62,70 @@
     column-count: 3;
     column-gap: 15px;
     letter-spacing: 0.46px;
+  }
 
-    &-text:not(:last-child) {
+  &__info-item {
+    &:not(:last-child) {
       margin-bottom: 18px;
     }
+  }
 
+  &__info-link {
+    outline: transparent;
+    transition: opacity 0.5s ease,
+      color 0.5s ease;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $bg1;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: $bg2;
+    }
   }
 
   &__adress {
     letter-spacing: 0.45px;
+    margin-bottom: 18px;
   }
 
   &__social {
     display: flex;
     flex-wrap: nowrap;
-    @extend %bg;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
+  }
 
-    &-link {
-      margin-right: 12px;
-     width: 33px;
-      height: 32px;
-      outline: transparent;
-      transition: opacity 0.5s ease,
-        background-color 0.5s ease;
+  &__social-link {
+    margin-right: 12px;
+    width: 33px;
+    height: 32px;
+    outline: transparent;
+    transition: opacity 0.5s ease,
+      background-color 0.5s ease;
 
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
+    }
 
-      &:focus {
-        box-shadow: 0 0 0 3px $bg2;
-        border-radius: 3px;
-      }
+    &:focus {
+      box-shadow: 0 0 0 3px $bg2;
+      border-radius: 3px;
+    }
 
-      &:hover {
-        opacity: 0.7;
-      }
+    &:hover {
+      opacity: 0.7;
+    }
 
-      &:active {
-        background-color: $bg2;
-      }
+    &:active {
+      background-color: $bg2;
     }
   }
 
@@ -122,32 +141,34 @@
     letter-spacing: 0.3px;
     padding-bottom: 24px;
     position: relative;
+  }
 
-    &-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &-text {
-      text-transform: uppercase;
-    }
+  &__bottom-text {
+    text-transform: uppercase;
+  }
 
-    &-icons {
-      display: flex;
-      justify-content: space-between;
-    }
+  &__bottom-icons {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &-img {
-      @extend %bg;
-      background-size: contain;
-      width: 100px;
-      height: 29px;
-      margin-right: -53px;
+  &__bottom-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: contain;
+    width: 100px;
+    height: 29px;
+    margin-right: -53px;
 
-      &:not(:last-child) {
-        margin-right: 24px;
-      }
+    &:not(:last-child) {
+      margin-right: 24px;
     }
   }
 }

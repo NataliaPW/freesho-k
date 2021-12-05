@@ -6,20 +6,8 @@
   position: relative;
   z-index: 30;
   padding: 12px 18px 18px;
-  /* height: 409px;
-  margin-bottom: 30px;
-  margin-left: 30px; */
 
-  &__box {
-    /*  margin-top: 70px; */
-    /* max-width: 300px;
-    width: 100%;
-    max-height: 217px;
-    height: 100%; */
-    /*  min-width: 100px; */
-    /* margin-top: 45px;
-    margin-bottom: 18px; */
-  }
+  &__box {}
 
   &__link {
     outline: transparent;
@@ -29,15 +17,9 @@
       position: absolute;
       z-index: 1;
       content: "";
-      background-color: $bd11;
-      /* max-width: 300px;
-      width: 100%; */
-      /*  max-height: 217px;
-      height: 100%; */
       left: 0;
       right: 0;
-      /* top: 57px;
-      bottom: 137px; */
+      background-color: $bd11;
       opacity: 0;
     }
 
@@ -48,32 +30,32 @@
     &:hover::after {
       opacity: 0;
     }
+  }
 
-    &-img {
-      object-fit: cover;
-    }
+  &__link-img {
+    object-fit: cover;
+  }
 
-    &-icon {
+  &__link-icon {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 48px;
+    height: 48px;
+    background-color: $bw;
+    border-radius: 50%;
+    opacity: 0;
+
+    &::before {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       content: "";
-      width: 48px;
-      height: 48px;
-      background-color: $bw;
-      border-radius: 50%;
-      opacity: 0;
-
-      &::before {
-        position: absolute;
-        z-index: 4;
-        content: "";
-        width: 24px;
-        height: 24px;
-        @extend %bg;
-        top: 12px;
-        left: 12px;
-        background-image: url('../images/icon/icon-search_card.svg');
-      }
+      width: 24px;
+      height: 24px;
+      top: 12px;
+      left: 12px;
+      mask: url('../images/sprite.svg#icon-search') center / cover no-repeat;
+      background-color: $bg9;
     }
 
     &:hover .card__link-icon {
@@ -90,6 +72,7 @@
   }
 
   &__text {
+    @include line-clamp(3);
     max-height: 60px;
     text-align: left;
     letter-spacing: 0.5px;
@@ -113,7 +96,8 @@
 
   &__discount {
     position: absolute;
-    bottom: 37px;
+    color: $bs5;
+    /* bottom: 37px; */
 
     &::before {
       position: absolute;
@@ -128,9 +112,7 @@
     }
   }
 
-  &__price {
-   
-  }
+  &__price {}
 
   &__iconbox {
     max-width: 70px;
@@ -176,60 +158,59 @@
 
   &__availability {
     position: absolute;
-    top: 265px;
-    left: 18px;
+    /* top: 265px;
+    left: 18px; */
     z-index: 5;
-
-    &-text {
-      font-size: $sz10;
-      line-height: $lh1;
-      text-transform: uppercase;
-
-      &--green {
-        color: $bg9;
-      }
-
-      &--red {
-        color: $br9;
-      }
-
-      &--grey {
-        color: $bs5;
-      }
-    }
   }
 
-  &__stars {
+   &__availability-text {
+     font-size: $sz10;
+     line-height: $lh1;
+     text-transform: uppercase;
 
-    &-one {
-      line-height: $lh1;
-      @extend %fOS700;
-      padding-right: 18px;
-      color: $bd5;
+     &--green {
+       color: $bg9;
+     }
+
+     &--red {
+       color: $br9;
+     }
+
+     &--grey {
+       color: $bs5;
+     }
+   }
+
+  &__stars {}
+
+  &__stars-one {
+    line-height: $lh1;
+    @extend %fOS700;
+    padding-right: 18px;
+    color: $bd5;
+    position: absolute;
+    /* top: 265px;
+      right: 7px; */
+
+    &::after {
       position: absolute;
-      top: 265px;
-      right: 7px;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 16px;
-        height: 16px;
-        @extend %bg;
-        bottom: 0;
-        right: 0;
-        background-size: contain;
-        background-image: url('../images/icon/star_1.svg');
-      }
+      content: "";
+      width: 16px;
+      height: 16px;
+      bottom: 0;
+      right: 0;
+      background-size: contain;
+      mask: url('../images/sprite.svg#icon-star_1') center / cover no-repeat;
+      background-color: $by9;
     }
   }
 
   &__stars-five {
     position: absolute;
     display: flex;
-    top: -18px;
-    left: 175px; 
-   }
+    /*  top: -18px;
+    left: 175px; */
+  }
 
   &__btn-heart {
     position: absolute;
@@ -240,44 +221,39 @@
     padding: 9px 6px;
     border-radius: 3px;
     border-color: transparent;
-    /* fill: $bs5; */
-    /*? картинка не реагирует на цвет fill*/
-    /* background: url('../images/sprite.svg#icon-heart') center / cover no-repeat; */
 
     outline: transparent;
-    transition: fill 0.5s ease,
+    transition: background-color 0.5s ease,
       transform 0.5s ease,
       background-position 0.5s ease;
 
-    /*  &::before {
+    &::before {
       position: absolute;
       content: "";
-      display: block;
-      fill: $bs5; */
-    /*  path {fill: $bs5;} */
-    /*  fill: $bg9; */
-    /*  width: 32px;
-      height: 29px; */
-    /*  background-image: url('../images/sprite.svg#icon-heart'); */
+      top: 10px;
+      right: 50%;
+      transform: translateX(50%);
 
-    /* & path fill{
-        fill: $bs5;
-      } */
-    /*  } */
-    /* & path {
-      fill: $bs5;
-    } */
+      width: 32px;
+      height: 30px;
+      mask: url('../images/sprite.svg#icon-heart') center / cover no-repeat;
+      background-color: $bs5;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px $bg2;
     }
 
-    & path:hover {
-      fill: $by9;
+    &:hover {
+      &::before {
+        background-color: $by9;
+      }
     }
 
-    & path:active {
-      fill: rgba(255, 184, 0, 0.5);
+    &:active {
+      &::before {
+        background-color: rgba(255, 184, 0, 0.5);
+      }
     }
 
     &--active {
@@ -288,27 +264,12 @@
       animation-fill-mode: forwards;
     }
 
-    &--active path {
-      fill: rgba(255, 184, 0, 0.5);
+    &--active {
+      &::before {
+        background-color: rgba(255, 184, 0, 0.5);
+      }
     }
   }
-
-  &__icon-svg {
-    fill: $bs5;
-    width: 32px;
-    height: 29px;
-    transition: fill 0.5s ease;
-    /*на mask не реагирует*/
-     /* mask: url('../images/sprite.svg#icon-heart') center / cover no-repeat $bs5; */
-}
-    &__btn-heart:hover .cart__icon-svg path {
-       fill: $by9;
-     }
-
-     &__btn-heart .cart__icon-svg path:active {
-       fill: rgba(255, 184, 0, 0.5);
-     }
-  
 
   @keyframes animate {
     0% {
@@ -334,7 +295,6 @@
   }
 
   &__btn-close {
-    @extend %btn-close;
     width: 24px;
     height: 24px;
 
@@ -349,7 +309,6 @@
 
 
   &__btn-cart {
-    @extend %btn;
     width: 32px;
     height: 32px;
     background-color: $bg9;
@@ -368,8 +327,8 @@
       top: 25%;
       left: 25%;
 
-      @extend %bg;
-      background-image: url('../images/icon/icon-cart_card.svg');
+      mask: url('../images/sprite.svg#icon-cart_card') center / cover no-repeat;
+      background-color: $bw;
     }
   }
 
@@ -379,32 +338,50 @@
     justify-content: space-between;
     width: 84px;
     height: 24px;
+  }
 
-    &-input {
-      width: 36px;
-      background-color: $bg1;
-      @extend %fOS400;
-      font-size: $sz14;
-      line-height: $lh1;
-      color: $bd5;
-      text-align: center;
-      outline: transparent;
-      border: none;
+  &__pic-input {
+    width: 36px;
+    background-color: $bg1;
+    @extend %fOS400;
+    font-size: $sz14;
+    line-height: $lh1;
+    color: $bd5;
+    text-align: center;
+    outline: transparent;
+    border: none;
+  }
+
+  &__pic-input[type="number"]::-webkit-outer-spin-button,
+  &__pic-input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  &__pic-btn {
+    width: 24px;
+    background-color: $bg9;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 2px;
+      background-color: $bw;
+      top: 11px;
+      left: 3px;
     }
 
-    &-input[type="number"]::-webkit-outer-spin-button,
-    &-input[type="number"]::-webkit-inner-spin-button {
-      display: none;
+    &--minus {
+      border-radius: 3px 0 0 3px;
     }
 
-    &-btn {
-      @extend %btn;
-      width: 24px;
-      background-color: $bg9;
-      padding: 0;
+    &--plus {
+      border-radius: 0 3px 3px 0;
       position: relative;
 
-      &::before {
+      &::after {
         position: absolute;
         content: "";
         width: 16px;
@@ -412,47 +389,28 @@
         background-color: $bw;
         top: 11px;
         left: 3px;
-      }
-
-      &--minus {
-        border-radius: 3px 0 0 3px;
-      }
-
-      &--plus {
-        border-radius: 0 3px 3px 0;
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: "";
-          width: 16px;
-          height: 2px;
-          background-color: $bw;
-          top: 11px;
-          left: 3px;
-          transform: rotate(90deg);
-        }
+        transform: rotate(90deg);
       }
     }
   }
 
   &__displaynone {
     display: none;
+  }
 
-    &-btn {
-      display: none;
+  &__displaynone-btn {
+    display: none;
 
-      &--active {
-        display: block;
-      }
+    &--active {
+      display: block;
     }
   }
 }
 
-.simple-rating{
-position: relative;
-display: inline-block;
-font-size: 16px;
+.simple-rating {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .simple-rating::before {
@@ -460,48 +418,47 @@ font-size: 16px;
   content: "★★★★★";
 }
 
-.simple-rating__items{
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-display: flex;
-flex-direction:row-reverse;
-overflow: hidden;
+.simple-rating__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
 }
 
-.simple-rating__item{
-position: absolute;
-width: 0%;
-height: 0%;
-opacity: 0;
-visibility: hidden;
-top: 0;
-left: 0;
+.simple-rating__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
 }
 
-.simple-rating__label{
-flex:0 0 20%;
-height: 100%;
-cursor: pointer;
-color: $bs5;
+.simple-rating__label {
+  flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: $bs5;
 }
 
 .simple-rating__label::before {
-content: "★";
-display: block;
-transition: color 0.3s ease 0s;
+  content: "★";
+  display: block;
+  transition: color 0.3s ease 0s;
 }
 
 .simple-rating__item:checked,
 .simple-rating__item:checked~.simple-rating__label {
-color: $by9;
+  color: $by9;
 }
 
 .simple-rating__label:hover,
 .simple-rating__label:hover~.simple-rating__label,
-.simple-rating__label:checked~.simple-rating__label:hover{
+.simple-rating__label:checked~.simple-rating__label:hover {
   color: $by8;
 }
-
