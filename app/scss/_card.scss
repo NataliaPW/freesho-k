@@ -6,19 +6,8 @@
   position: relative;
   z-index: 30;
   padding: 12px 18px 18px;
-  /* height: 409px;
-  margin-bottom: 30px;
-  margin-left: 30px; */
 
   &__box {
-    /*  margin-top: 70px; */
-    /* max-width: 300px;
-    width: 100%;
-    max-height: 217px;
-    height: 100%; */
-    /*  min-width: 100px; */
-    /* margin-top: 45px;
-    margin-bottom: 18px; */
   }
 
   &__link {
@@ -69,10 +58,10 @@
         content: "";
         width: 24px;
         height: 24px;
-        @extend %bg;
         top: 12px;
         left: 12px;
-        background-image: url('../images/icon/icon-search_card.svg');
+       mask: url('../images/sprite.svg#icon-search') center / cover no-repeat;
+       background-color: $bg9;
       }
     }
 
@@ -113,7 +102,8 @@
 
   &__discount {
     position: absolute;
-    bottom: 37px;
+     color: $bs5;
+    /* bottom: 37px; */
 
     &::before {
       position: absolute;
@@ -174,8 +164,8 @@
 
   &__availability {
     position: absolute;
-    top: 265px;
-    left: 18px;
+    /* top: 265px;
+    left: 18px; */
     z-index: 5;
 
     &-text {
@@ -198,35 +188,35 @@
   }
 
   &__stars {
+  }
 
-    &-one {
-      line-height: $lh1;
-      @extend %fOS700;
-      padding-right: 18px;
-      color: $bd5;
+  &__stars-one {
+    line-height: $lh1;
+    @extend %fOS700;
+    padding-right: 18px;
+    color: $bd5;
+    position: absolute;
+    /* top: 265px;
+      right: 7px; */
+
+    &::after {
       position: absolute;
-      top: 265px;
-      right: 7px;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 16px;
-        height: 16px;
-        @extend %bg;
-        bottom: 0;
-        right: 0;
-        background-size: contain;
-        background-image: url('../images/icon/star_1.svg');
-      }
+      content: "";
+      width: 16px;
+      height: 16px;
+      bottom: 0;
+      right: 0;
+      background-size: contain;
+     mask: url('../images/sprite.svg#icon-star_1') center / cover no-repeat;
+     background-color: $by9;
     }
   }
 
   &__stars-five {
     position: absolute;
     display: flex;
-    top: -18px;
-    left: 175px;
+   /*  top: -18px;
+    left: 175px; */
   }
 
   &__btn-heart {
@@ -312,7 +302,6 @@
   }
 
   &__btn-close {
-    @extend %btn-close;
     width: 24px;
     height: 24px;
 
@@ -327,7 +316,6 @@
 
 
   &__btn-cart {
-    @extend %btn;
     width: 32px;
     height: 32px;
     background-color: $bg9;
@@ -346,8 +334,8 @@
       top: 25%;
       left: 25%;
 
-      @extend %bg;
-      background-image: url('../images/icon/icon-cart_card.svg');
+       mask: url('../images/sprite.svg#icon-cart_card') center / cover no-repeat;
+      background-color: $bw;
     }
   }
 
@@ -357,32 +345,50 @@
     justify-content: space-between;
     width: 84px;
     height: 24px;
+  }
 
-    &-input {
-      width: 36px;
-      background-color: $bg1;
-      @extend %fOS400;
-      font-size: $sz14;
-      line-height: $lh1;
-      color: $bd5;
-      text-align: center;
-      outline: transparent;
-      border: none;
+  &__pic-input {
+    width: 36px;
+    background-color: $bg1;
+    @extend %fOS400;
+    font-size: $sz14;
+    line-height: $lh1;
+    color: $bd5;
+    text-align: center;
+    outline: transparent;
+    border: none;
+  }
+
+  &__pic-input[type="number"]::-webkit-outer-spin-button,
+  &__pic-input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  &__pic-btn {
+    width: 24px;
+    background-color: $bg9;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 2px;
+      background-color: $bw;
+      top: 11px;
+      left: 3px;
     }
 
-    &-input[type="number"]::-webkit-outer-spin-button,
-    &-input[type="number"]::-webkit-inner-spin-button {
-      display: none;
+    &--minus {
+      border-radius: 3px 0 0 3px;
     }
 
-    &-btn {
-      @extend %btn;
-      width: 24px;
-      background-color: $bg9;
-      padding: 0;
+    &--plus {
+      border-radius: 0 3px 3px 0;
       position: relative;
 
-      &::before {
+      &::after {
         position: absolute;
         content: "";
         width: 16px;
@@ -390,26 +396,7 @@
         background-color: $bw;
         top: 11px;
         left: 3px;
-      }
-
-      &--minus {
-        border-radius: 3px 0 0 3px;
-      }
-
-      &--plus {
-        border-radius: 0 3px 3px 0;
-        position: relative;
-
-        &::after {
-          position: absolute;
-          content: "";
-          width: 16px;
-          height: 2px;
-          background-color: $bw;
-          top: 11px;
-          left: 3px;
-          transform: rotate(90deg);
-        }
+        transform: rotate(90deg);
       }
     }
   }

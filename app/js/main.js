@@ -111,10 +111,10 @@ $(function () {
   });
 
   var Mixer = mixitup('.top__full');
-  var Mixer = mixitup('.promo__content');
+  var Mixer = mixitup('.promo__full');
 
   /*галерея фансибокс*/
-  $("a.gallery-1, a.gallery-2, a.gallery-3, a.gallery-4, a.gallery-5, a.gallery-6, a.gallery-7, a.gallery-8, a.gallery-9").fancybox();
+  $("a.gallery-1, a.gallery-2, a.gallery-3, a.gallery-4, a.gallery-5, a.gallery-6, a.gallery-7, a.gallery-8, a.gallery-9, , a.gallery-10, a.gallery-11, a.gallery-12, a.gallery-13, a.gallery-14, a.gallery-15").fancybox();
 
   /*звездный рейтинг*/
 

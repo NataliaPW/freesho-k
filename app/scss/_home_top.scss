@@ -92,8 +92,9 @@
 
   /* &__price-info--top {} */
 
-  /*  &__discount--top {
-  } */
+   &__discount--top {
+     bottom: 37px;
+  }
 
   /* &__price--top {}*/
 
@@ -118,7 +119,9 @@
 
   &__stars-five--top {} */
 
-  &__btn-heart--top {}
+  &__btn-heart--top {
+    display: none;
+  }
 
   &__btn-close--top {
     display: none;
@@ -127,6 +130,7 @@
   &__pic--top {
     right: 73px;
     bottom: 22px;
+    /* display: flex; */
   }
 
   /*   &__btn-cart--top {
