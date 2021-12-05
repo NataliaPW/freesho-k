@@ -44,66 +44,69 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+  }
 
-    &-item {
-      position: relative;
-      width: calc(100% / 3 - 30px);
-      width: 100%;
-    }
+  &__bottom-item {
+    position: relative;
+    width: calc(100% / 3 - 30px);
+    width: 100%;
+  }
 
-    &-item:not(:last-child) {
+  &__bottom-item {
+    &:not(:last-child) {
       margin-right: 30px;
     }
+  }
 
-    &-label {
-      position: absolute;
-      z-index: 2;
-      width: 65px;
-      height: 76px;
-      top: 0;
-      left: 20px;
-      background-color: $bw;
-      border-radius: 0px 0px 4px 4px;
-      font-size: $sz10;
-      line-height: $lh136;
-      @extend %fOS700;
-      text-align: center;
+  &__bottom-label {
+    position: absolute;
+    z-index: 2;
+    width: 65px;
+    height: 76px;
+    top: 0;
+    left: 20px;
+    background-color: $bw;
+    border-radius: 0px 0px 4px 4px;
+    font-size: $sz10;
+    line-height: $lh136;
+    @extend %fOS700;
+    text-align: center;
+    display: block;
+    padding-top: 18px;
+    letter-spacing: 1.3px;
+
+    &--day {
       display: block;
-      padding-top: 18px;
-      letter-spacing: 1.3px;
-
-      &--day {
-        display: block;
-        font-size: $sz30;
-        line-height: $lh1;
-        @extend %fR600;
-      }
+      font-size: $sz30;
+      line-height: $lh1;
+      @extend %fR600;
     }
+  }
 
-    &-content {
-      max-width: 410px;
-      height: 348px;
-      box-shadow: 0 3px 3px 0 #00000040;
+  &__bottom-content {
+    max-width: 410px;
+    height: 348px;
+    box-shadow: 0 3px 3px 0 #00000040;
+  }
+
+  &__bottom-img {
+    object-fit: cover;
+    margin-bottom: 18px;
+  }
+
+  &__bottom-link {
+    outline: transparent;
+    transition: color 0.5s ease;
+
+    &:focus {
+      color: $bg9;
     }
+  }
 
-    &-img {
-      object-fit: cover;
-      margin-bottom: 18px;
-    }
-
-    &-link {
-      outline: transparent;
-      transition: color 0.5s ease;
-
-      &:focus {
-        color: $bg9;
-      }
-    }
-
-    &-text {
-      padding: 0 26px 18px 18px;
-      font-size: $sz16;
-      letter-spacing: 0.2px;
-    }
+  &__bottom-text {
+    @include line-clamp(3);
+    padding: 0 26px 18px 18px;
+    font-size: $sz16;
+    letter-spacing: 0.2px;
   }
 }

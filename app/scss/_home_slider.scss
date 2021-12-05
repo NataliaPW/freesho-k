@@ -41,16 +41,17 @@
     @extend %fR900;
     text-transform: uppercase;
     max-width: 765px;
-  }
 
-  &__title--action {
-    @extend %fS700;
-    color: $br9;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
+    &--action {
+      @extend %fS700;
+      color: $br9;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
   }
 
   &__text {
+    @include line-clamp(1);
     font-size: $sz16;
     @extend %fOS400;
     margin-bottom: 32px;
@@ -73,74 +74,74 @@
 
   outline: transparent;
   transition: background-color 0.5s ease;
-}
 
-.slick-btn.slick-disabled {
-  cursor: default;
-}
+  &::before {
+    position: absolute;
+    z-index: 4;
+    content: "";
+    top: 30%;
+    width: 23px;
+    height: 23px;
+    border-top: 3px solid $bd5;
+    border-right: 3px solid $bd5;
 
-.slick-btn.slick-disabled::before {
-  border-color: $bs5;
-}
+    outline: transparent;
+    transition: border-color 0.5s ease;
+  }
 
-.slick-btn::before {
-  position: absolute;
-  z-index: 4;
-  content: "";
-  top: 30%;
-  width: 23px;
-  height: 23px;
-  border-top: 3px solid $bd5;
-  border-right: 3px solid $bd5;
+  &:focus {
+    box-shadow: 0 0 0 3px #63A60E80;
 
-  outline: transparent;
-  transition: border-color 0.5s ease;
+    &::before {
+      border-color: $bs7;
+    }
+  }
+
+  &:hover {
+    background-color: $bg2;
+
+    &::before {
+      border-color: $bg9;
+    }
+  }
+
+  &:active {
+    background-color: $bs6;
+
+    &::before {
+      border-color: $bg9;
+    }
+  }
+
+  &.slick-disabled {
+    cursor: default;
+  }
+
+  &.slick-disabled::before {
+    border-color: $bs5;
+  }
 }
 
 .slick-next {
   right: 62px;
+
+  &::before {
+    content: "";
+    transform: rotate(45deg);
+    left: 25%;
+
+    position: absolute;
+  }
 }
 
 .slick-prev {
   left: 62px;
-}
 
-.slick-next::before {
-  content: "";
-  transform: rotate(45deg);
-  left: 25%;
+  &::before {
+    content: "";
+    transform: rotate(-135deg);
+    left: 35%;
 
-  position: absolute;
-}
-
-.slick-prev::before {
-  content: "";
-  transform: rotate(-135deg);
-  left: 35%;
-
-  position: absolute;
-}
-
-.slick-btn:focus {
-  box-shadow: 0px 0px 0px 3px #63A60E80;
-}
-
-.slick-btn:focus::before {
-  border-color: $bs7;
-}
-
-.slick-btn:hover {
-  background-color: $bg2;
-}
-
-.slick-btn:hover::before {
-  border-color: $bg9;
-}
-
-.slick-btn:active {
-  background-color: $bs6;
-}
-
-.slick-btn:active::before {
-  border-color: $bg9;
+    position: absolute;
+  }
 }

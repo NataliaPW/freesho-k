@@ -27,34 +27,34 @@
     width: 33%;
     margin-right: 10px;
     position: relative;
+  }
 
-    &-input {
-      width: 181px;
-      height: 40px;
-      background-color: $bw;
-      padding: 12px;
-      outline: transparent;
-      border-radius: 6px 0 0 6px;
-      color: $bd7;
-      line-height: $lh14;
+  &__form-input {
+    width: 181px;
+    height: 40px;
+    background-color: $bw;
+    padding: 12px;
+    outline: transparent;
+    border-radius: 6px 0 0 6px;
+    color: $bd7;
+    line-height: $lh14;
 
-      &::placeholder {
-        padding-left: 10px;
-        color: $bs8;
-        font-size: $sz14;
-        line-height: $lh1;
-        @extend %fOS400;
-      }
+    &::placeholder {
+      padding-left: 10px;
+      color: $bs8;
+      font-size: $sz14;
+      line-height: $lh1;
+      @extend %fOS400;
     }
+  }
 
-    &-btn {
-      position: absolute;
-      font-size: $sz12;
-      line-height: $lh136;
-      @extend %fOS700;
-      border-radius: 0 6px 6px 0;
-      padding: 12px 17px;
-    }
+  &__form-btn {
+    position: absolute;
+    font-size: $sz12;
+    line-height: $lh136;
+    @extend %fOS700;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 17px;
   }
 
   &__info {
@@ -64,8 +64,10 @@
     letter-spacing: 0.46px;
   }
 
-  &__info-item:not(:last-child) {
-    margin-bottom: 18px;
+  &__info-item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
   }
 
   &__info-link {
@@ -95,36 +97,37 @@
   &__social {
     display: flex;
     flex-wrap: nowrap;
-    @extend %bg;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
     text-align: center;
   }
 
-   &__social-link {
-     margin-right: 12px;
-     width: 33px;
-     height: 32px;
-     outline: transparent;
-     transition: opacity 0.5s ease,
-       background-color 0.5s ease;
+  &__social-link {
+    margin-right: 12px;
+    width: 33px;
+    height: 32px;
+    outline: transparent;
+    transition: opacity 0.5s ease,
+      background-color 0.5s ease;
 
-     &:last-child {
-       margin-right: 0;
-     }
+    &:last-child {
+      margin-right: 0;
+    }
 
-     &:focus {
-       box-shadow: 0 0 0 3px $bg2;
-       border-radius: 3px;
-     }
+    &:focus {
+      box-shadow: 0 0 0 3px $bg2;
+      border-radius: 3px;
+    }
 
-     &:hover {
-       opacity: 0.7;
-     }
+    &:hover {
+      opacity: 0.7;
+    }
 
-     &:active {
-       background-color: $bg2;
-     }
-   }
+    &:active {
+      background-color: $bg2;
+    }
+  }
 
   &__border {
     display: block;

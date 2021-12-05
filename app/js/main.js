@@ -1,20 +1,20 @@
 $(function () {
 
   /*подключение лист меню - выпадашка*/
-   /*клик вне элемента*/
+  /*клик вне элемента*/
   $(document).mouseup(function (e) {
     var container = $(".menulist");
     var ul = $(".menulist__list");
 
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-     /*  alert('Клик снаружи.'); */
+      /*  alert('Клик снаружи.'); */
       ul.hide();
-      
-       $('.menulist').removeClass('menulist--active');
-        $('.menulist__list').removeClass('menulist__list--active');
-        $('.menulist__btn').removeClass('menulist__btn--active');
-        $('.menulist__link').addClass('menulist__link--active');
-        $('.menulist-btn__icon-arrow').removeClass('menulist-btn__icon-arrow--active');
+
+      $('.menulist').removeClass('menulist--active');
+      $('.menulist__list').removeClass('menulist__list--active');
+      $('.menulist__btn').removeClass('menulist__btn--active');
+      $('.menulist__link').addClass('menulist__link--active');
+      $('.menulist-btn__icon-arrow').removeClass('menulist-btn__icon-arrow--active');
 
     } else {
       /* alert('Клик внутри.'); */
@@ -36,18 +36,18 @@ $(function () {
     }
   });
 
-   /*подключение формы корзина - выпадашка*/
-   /*клик вне элемента*/
-    $('.cart-form__btn').on('click', function () {
-       $('.cart-form').toggleClass('cart-form--active');
-        $('.cart-form__form').toggleClass('cart-form__form--active'); 
-      });
+  /*подключение формы корзина - выпадашка*/
+  /*клик вне элемента*/
+  $('.cart-form__btn').on('click', function () {
+    $('.cart-form').toggleClass('cart-form--active');
+    $('.cart-form__form').toggleClass('cart-form__form--active');
+  });
 
-       $('.cart__btn-close').on('click', function () {
-       $('.cart-form__form').hide();
-      });
+  $('.cart__btn-close').on('click', function () {
+    $('.cart-form__form').hide();
+  });
 
- 
+
   /*подключение слайдера*/
 
   $('.slider-list').slick({

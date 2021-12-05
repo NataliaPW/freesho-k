@@ -59,11 +59,8 @@
 
   &__link--top {
     &::before {
-      width: 100%;
-      /* top: calc(100% - 57px - 217px + 24px);
-       left: calc(100% - 174px); */
-      top: 0;
-      left: 0;
+      top: 57px;
+      bottom: 137px;
     }
   }
 
@@ -72,13 +69,13 @@
     height: 225px;
   }
 
-  &__kodprodukta--top {
-    display: none;
+  &__link-icon--top {
+    top: 145px;
+    left: 126px;
   }
 
-  &__link-icon--top {
-    top: 15px;
-    left: 30px;
+  &__kodprodukta--top {
+    display: none;
   }
 
   &__content--top {
@@ -92,8 +89,8 @@
 
   /* &__price-info--top {} */
 
-   &__discount--top {
-     bottom: 37px;
+  &__discount--top {
+    bottom: 37px;
   }
 
   /* &__price--top {}*/
@@ -135,47 +132,4 @@
 
   /*   &__btn-cart--top {
   } */
-}
-
-
-.filter {
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 51px;
-
-  &__item:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__name {
-    color: $bd5;
-    font-size: $sz15;
-    @extend %fOS700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-    text-decoration-line: underline;
-    text-decoration-color: transparent;
-    outline: transparent;
-    transition: color 0.5s ease,
-      text-decoration-color 0.5s ease;
-
-    &:focus {
-      box-shadow: 0 0 0 3px $bg2;
-      border-radius: 3px;
-    }
-
-    &:hover {
-      color: $bg9;
-    }
-
-    &:active {
-      text-decoration-color: $bg8;
-    }
-  }
-}
-
-.mixitup-control-active {
-  color: $bg8;
 }

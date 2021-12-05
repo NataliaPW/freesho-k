@@ -32,16 +32,22 @@
       background-color: $bg9;
     }
 
-    &--scooter::before {
-      mask: url('../images/sprite.svg#icon-scooter') center / cover no-repeat;
+    &--scooter {
+      &::before {
+        mask: url('../images/sprite.svg#icon-scooter') center / cover no-repeat;
+      }
     }
 
-    &--return-box::before {
-      mask: url('../images/sprite.svg#icon-return-box') center / cover no-repeat;
+    &--return-box {
+      &::before {
+        mask: url('../images/sprite.svg#icon-return-box') center / cover no-repeat;
+      }
     }
 
-    &--clock::before {
-      mask: url('../images/sprite.svg#icon-clock') center / cover no-repeat;
+    &--clock {
+      &::before {
+        mask: url('../images/sprite.svg#icon-clock') center / cover no-repeat;
+      }
     }
   }
 
@@ -51,6 +57,7 @@
   }
 
   &__text {
+    @include line-clamp(2);
     color: $bd5;
     @extend %fOS400;
   }
