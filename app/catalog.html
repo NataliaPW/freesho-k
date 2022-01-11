@@ -22,171 +22,670 @@
 
 <body>
   <header class="header">
-    <div class="header__top">
-      <div class="container">
-        <nav class="header__menu menu">
+    <nav class="header__nav-menu">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__menu menu">
 
-          <ul class="menu__list">
-            <li class="menu__item menu__item--icon">
-              <a class="menu__link menu__icon menu__icon--del" href="#" target="_blank">
-                адрес и время доставки
-              </a>
-            </li>
-            <li class="menu__item menu__item--icon">
-              <a class="menu__link menu__icon menu__icon--tel" href="#" target="_blank">
-                горячая линия 24/7
-              </a>
-            </li>
-          </ul>
-
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                доставка
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#" target="_blank">
-                о нас
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                новости
-              </a>
-            </li>
-          </ul>
-
-        </nav>
-      </div>
-    </div>
-
-    <div class="header__bottom">
-      <div class="container">
-        <div class="header__bottom-inner">
-
-          <a class="header__logo logo" href="#">
-            <img class="logo__img" src="images/global/logo.svg" alt="логотип организации" width="200" height="60">
-          </a>
-
-          <nav class="header__menulist menulist">
-            <button class="menulist__btn" type="button" aria-label="кнопка меню">
-              <span class="btn__icon-nav"></span>
-              <span class="btn__name">Каталог товаров</span>
-              <span class="btn__icon-arrow"></span>
+            <button class="menu__btn" type="button" aria-label="кнопка меню">
+              <span class="menu__btn-line"></span>
             </button>
 
-            <ul class="menulist__list">
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Овощи и фрукты
-                </a>
+            <ul class="menu__list">
+              <li class="menu__item menu__item--icon">
+                <button class="menu__link menu__icon menu__icon--del" type="button">
+                  <span class="menu__link-text menu__link-text--left">
+                    адрес и время доставки
+                  </span>
+                </button>
               </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Бакалея
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Молочные продукты
-                </a>
-              </li>
+              <li class="menu__item menu__item--icon contact-form">
+                <button class="menu__link menu__icon menu__icon--tel" type="button">
+                  <span class="menu__link-text menu__link-text--left">
+                    горячая линия 24/7
+                  </span>
+                </button>
 
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Хлеб
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Мясо
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Колбаса
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Рыба
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Алкаголь
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Напитки
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Торты
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Чай
-                </a>
-              </li>
-              <li class="menulist__item">
-                <a class="menulist__link" href="#">
-                  Кофе
-                </a>
-              </li>
+                <div class="header__contact contact contact-form__form">
+                  <div class="contact__container">
+                    <div class="contact__top">
+                      <a class="contact__logo logo" href="#">
+                        <img class="logo__img" src="images/global/logo_green.svg" alt="логотип организации" width="55"
+                          height="60">
+                      </a>
 
+                      <div class="contact__logo-text">
+                        <span class="contact__title">
+                          ФРЕШоК
+                        </span>
+                        <span class="contact__text">
+                          ОНЛАЙН-МАРКЕТ
+                        </span>
+                      </div>
+
+                      <button class="contact__btn-close btn-close" type="button" aria-label="кнопка закрыть">
+                      </button>
+                    </div>
+                  </div>
+                  <button class="contact__exit-btn btn" type="button">
+                    Вход | Регистрация
+                  </button>
+
+                  <div class="contact__menulist menulist">
+                    <button class="contact__menulist-btn menulist__btn" type="button" aria-label="кнопка меню">
+                      <span class="contact__menulist-icon menulist-btn__icon-nav"></span>
+                      <span class="contact__menulist-name btn__name">Каталог товаров</span>
+                    </button>
+
+                    <ul class="contact__menulist-list menulist__list">
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Овощи и фрукты
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Бакалея
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Молочные продукты
+                        </a>
+                      </li>
+
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Хлеб
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Мясо
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Колбаса
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Рыба
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Алкаголь
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Напитки
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Торты
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Чай
+                        </a>
+                      </li>
+                      <li class="menulist__item">
+                        <a class="menulist__link" href="#">
+                          Кофе
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <div class="contact__container">
+                    <address>
+                      <ul class="contact__adress footer__adress">
+                        <li class="contact__adress-item">
+                          <span class="contact__adress-icon contact__adress-icon--phone"></span>
+                          <a class="contact__adress-link" href="tel:+7907288365" aria-label="позвонить">
+                            +7 907 288 365
+                          </a>
+                        </li>
+                        <li class="contact__adress-item">
+                          <span class="contact__adress-icon contact__adress-icon--map"></span>
+                          <a class="contact__adress-link" href="# " aria-label="карта маршрута">
+                            Санкт-Петербург, ул. Ленина, 1
+                          </a>
+                        </li>
+                      </ul>
+
+                      <ul class="contact__social footer__social">
+                        <li class="contact__social-item">
+                          <a class="contact__social-link" href="#"
+                            style="background-image: url(images/icon/facebook_contact.svg)" target="_blank"
+                            aria-label="ссылка на facebook" width="33" height="32">
+                          </a>
+                        </li>
+
+                        <li class="contact__social-item">
+                          <a class="contact__social-link" href="#"
+                            style="background-image: url(images/icon/youtube_contact.svg)" target="_blank"
+                            aria-label="ссылка на youtube" width="33" height="32">
+                          </a>
+                        </li>
+
+                        <li class="contact__social-item">
+                          <a class="contact__social-link" href="#"
+                            style="background-image: url(images/icon/telegram_contact.svg)" target="_blank"
+                            aria-label="ссылка на telegram" width="33" height="32">
+                          </a>
+                        </li>
+
+                        <li class="contact__social-item">
+                          <a class="contact__social-link" href="#"
+                            style="background-image: url(images/icon/instagram_contact.svg)" target="_blank"
+                            aria-label="ссылка на instagram" width="33" height="32">
+                          </a>
+                        </li>
+                      </ul>
+                    </address>
+
+                    <ul class="contact__info">
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" target="_blank" aria-label="О нас">
+                          О нас
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" aria-label="Контакты">
+                          Контакты
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" target="_blank" aria-label="Публичная оферта">
+                          Публичная оферта
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" target="_blank" aria-label="Оплата и доставка">
+                          Оплата и доставка
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" target="_blank" aria-label="Вакансии">
+                          Вакансии
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" aria-label="Акции">
+                          Акции
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" target="_blank" aria-label=" Отзывы">
+                          Отзывы
+                        </a>
+                      </li>
+
+                      <li class="contact__info-item">
+                        <a class="contact__info-link" href="#" aria-label="Новости">
+                          Новости
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
             </ul>
-          </nav>
 
-          <div class="header__search search">
-            <form class="search__form">
-              <label class="search__label">
-                <input class="search__input" id="search" placeholder="Найти в магазине ..." name="search_text"
-                  type="search" required>
-              </label>
+            <ul class="menu__list menu__list--right">
+              <li class="menu__item  menu__item--right">
+                <a class=" menu__link--right" href="#">
+                  <span class="menu__link-text">
+                    доставка
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item menu__item--right">
+                <a class="menu__link menu__link--right" href="#" target="_blank">
+                  <span class="menu__link-text">
+                    о нас
+                  </span>
+                </a>
+              </li>
+              <li class="menu__item menu__item--right">
+                <a class="menu__link menu__link--right" href="#">
+                  <span class="menu__link-text">
+                    новости
+                  </span>
+                </a>
+              </li>
+            </ul>
 
-              <button class="search__btn" type="submit">Поиск</button>
-
-            </form>
           </div>
-
-          <div class="header__user user">
-            <div class="user__inner">
-
-              <a class="user__link user__link--user" href="#">
-              </a>
-
-              <a class="user__link user__link--heart" href="#">
-                <span class="user__number">
-                  12
-                </span>
-              </a>
-
-              <a class="user__link user__link--cart" href="#">
-                <span class="user__number">
-                  12
-                </span>
-              </a>
-
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
 
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__bottom-inner">
 
+            <a class="header__logo logo" href="#">
+              <img class="logo__img" src="images/global/logo.svg" alt="логотип организации" width="200" height="60">
+            </a>
+            <a class="header__logo--short logo" href="#">
+              <img class="logo__img--short" src="images/global/logo-short.svg" alt="логотип организации" width="37"
+                height="40">
+            </a>
+
+            <div class="header__menulist menulist">
+              <button class="menulist__btn" type="button" aria-label="кнопка меню">
+                <span class="menulist-btn__icon-nav"></span>
+                <span class="btn__name">Каталог товаров</span>
+                <span class="menulist-btn__icon-arrow"></span>
+              </button>
+
+              <ul class="menulist__list">
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Овощи и фрукты
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Бакалея
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Молочные продукты
+                  </a>
+                </li>
+
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Хлеб
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Мясо
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Колбаса
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Рыба
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Алкаголь
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Напитки
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Торты
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Чай
+                  </a>
+                </li>
+                <li class="menulist__item">
+                  <a class="menulist__link" href="#">
+                    Кофе
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            <ul class="header__user user">
+              <li class="user__item">
+
+                <button class="user__link user__link--search" type="submit">
+                </button>
+
+                <form class="header__search search-form">
+                  <label class="search-form__label sr-only" for="search">
+                    Поиск по сайту</label>
+                  <input class="search-form__input" id="search" placeholder="Найти в магазине ..." name="search_text"
+                    type="search" required>
+
+                  <button class="search-form__btn" type="submit">Поиск</button>
+                </form>
+
+              </li>
+
+              <li class="user__item">
+                <a class="user__link user__link--user" href="#">
+                </a>
+              </li>
+
+              <li class="user__item">
+                <a class="user__link user__link--heart" href="#">
+                  <span class="user__number">
+                    12
+                  </span>
+                </a>
+              </li>
+
+              <li class="user__item cart-form">
+
+                <button class="user__link user__link--cart cart-form__btn" type="submit">
+                  <span class="user__number">
+                    12
+                  </span>
+                </button>
+
+                <div class="header__cart cart cart-form__form">
+                  <div class="cart__wrapper">
+                    <div class="cart__top">
+                      <div class="cart__top-content">
+                        <h3 class="cart__title cart__title--top">
+                          Корзина
+                        </h3>
+                        <p class="cart__text">
+                          очистить корзину
+                        </p>
+                      </div>
+                      <button class="cart__btn-close btn-close" type="button">
+                      </button>
+                    </div>
+
+                    <ul class="cart__full">
+                      <li class="cart__item">
+                        <article class="cart__cards">
+                          <div class="cart__content card">
+
+                            <div class="card__subline card__subline--cart">
+                              <div class="card__iconbox card__iconbox--cart">
+                                <span class="card__badge card__badge--cart--green card__badge--green">
+                                  новинка
+                                </span>
+                                <span class="card__badge card__badge--cart--orang card__badge--orang">
+
+                                </span>
+                                <span class="card__badge card__badge--cart--red card__badge--red">
+                                  -50%
+                                </span>
+                              </div>
+
+                              <button class="card__btn-heart card__btn-heart--cart" type="button">
+                              </button>
+
+                              <button class="card__btn-close btn-close card__btn-close--cart" type="button">
+                              </button>
+                            </div>
+
+                            <div class="card__box card__box--cart">
+
+                              <a class="card__link card__link--cart" data-fancybox="gallery-1"
+                                href="images/global/product/pineapple.jpg">
+                                <img class="card__link-img card__link-img--cart"
+                                  src="images/global/product/pineapple.jpg" alt="фото ананаса" width="264" height="225">
+                                <span class="card__link-icon card__link-icon--cart"></span>
+                              </a>
+
+                              <a class="card__link card__link--cart" href="images/global/product/pineapple.jpg"
+                                data-fancybox="gallery-1"></a>
+                              <a class="card__link card__link--cart" href="images/global/product/pineapple.jpg"
+                                data-fancybox="gallery-1"></a>
+                              <a class="card__link card__link--cart" href="images/global/product/pineapple.jpg"
+                                data-fancybox="gallery-1"></a>
+                            </div>
+
+                            <div class="card__content card__content--cart">
+
+                              <div class="card__topline card__topline--cart">
+
+                                <a class="card__title" href="#">
+                                  <h3 class="card__text card__text--cart">
+                                    Ананас <span>, 1 кг</span>
+                                  </h3>
+                                </a>
+
+                              </div>
+
+                              <div class="card__middleline card__middleline--cart">
+                                <span class="card__kodprodukta card__kodprodukta--cart">
+                                  Код: 0111111
+                                </span>
+
+                                <div class="card__stars card__stars--cart">
+                                  <span class="card__stars-one card__stars-one--cart">
+                                    4.5
+                                  </span>
+
+                                  <div class="card__stars-five card__stars-five--cart" data-rateyo-rating="4.5">
+                                  </div>
+                                </div>
+
+                                <div class="card__availability  card__availability--cart">
+                                  <span class="card__availability-text card__availability-text--green">
+                                    в наличии
+                                  </span>
+                                  <span class="card__availability-text card__availability-text--red">
+
+                                  </span>
+                                  <span class="card__availability-text card__availability-text--grey">
+
+                                  </span>
+
+                                </div>
+                              </div>
+
+                              <div class="card__bottomline card__bottomline--cart">
+
+                                <div class="card__price-info card__price-info--cart">
+                                  <span class="card__discount
+                        card__discount--cart">
+                                    <em>1999 <span>₽</span></em>
+                                  </span>
+                                  <span class="card__price card__price--cart">
+                                    <em>999 <span>₽</span></em>
+                                  </span>
+                                </div>
+
+                                <div class="card__btn-box card__btn-box--cart">
+
+                                  <div class="card__pic card__pic--cart">
+                                    <button class="card__pic-btn card__pic-btn--cart card__pic-btn--minus btn">
+                                    </button>
+                                    <input class="card__pic-input card__pic-input--cart" type="number" value="1"
+                                      step="1" min="0" max="100">
+                                    <button
+                                      class="card__pic-btn card__pic-btn--cart card__pic-btn--plus  card__pic-btn--cart--plus btn">
+                                    </button>
+                                  </div>
+
+                                  <button class="card__btn-cart btn card__btn-cart--cart" type="button">
+                                    <span>
+                                      Добавить в карзину
+                                    </span>
+                                  </button>
+
+                                  <span class="card__summprice card__summprice--cart">
+                                    <em>999 <span>₽</span></em>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+
+                      <li class="cart__item">
+                        <article class="cart__cards">
+                          <div class="cart__content card">
+
+                            <div class="card__subline card__subline--cart">
+                              <div class="card__iconbox card__iconbox--cart">
+                                <span class="card__badge card__badge--cart--green card__badge--green">
+                                  новинка
+                                </span>
+                                <span class="card__badge card__badge--cart--orang card__badge--orang">
+
+                                </span>
+                                <span class="card__badge card__badge--cart--red card__badge--red">
+                                  -50%
+                                </span>
+                              </div>
+
+                              <button class="card__btn-heart card__btn-heart--cart" type="button">
+                              </button>
+
+                              <button class="card__btn-close btn-close card__btn-close--cart" type="button">
+                              </button>
+                            </div>
+
+                            <div class="card__box card__box--cart">
+
+                              <a class="card__link card__link--cart" data-fancybox="gallery-2"
+                                href="images/global/product/lemon.jpg">
+                                <img class="card__link-img card__link-img--cart" src="images/global/product/lemon.jpg"
+                                  alt="фото лимона" width="264" height="225">
+                                <span class="card__link-icon card__link-icon--cart"></span>
+                              </a>
+
+                              <a class="card__link card__link--cart" href="images/global/product/lemon.jpg"
+                                data-fancybox="gallery-2"></a>
+                              <a class="card__link card__link--cart" href="images/global/product/lemon.jpg"
+                                data-fancybox="gallery-2"></a>
+                              <a class="card__link card__link--cart" href="images/global/product/lemon.jpg"
+                                data-fancybox="gallery-2"></a>
+                            </div>
+
+                            <div class="card__content card__content--cart">
+
+                              <div class="card__topline card__topline--cart">
+
+                                <a class="card__title" href="productpage.html">
+                                  <h3 class="card__text card__text--cart">
+                                    Лимон<span>, 1 кг</span>
+                                  </h3>
+                                </a>
+
+                              </div>
+
+                              <div class="card__middleline card__middleline--cart">
+                                <span class="card__kodprodukta card__kodprodukta--cart">
+                                  Код: 0111112
+                                </span>
+
+                                <div class="card__stars card__stars--cart">
+                                  <span class="card__stars-one card__stars-one--cart">
+                                    4.5
+                                  </span>
+
+                                  <div class="card__stars-five card__stars-five--cart" data-rateyo-rating="4.5">
+                                  </div>
+                                </div>
+
+                                <div class="card__availability  card__availability--cart">
+                                  <span class="card__availability-text card__availability-text--green">
+                                    в наличии
+                                  </span>
+                                  <span class="card__availability-text card__availability-text--red">
+
+                                  </span>
+                                  <span class="card__availability-text card__availability-text--grey">
+
+                                  </span>
+
+                                </div>
+                              </div>
+
+                              <div class="card__bottomline card__bottomline--cart">
+
+                                <div class="card__price-info card__price-info--cart">
+                                  <span class="card__discount
+                        card__discount--cart">
+                                    <em> <span></span></em>
+                                  </span>
+                                  <span class="card__price card__price--cart">
+                                    <em>199 <span>₽</span></em>
+                                  </span>
+                                </div>
+
+                                <div class="card__btn-box card__btn-box--cart">
+
+                                  <div class="card__pic card__pic--cart">
+                                    <button class="card__pic-btn card__pic-btn--cart card__pic-btn--minus btn">
+                                    </button>
+                                    <input class="card__pic-input card__pic-input--cart" type="number" value="1"
+                                      step="1" min="0" max="100">
+                                    <button
+                                      class="card__pic-btn card__pic-btn--cart card__pic-btn--plus  card__pic-btn--cart--plus btn">
+                                    </button>
+                                  </div>
+
+                                  <button class="card__btn-cart btn card__btn-cart--cart" type="button">
+                                    <span>
+                                      Добавить в карзину
+                                    </span>
+                                  </button>
+
+                                  <span class="card__summprice card__summprice--cart">
+                                    <em>199 <span>₽</span></em>
+                                  </span>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      </li>
+                    </ul>
+
+                    <div class="cart__bottom">
+                      <div class="cart__bottom-content">
+                        <p class="cart__title">
+                          Товаров на сумму
+                        </p>
+                        <p class="cart__price">
+                          2038 <span>₽</span>
+                        </p>
+                      </div>
+                      <buttom class="cart__btn btn">
+                        Оформить заказ
+                      </buttom>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <!-- /*хлебные крошки*/ -->
     <div class="header__breadcrumbs breadcrumbs">
       <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__link">
-            <a class="breadcrumbs__item" href="#">
+            <a class="breadcrumbs__item" href="index.html">
               Главная
             </a>
           </li>
@@ -198,125 +697,2132 @@
         </ul>
       </div>
     </div>
-
-
   </header>
 
   <main class="main">
-
-    <section class="catalog__mainpage mainpage">
+    <section class="catalog-mainpage mainpage">
       <div class="container">
-        <div class="mainpage__title">
+        <h2 class="mainpage__title">
           Каталог товаров
-        </div>
+        </h2>
 
-        <div class="mainpage__inner">
-          <div class="mainpage__filter"> 
+        <div class="mainpage__filter-menu">
+          <div class="mainpage__filter-top">
+           <button class="mainpage__btn-close btn-close" type="button"></button>
 
-           <button class="mainpage__filter-title" type="button">
-             <span>Категории</span>
-             <span>+</span>
-           </button>
+          <ul class="mainpage__filter">
+            <li class="mainpage__filter-item">
+              <button class="mainpage__filter-title mainpage__filter-title--category" type="button">
+                Категории
+              </button>
 
-            <ul class="mainpage__filter-container">
-              <li class="mainpage__item">
-                <a class="mainpage__link" href="#">
-                  Овощи и фрукты
-                </a>
-              </li>
-              <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Бакалея
-                </a>
-              </li>
-              <li class="mainpage__item">
-                <a class="mainpage__link" href="#">
-                  Молочные продукты
-                </a>
-              </li>
+              <ul class="mainpage__filter-list mainpage__filter-list--category">
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Овощи и фрукты
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Бакалея
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Молочные продукты
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Хлеб
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Мясо
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Колбаса
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Рыба
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Алкаголь
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Напитки
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Торты
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Чай
+                  </a>
+                </li>
+                <li class="mainpage__item">
+                  <a class="mainpage__link" href="#">
+                    Кофе
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-             <li class="mainpage__item">
-                <a class="mainpage__link" href="#">
-                  Хлеб
-                </a>
-              </li>
-              <li class="mainpage__item">
-                <a class="mainpage__link" href="#">
-                  Мясо
-                </a>
-              </li>
-             <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Колбаса
-                </a>
-              </li>
-             <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Рыба
-                </a>
-              </li>
-              <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Алкаголь
-                </a>
-              </li>
-              <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Напитки
-                </a>
-              </li>
-             <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Торты
-                </a>
-              </li>
-             <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Чай
-                </a>
-              </li>
-             <li class="mainpage__item">
-                <a class="mainpage__link"  href="#">
-                  Кофе
-                </a>
-              </li>
-            </ul>
+            <li class="mainpage__filter-item">
+              <button class="mainpage__filter-title mainpage__filter-title--offer" type="button">
+                Предложения
+              </button>
 
-             <button class="mainpage__filter-title" type="button">
-            Предложения
-           </button>
+              <ul class="mainpage__filter-list mainpage__filter-list--offer">
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="action" name="action">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="action">
+                    Со скидкой
+                  </label>
+                </li>
 
-            <button class="mainpage__filter-title" type="button">
-            Бренд
-           </button>
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="new" name="new">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="new">
+                    Новинка
+                  </label>
+                </li>
 
-            <button class="mainpage__filter-title" type="button">
-            Цена
-           </button>
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="hit" name="hit">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="hit">
+                    Хит
+                  </label>
+                </li>
+              </ul>
 
+            </li>
+            <li class="mainpage__filter-item">
+              <button class="mainpage__filter-title mainpage__filter-title--brand" type="button">
+                Бренд
+              </button>
 
+              <ul class="mainpage__filter-list mainpage__filter-list--brand">
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="cocacola" name="cocacola">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="cocacola">
+                    CocaCola
+                  </label>
+                </li>
 
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="pepsi" name="pepsi">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="pepsi">
+                    Pepsi
+                  </label>
+                </li>
 
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="sprite" name="sprite">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="sprite">
+                    Sprite
+                  </label>
+                </li>
 
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="fanta" name="fanta">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="fanta">
+                    Fanta
+                  </label>
+                </li>
 
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="redbull" name="redbull">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="redbull">
+                    RedBull
+                  </label>
+                </li>
 
+                <li class="mainpage__item mainpage__item--input">
+                  <input class="mainpage__filter-input" type="checkbox" id="pepper" name="pepper">
+                  <span class="mainpage__filter-checkbox"></span>
+                  <label class="mainpage__filter-label" for="pepper">
+                    Dr Pepper
+                  </label>
+                </li>
+              </ul>
+            </li>
 
+            <li class="mainpage__filter-item mainpage__filter-item--price">
+              <button class="mainpage__filter-title mainpage__filter-title--price" type="button">
+                Цена
+              </button>
 
+              <form class="mainpage__filter-list  mainpage__form mainpage__filter-list--price">
+                <label class="mainpage__form-label">
+                  <div class="mainpage__form-box">
+                    <span class="mainpage__form-text">
+                      от
+                    </span>
+                    <span class="mainpage__form-from">
+                    </span>
+                    <span class="mainpage__form-text">
+                      ₽
+                    </span>
+                  </div>
+                  <div class="mainpage__form-box">
+                    <span class="mainpage__form-text">
+                      до
+                    </span>
+                    <span class="mainpage__form-to">
+                    </span>
+                    <span class="mainpage__form-text">
+                      ₽
+                    </span>
+                  </div>
+                </label>
+                <input class="mainpage__form-slider" type="text" name="form-price" data-min="0" data-max="1200"
+                  data-from="100" data-to="1000" value="" />
+              </form>
 
+            </li>
+          </ul>
+</div>
+          <div class="mainpage__content">
+            <form class="mainpage__content-form" action="#">
+              <ul class="mainpage__content-filter mainpage__content-filter--select">
+                <li class="mainpage__content-item mainpage__content-item--abc">
+                  <select class="mainpage__content-select mainpage__content-select--text" name="text" id="text">
+                    <option class="mainpage__content-option value=" 1">
+                      По названию
+                    </option>
+                    <option class="mainpage__content-option value=" 2">
+                      По популярности
+                    </option>
+                    <option class="mainpage__content-option value=" 3">
+                      Сначала дешевые
+                    </option>
+                    <option class="mainpage__content-option value=" 4">
+                      Сначала дорогие
+                    </option>
+                    <option class="mainpage__content-option value=" 5">
+                      По алфавиту
+                    </option>
+                  </select>
+                </li>
 
+                <li class="mainpage__content-item mainpage__content-item--number">
+                  <select class="mainpage__content-select mainpage__content-select" name="number" id="number">
+                    <option class="mainpage__content-option value=" 1">
+                      по 12
+                    </option>
+                    <option class="mainpage__content-option value=" 2">
+                      по 18
+                    </option>
+                    <option class="mainpage__content-option value=" 3">
+                      по 24
+                    </option>
+                    <option class="mainpage__content-option value=" 4">
+                      по 30
+                    </option>
+                    <option class="mainpage__content-option value=" 5">
+                      по 36
+                    </option>
+                  </select>
+                </li>
+              </ul>
 
-            1
+              <ul class="mainpage__content-filter">
+                <li class="mainpage__content-item mainpage__content-item--two">
+                  <button class="mainpage__filter-sort mainpage__filter-sort mainpage__filter-sort--two" type="button"
+                    aria-label="сортировать в два ряда"></button>
+                </li>
+
+                <li class="mainpage__content-item mainpage__content-item--three">
+                  <button class="mainpage__filter-sort mainpage__filter-sort--active mainpage__filter-sort--three"
+                    type="button" aria-label="сортировать в три ряда"></button>
+                </li>
+
+                <li class="mainpage__content-item mainpage__content-item--filter">
+                  <button class="mainpage__filter-sort mainpage__filter-sort--menu-filter" type="button"
+                    aria-label="сортировать в три ряда"></button>
+                </li>
+              </ul>
+            </form>
+
+            <div class="mainpage__content-cardbox mainpage-cardbox">
+
+              <ul class="mainpage-cardbox__full">
+
+                <li class="mainpage-cardbox__item mix category-1">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+                            -50%
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-1"
+                          href="images/global/product/pineapple.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/pineapple.jpg" alt="фото ананаса" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/pineapple.jpg"
+                          data-fancybox="gallery-1"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/pineapple.jpg"
+                          data-fancybox="gallery-1"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/pineapple.jpg"
+                          data-fancybox="gallery-1"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Ананас <span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111111
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>1999 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>999 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>999 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-1">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+                            -50%
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-2"
+                          href="images/global/product/lemon.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/lemon.jpg" alt="фото лимона" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/lemon.jpg"
+                          data-fancybox="gallery-2"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/lemon.jpg"
+                          data-fancybox="gallery-2"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/lemon.jpg"
+                          data-fancybox="gallery-2"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="productpage.html">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Лимон <span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111112
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em> <span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>199 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>199 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-1">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+                            хит
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-3"
+                          href="images/global/product/dragon_fruit.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/dragon_fruit.jpg" alt="фото питахайя" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/dragon_fruit.jpg"
+                          data-fancybox="gallery-3"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/dragon_fruit.jpg"
+                          data-fancybox="gallery-3"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/dragon_fruit.jpg"
+                          data-fancybox="gallery-3"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="productpage.html">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Питахайя красная с белой мякотью <span>, 1 шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111113
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>1019<span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>1019 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-4">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-4"
+                          href="images/global/product/ketchup.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/ketchup.jpg" alt="фото кетчупа" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/ketchup.jpg"
+                          data-fancybox="gallery-4"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/ketchup.jpg"
+                          data-fancybox="gallery-4"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/ketchup.jpg"
+                          data-fancybox="gallery-4"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Кетчуп томатный детский органический Bio-Zentrale 500мл<span>, 1 шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111114
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>600 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>600 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-2">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+                            хит
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-5"
+                          href="images/global/product/carrot.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/carrot.jpg" alt="фото моркови" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/carrot.jpg"
+                          data-fancybox="gallery-5"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/carrot.jpg"
+                          data-fancybox="gallery-5"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/carrot.jpg"
+                          data-fancybox="gallery-5"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Морковь молодая с бабушкиной грядки<span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111115
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+                              заканчивается
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>49 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>49 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-3">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+                            -30%
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-6"
+                          href="images/global/product/juice.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/juice.jpg" alt="фото напитка апельсинового сока" width="264"
+                            height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/juice.jpg"
+                          data-fancybox="gallery-6"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/juice.jpg"
+                          data-fancybox="gallery-6"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/juice.jpg"
+                          data-fancybox="gallery-6"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+                              безалкогольный<span>, 1 шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111116
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>49 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>49 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-4">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-7"
+                          href="images/global/product/coffee.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/coffee.jpg" alt="фото упаковки кофе" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/coffee.jpg"
+                          data-fancybox="gallery-7"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/coffee.jpg"
+                          data-fancybox="gallery-7"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/coffee.jpg"
+                          data-fancybox="gallery-7"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Кофе с коноплей органический Caffé Salomoni 250г<span>, 1 шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111117
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+                              заканчивается
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>877 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>877 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-2">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-8"
+                          href="images/global/product/paprik.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/paprik.jpg" alt="фото перца" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/paprik.jpg"
+                          data-fancybox="gallery-8"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/paprik.jpg"
+                          data-fancybox="gallery-8"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/paprik.jpg"
+                          data-fancybox="gallery-8"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Перец оранжевый<span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111118
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+                              заканчивается
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>349 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>349 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-3">
+                  <article class="mainpage-cardbox__cards">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+                            -50%
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-9"
+                          href="images/global/product/juice_2.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/juice_2.jpg" alt="фото сока из арбуза" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/juice_2.jpg"
+                          data-fancybox="gallery-9"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/juice_2.jpg"
+                          data-fancybox="gallery-9"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/juice_2.jpg"
+                          data-fancybox="gallery-9"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л<span>, 1
+                                шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111119
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em><span></span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>99 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>99 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-1">
+                  <article class="mainpage-cardbox__cards card__displaynone-btn">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-10"
+                          href="images/global/product/strawberry.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/strawberry.jpg" alt="фото клубники" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/strawberry.jpg"
+                          data-fancybox="gallery-10"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/strawberry.jpg"
+                          data-fancybox="gallery-10"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/strawberry.jpg"
+                          data-fancybox="gallery-10"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Клубника<span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111120
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              5.0
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="5.0">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+                              нет в наличии
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>600 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>440 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>440 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-1">
+                  <article class="mainpage-cardbox__cards card__displaynone-btn">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-11"
+                          href="images/global/product/mango.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/mango.jpg" alt="фото манго" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/mango.jpg"
+                          data-fancybox="gallery-11"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/mango.jpg"
+                          data-fancybox="gallery-11"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/mango.jpg"
+                          data-fancybox="gallery-11"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Манго<span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111121
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              5.0
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="5.0">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>960 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>660 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>660 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-4">
+                  <article class="mainpage-cardbox__cards card__displaynone-btn">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+                            новинка
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-12"
+                          href="images/global/product/salmon.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/salmon.jpg" alt="фото лосося" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/salmon.jpg"
+                          data-fancybox="gallery-12"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/salmon.jpg"
+                          data-fancybox="gallery-12"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/salmon.jpg"
+                          data-fancybox="gallery-12"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Лосось<span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111122
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.5
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.5">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>1149 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>990 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>990 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-3">
+                  <article class="mainpage-cardbox__cards card__displaynone-btn">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+                            хит
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-13"
+                          href="images/global/product/veg_juice.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/veg_juice.jpg" alt="фото сока Granini овощного" width="264"
+                            height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/veg_juice.jpg"
+                          data-fancybox="gallery-13"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/veg_juice.jpg"
+                          data-fancybox="gallery-13"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/veg_juice.jpg"
+                          data-fancybox="gallery-13"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Сок Granini овощной 100%, 0.5л<span>, 1 шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111123
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.9
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.9">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+                              заканчивается
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>230 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>180 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>180 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-1">
+                  <article class="mainpage-cardbox__cards card__displaynone-btn">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+                            хит
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-14"
+                          href="images/global/product/basket.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/basket.jpg" alt="фото корзины с фруктами" width="264"
+                            height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/basket.jpg"
+                          data-fancybox="gallery-14"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/basket.jpg"
+                          data-fancybox="gallery-14"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/basket.jpg"
+                          data-fancybox="gallery-14"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Фруктовая корзина<span>, 1 шт</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111124
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.8
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.8">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>5490 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>3990 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>3990 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="mainpage-cardbox__item mix category-4">
+                  <article class="mainpage-cardbox__cards card__displaynone-btn">
+                    <div class="mainpage-cardbox__content card">
+
+                      <div class="card__subline card__subline--mainpage-cardbox">
+                        <div class="card__iconbox card__iconbox--mainpage-cardbox">
+                          <span class="card__badge card__badge--mainpage-cardbox--green card__badge--green">
+
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--orang card__badge--orang">
+                            хит
+                          </span>
+                          <span class="card__badge card__badge--mainpage-cardbox--red card__badge--red">
+
+                          </span>
+                        </div>
+
+                        <button class="card__btn-heart card__btn-heart--mainpage-cardbox" type="button">
+                        </button>
+
+                        <button class="card__btn-close btn-close card__btn-close--mainpage-cardbox" type="button">
+                        </button>
+                      </div>
+
+                      <div class="card__box card__box--mainpage-cardbox">
+
+                        <a class="card__link card__link--mainpage-cardbox" data-fancybox="gallery-15"
+                          href="images/global/product/meat.jpg">
+                          <img class="card__link-img card__link-img--mainpage-cardbox"
+                            src="images/global/product/meat.jpg" alt="фото мякоти свинины" width="264" height="225">
+                          <span class="card__link-icon card__link-icon--mainpage-cardbox"></span>
+                        </a>
+
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/meat.jpg"
+                          data-fancybox="gallery-15"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/meat.jpg"
+                          data-fancybox="gallery-15"></a>
+                        <a class="card__link card__link--mainpage-cardbox" href="images/global/product/meat.jpg"
+                          data-fancybox="gallery-15"></a>
+                      </div>
+
+                      <div class="card__content card__content--mainpage-cardbox">
+
+                        <div class="card__topline card__topline--mainpage-cardbox">
+
+                          <a class="card__title" href="#">
+                            <h3 class="card__text card__text--mainpage-cardbox">
+                              Свинина мякоть<span>, 1 кг</span>
+                            </h3>
+                          </a>
+
+                        </div>
+
+                        <div class="card__middleline card__middleline--mainpage-cardbox">
+                          <span class="card__kodprodukta card__kodprodukta--mainpage-cardbox">
+                            Код: 0111125
+                          </span>
+
+                          <div class="card__stars card__stars--mainpage-cardbox">
+                            <span class="card__stars-one card__stars-one--mainpage-cardbox">
+                              4.8
+                            </span>
+
+                            <div class="card__stars-five card__stars-five--mainpage-cardbox" data-rateyo-rating="4.8">
+                            </div>
+                          </div>
+
+                          <div class="card__availability  card__availability--mainpage-cardbox">
+                            <span class="card__availability-text card__availability-text--green">
+                              в наличии
+                            </span>
+                            <span class="card__availability-text card__availability-text--red">
+
+                            </span>
+                            <span class="card__availability-text card__availability-text--grey">
+
+                            </span>
+
+                          </div>
+                        </div>
+
+                        <div class="card__bottomline card__bottomline--mainpage-cardbox">
+
+                          <div class="card__price-info card__price-info--mainpage-cardbox">
+                            <span class="card__discount
+                        card__discount--mainpage-cardbox">
+                              <em>590 <span>₽</span></em>
+                            </span>
+                            <span class="card__price card__price--mainpage-cardbox">
+                              <em>499 <span>₽</span></em>
+                            </span>
+                            <span class="card__summprice card__summprice--mainpage-cardbox">
+                              <em>499 <span>₽</span></em>
+                            </span>
+                          </div>
+
+                          <div class="card__btn-box card__btn-box--mainpage-cardbox">
+
+                            <div class="card__pic card__pic--mainpage-cardbox">
+                              <button class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--minus btn">
+                              </button>
+                              <input class="card__pic-input card__pic-input--mainpage-cardbox" type="number" value="1"
+                                step="1" min="0" max="100">
+                              <button
+                                class="card__pic-btn card__pic-btn--mainpage-cardbox card__pic-btn--plus  card__pic-btn--mainpage-cardbox--plus btn">
+                              </button>
+                            </div>
+
+                            <button class="card__btn-cart btn card__btn-cart--mainpage-cardbox" type="button">
+                              <span>
+                                Добавить в карзину
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+
+              </ul>
+
+              <div class="mainpage__content-footer">
+                <button class="mainpage__content-btn btn btn__visible" type="button">
+                  <span class="card__btn-text">Показать еще</span>
+                  <span class="card__displaynone-btn">Скрыть</span>
+                </button>
+
+                <div class="mainpage-content__pagination pagination">
+                  <span class="pagination__arrows pagination__arrows--prev" href="#"></span>
+                  <ul class="pagination__list">
+                    <li class="pagination__item pagination__item--active">
+                      <a class="pagination__link" href="#">
+                        1
+                      </a>
+                    </li>
+                    <li class="pagination__item pagination__item--hidden">
+                      <a class="pagination__link" href="#">
+                        2
+                      </a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">
+                        ...
+                      </a>
+                    </li>
+                    <li class="pagination__item pagination__item--hidden">
+                      <a class="pagination__link" href="#">
+                        9
+                      </a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">
+                        10
+                      </a>
+                    </li>
+                  </ul>
+                  <span class="pagination__arrows pagination__arrows--next pagination__arrows--active" href="#"></span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="__content">
-            2
-          </div>
         </div>
-
     </section>
-    <section class="catalog__advantages advantages">
+
+    <section class="catalog-advantages advantages">
       <div class="container">
         <h2 class="advantages__title sr-only">
-          <!-- вставлен скрытый класс -->
+          advantages
         </h2>
         <ul class="advantages__inner">
 
@@ -339,7 +2845,7 @@
           </li>
 
           <li class="advantages__item advantages__item--clock">
-            <h3 class="services__name">
+            <h3 class="advantages__name">
               Поддержка 24/7
             </h3>
             <p class="advantages__text">
@@ -351,6 +2857,7 @@
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__contact">
@@ -362,8 +2869,9 @@
         <div class="footer__contact-inner">
 
           <form class="footer__form">
-            <label class="footer__form-label" for="email">
-              Следите за нашими акциями</label>
+            <h3 class="footer__form-title">Следите за нашими акциями</h3>
+            <label class="footer__form-label sr-only" for="email">
+              Отправить e-mail</label>
             <input class="footer__form-input" id="email" type="email" placeholder="email@email.com" name="email"
               required>
 
@@ -371,77 +2879,95 @@
           </form>
 
           <ul class="footer__info">
-            <li class="footer__info-text">
+            <li class="footer__info-item">
               <a class="footer__info-link" href="#" target="_blank" aria-label="О нас">
                 О нас
               </a>
             </li>
-            <li class="footer__info-text">
+
+            <li class="footer__info-item">
               <a class="footer__info-link" href="#" aria-label="Контакты">
                 Контакты
               </a>
             </li>
-            <li class="footer__info-text">
+
+            <li class="footer__info-item">
               <a class="footer__info-link" href="#" target="_blank" aria-label="Публичная оферта">
                 Публичная оферта
               </a>
             </li>
-            <li class="footer__info-text">
+
+            <li class="footer__info-item">
               <a class="footer__info-link" href="#" target="_blank" aria-label="Оплата и доставка">
                 Оплата и доставка
               </a>
             </li>
-            <li class="footer__info-text">
+
+            <li class="footer__info-item">
               <a class="footer__info-link" href="#" target="_blank" aria-label="Вакансии">
                 Вакансии
               </a>
             </li>
-            <li class="footer__info-text">
-              <a class="footer__info-link" href="#" aria-label="Акции">
+
+            <li class="footer__info-item">
+              <a class="footer__info-link" href="#body" aria-label="Акции">
                 Акции
               </a>
             </li>
-            <li class="footer__info-text">
+
+            <li class="footer__info-item">
               <a class="footer__info-link" href="#" target="_blank" aria-label=" Отзывы">
                 Отзывы
               </a>
             </li>
-            <li class="footer__info-text">
-              <a class="footer__info-link" href="#" aria-label="Новости">
+
+            <li class="footer__info-item">
+              <a class="footer__info-link" href="#news" aria-label="Новости">
                 Новости
               </a>
             </li>
           </ul>
 
-          <ul class="footer__adress">
-            <li class="footer__adress-text footer__info-text">
-              <span>Горячая линия</span>
-              <a class="footer__adress-phone" href="tel:+7907288365" aria-label="позвонить">
-                +7 907 288 365
-              </a>
-            </li>
-            <li class="footer__adress-text footer__info-text">
-              <address>Санкт-Петербург, ул. Ленина, 1</address>
-            </li>
-            <li class="footer__social">
-              <a class="footer__social-link" href="#" style="background-image: url(images/icon/facebook.svg)"
-                target="_blank" aria-label="ссылка на facebook" width="33" height="32">
-              </a>
+          <address>
+            <ul class="footer__adress">
+              <li class="footer__adress-text footer__info-text">
+                <a class="footer__adress-phone" href="tel:+7907288365" aria-label="позвонить">
+                  Горячая линия<span>+7 907 288 365</span>
+                </a>
+              </li>
+              <li class="footer__adress-text footer__info-text">
+                <a class="footer__adress-map" href="# " aria-label="карта маршрута">
+                  Санкт-Петербург, ул. Ленина, 1
+                </a>
+              </li>
+            </ul>
 
-              <a class="footer__social-link" href="#" style="background-image: url(images/icon/youtube.svg)"
-                target="_blank" aria-label="ссылка на youtube" width="33" height="32">
-              </a>
+            <ul class="footer__social">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url(images/icon/facebook.svg)"
+                  target="_blank" aria-label="ссылка на facebook" width="33" height="32">
+                </a>
+              </li>
 
-              <a class="footer__social-link" href="#" style="background-image: url(images/icon/telegram.svg)"
-                target="_blank" aria-label="ссылка на telegram" width="33" height="32">
-              </a>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url(images/icon/youtube.svg)"
+                  target="_blank" aria-label="ссылка на youtube" width="33" height="32">
+                </a>
+              </li>
 
-              <a class="footer__social-link" href="#" style="background-image: url(images/icon/instagram.svg)"
-                target="_blank" aria-label="ссылка на instagram" width="33" height="32">
-              </a>
-            </li>
-          </ul>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url(images/icon/telegram.svg)"
+                  target="_blank" aria-label="ссылка на telegram" width="33" height="32">
+                </a>
+              </li>
 
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url(images/icon/instagram.svg)"
+                  target="_blank" aria-label="ссылка на instagram" width="33" height="32">
+                </a>
+              </li>
+            </ul>
+          </address>
         </div>
       </div>
     </div>
@@ -454,17 +2980,17 @@
           <a class="footer__bottom-text" href="#body">
             © 2021 ФРЕШОК
           </a>
-          <div class="footer__bottom-icons">
-            <div class="footer__bottom-img">
-              <img class="footer__bottom-visa" src="images/icon/logo_visa.svg" alt="лого visa" height="29">
-            </div>
-            <div class="footer__bottom-img">
-              <img class="footer__bottom-mc" src="images/icon/logo_mc.svg" alt="лого mastercard" height="29">
-              </d>
-            </div>
-          </div>
+          <ul class="footer__bottom-icons">
+            <li class="footer__bottom-img">
+              <img class="footer__bottom-visa" src="images/icon/logo_visa.svg" alt="лого visa" width="93" height="29">
+            </li>
+            <li class="footer__bottom-img">
+              <img class="footer__bottom-mc" src="images/icon/logo_mc.svg" alt="лого mastercard" width="49" height="29">
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
   </footer>
 
 

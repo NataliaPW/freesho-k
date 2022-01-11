@@ -1,4 +1,3 @@
-
 /*обрезание текста*/
 
 @mixin line-clamp($lines: 1) {
@@ -16,6 +15,7 @@
     -webkit-box-orient: vertical;
   }
 }
+
 /* @include line-clamp(3); */
 
 /*подключение шрифтов*/
@@ -35,3 +35,178 @@
 // Внимательно проверяем название файла в папке, это наш второй параметр - $url
 
 /* @include font-face(OpenSans, OpenSansRegular, 400) @include font-face(OpenSans, OpenSansBold, 700) */
+
+/*подключение иконок*/
+@mixin icon($name, $width, $height, $color) {
+  @if ($width>0){
+  width: #{$width}px;
+  }
+  @if ($height>0) {
+    height: #{$height}px;
+  }
+  mask: url('../images/sprite.svg#icon-#{$name}') center / cover no-repeat;
+  background-color: #{$color};
+}
+
+/* @include icon(search, 24, 24, $bg9); */
+
+/*подключение before*/
+@mixin img_bg() {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @content;
+}
+
+/* @include img_bg(); */
+
+/*подключение before*/
+@mixin position($relative, $index) {
+  @if ($relative==0) {
+    position: relative;
+  }
+
+  @else if($relative==1) {
+    position: absolute;
+    content: "";
+  }
+
+  @content;
+
+  @if ($index==0) {}
+
+  @else {
+    z-index: $index;
+  }
+}
+
+/* @include position(1, 0); 
+0 - relative,
+1 - absolute */
+
+@mixin position-size($relative, $index, $width, $height, $color) {
+  @include position($relative, $index);
+  background-color: $color;
+
+  @if ($width>0) and ($height>0) {
+    width: #{$width}px;
+    height: #{$height}px;
+  }
+
+  @else if ($width==0) and ($height>0) {
+    height: #{$height}px;
+  }
+
+  @else if ($width>0) and ($height==0) {
+    width: #{$width}px;
+  }
+
+  @else {}
+}
+
+/* @include position-size(1, 4, 23, 23, $bw); */
+
+/*подключение высоты шрифта и высоты строки (переменная шрифта задается числом)*/
+@mixin font-size($font-size, $line-height) {
+  font-size: #{$font-size}px;
+  line-height: calc(#{$line-height} / #{$font-size});
+  }
+
+  /* @include font-size(14, 19); */
+
+/*подключение flex*/
+
+@mixin flex($justify, $column, $aling, $wrap) {
+  display: flex;
+  
+  @if ($justify==1) {
+    justify-content: space-between;
+  }
+
+  @else if($justify==2) {
+    justify-content: center;
+  }
+
+  @else if($justify==3) {
+    justify-content: end;
+  }
+
+  @else if($justify==4) {
+    justify-content: start;
+  }
+
+  @else if($justify==5) {
+    justify-content: space-around;
+  }
+
+  @else if($justify==6) {
+    justify-content: flex-end;
+  }
+
+  @if ($column==1) {
+    flex-direction: column;
+  }
+
+    @if ($aling==1) {
+      align-items: center;
+    }
+
+    @if ($aling==2) {
+      align-items: flex-end;
+    }
+
+    @if ($aling==3) {
+      align-items: end;
+    }
+
+    @if ($wrap==1) {
+      flex-wrap: wrap;
+    }
+
+     @if ($wrap==2) {
+       flex-wrap: nowrap;
+     }
+
+      @content;
+}
+
+/* @include flex(0, 0, 0 ,0);
+1 -space-between
+2 - center
+3-  end;
+4 - start
+5 - space-around
+6-justify-content: flex-end;
+
+1 - flex-direction: column;
+
+1-align-items: center;
+2- align-items: flex-end;
+3- align-items: end;
+
+1- flex-wrap: wrap;
+ flex-wrap: nowrap;
+*/
+
+/*анимирование*/
+
+@mixin transition($name1, $name2, $name3, $time, $anim) {
+  outline: transparent;
+
+  @if (($name2==0) and ($name3==0)) {
+    transition: $name1 $time $anim;
+  }
+
+  @if ($name3==0) {
+    transition: $name1 $time $anim,
+      $name2 $time $anim;
+  }
+
+  @else {
+    transition: $name1 #{$time} #{$anim},
+    $name2 $time $anim,
+    $name3 $time $anim;
+  }
+}
+
+/* @include transition(background-color, 0, 0, 0.5, ease); */

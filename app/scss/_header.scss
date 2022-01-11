@@ -1,34 +1,82 @@
+body.hidden {
+  overflow: hidden;
+}
+
 .header {
+  /*  position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: 1000;
+
+  &--fixed {
+    
+    @media (max-width: $md2) {
+      padding: 10px 0;
+    }
+  } */
 
   &__top {
+
     background: $bd8;
   }
 
   &__menu {
     padding-top: 17px;
     padding-bottom: 15px;
+
+    @media (max-width: $md2) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__bottom {
     background-color: $bg9;
+  }
 
-    &-inner {
-      display: flex;
-      align-items: center;
-      padding: 25px 0;
+  &__bottom-inner {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    justify-content: space-between;
+
+    @media (max-width: $md2) {
+      padding: 9px 0;
     }
   }
 
   &__logo {
     margin-right: 24px;
 
+    @media (max-width: $md2) {
+      display: none;
+    }
+
     &__img {
       width: 200px;
       height: 60px;
-      background-position: center;
+      @include img_bg();
+      /*  background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: cover; */
     }
+  }
+
+  &__logo--short {
+    margin-right: 24px;
+    display: none;
+
+    @media (max-width: $md2) {
+      display: block;
+    }
+  }
+
+  &__img--short {
+    width: 37px;
+    height: 40px;
+    @include img_bg();
   }
 }
 
@@ -36,35 +84,127 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: uppercase;
 
-  color: $bw;
-  @extend %fOS700;
-  font-size: $sz13;
-  line-height: $lh138;
+  &--active .menu__list--right--active {
+    transform: translateY(0%);
+  }
+
+  &__btn {
+    display: none;
+    width: 30px;
+    height: 20px;
+    margin-left: 7px;
+
+    @media (max-width: $md2) {
+      display: block;
+
+      position: relative;
+      z-index: 310;
+
+      & span,
+      &::before,
+      &::after {
+        display: block;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        background-color: $bw;
+        position: absolute;
+        z-index: 150;
+      }
+
+      & span {
+        top: calc(50% - 1px);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        transition: top 0.3s ease-in-out, bottom 0.3s ease-in, transform 0.3s ease;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      &--active span {
+        display: none;
+      }
+
+      &--active::before {
+        transform: rotate(-225deg);
+        top: calc(50% - 1px);
+      }
+
+      &--active::after {
+        transform: rotate(225deg);
+        bottom: calc(50% - 1px);
+      }
+    }
+  }
 
   &__list {
     display: flex;
     text-align: center;
+    align-items: center;
+
+    &--right {
+      @media (max-width: $md2) {
+        position: absolute;
+        z-index: 200;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        background-color: $bd8;
+        height: 100vh;
+        overflow-y: auto;
+
+        display: block;
+        text-align: center;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease;
+        padding: 81px 0 0 15px;
+      }
+    }
   }
 
   &__item {
+
     &:not(:last-child) {
       margin-right: 24px;
+
+      @media (max-width: $md2) {
+        margin-right: 0;
+      }
+    }
+
+
+    @media (max-width: $md2) {
+      @include transition(background-color, 0, 0, 0.5, ease);
+      /* transition: background-color 0.5s ease; */
     }
 
     &--icon {
       &:not(:last-child) {
         margin-right: 46px;
+
+        @media (max-width: $md2) {
+          margin-right: 30px;
+        }
       }
     }
   }
 
   &__link {
-    letter-spacing: 0.45px;
-    outline: transparent;
+    @include transition(color, opacity, 0, 0.5, ease);
+    /* outline: transparent;
     transition: opacity 0.5s ease,
-      color 0.5s ease;
+      color 0.5s ease; */
 
     &:focus {
       box-shadow: 0 0 0 3px $bg1;
@@ -78,6 +218,14 @@
     &:active {
       color: $bg2;
     }
+
+    &--right {
+      @media (max-width: $md2) {
+        display: block;
+        padding: 11px 0;
+        transition: background-color 0.2s ease;
+      }
+    }
   }
 
   &__icon {
@@ -85,32 +233,60 @@
 
     &--del {
       padding-left: 46px;
+
+      @media (max-width: $md2) {
+        padding-left: 36px;
+      }
     }
 
     &--tel {
       padding-left: 35px;
+
+      @media (max-width: $md2) {
+        padding-left: 25px;
+      }
     }
 
     &::before {
-      position: absolute;
-      content: "";
+      @include position(1, 0);
+      /* position: absolute;
+      content: ""; */
       left: 0;
       top: -3px;
-      height: 23px;
-      background-color: $bw;
+
+      @media (max-width: $md2) {
+        top: 0;
+      }
     }
 
     &--del {
       &::before {
-        width: 32px;
-        mask: url('../images/sprite.svg#icon-del-address') center / cover no-repeat;
+        @include icon(del-address, 32, 23, $bw);
+        /* width: 32px;
+        mask: url('../images/sprite.svg#icon-del-address') center / cover no-repeat; */
       }
     }
 
     &--tel {
       &::before {
-        width: 23px;
-        mask: url('../images/sprite.svg#icon-tel') center / cover no-repeat;
+        @include icon(tel, 23, 23, $bw);
+        /* width: 23px;
+        mask: url('../images/sprite.svg#icon-tel') center / cover no-repeat; */
+      }
+    }
+  }
+
+  &__link-text {
+    color: $bw;
+    @extend %fOS700;
+    font-size: $sz13;
+    line-height: $lh138;
+    text-transform: uppercase;
+
+    &--left {
+      @media (max-width: $md2) {
+        font-size: 0;
+        padding-left: 2px;
       }
     }
   }
@@ -118,7 +294,14 @@
 
 .menulist {
   position: relative;
+  z-index: 100;
   margin-right: 31px;
+  border-radius: 6px;
+  border: 1px solid $bd4;
+
+  @media (max-width: $md2) {
+    display: none;
+  }
 
   &__btn {
     width: 240px;
@@ -131,9 +314,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    outline: transparent;
-    transition: background-color 0.5s ease;
+    @include transition(background-color, 0, 0, 0.5, ease);
+    /*  outline: transparent;
+    transition: background-color 0.5s ease; */
 
     position: relative;
 
@@ -152,10 +335,9 @@
 
     width: 240px;
     max-height: 100vh;
+    overflow-y: auto;
 
     background-color: $bw;
-
-    overflow-y: auto;
 
     display: block;
     font-size: $sz16;
@@ -170,18 +352,19 @@
     padding: 11px 10px 11px 24px;
     color: $bd8;
     line-height: $lh12;
-    border: 1px solid $bd4;
+    border-bottom: 1px solid $bd4;
+    border-left: 3px solid transparent;
 
-    outline: transparent;
-    transition: border-left 0.5s ease, color 0.5s ease;
+    @include transition(border-left-color, color, 0, 0.5, ease);
+    /* outline: transparent;
+    transition: border-left-color 0.5s ease, color 0.5s ease; */
 
     &:focus {
       box-shadow: 0 0 0 2px $bd3;
-      border-radius: 3px;
     }
 
     &:hover {
-      border-left: 3px solid $bg9;
+      border-left-color: $bg9;
       color: $bg9;
     }
 
@@ -191,44 +374,54 @@
   }
 }
 
+.contact__menulist {
+  @media (max-width: $md2) {
+    display: block;
+  }
+}
+
 .menulist-btn__icon-nav {
-  width: 20px;
-  height: 1px;
+  @include position-size(0, 0, 20, 1, $bg9);
+  /* width: 20px;
+  height: 1px; */
   left: 0;
   top: 0;
-  background-color: $bg9;
-  position: relative;
+  /*   background-color: $bg9;
+  position: relative; */
 
   &::before,
   &::after {
-    width: 25px;
-    height: 1px;
+    @include position-size(1, 15, 25, 1, $bg9);
+    /*  width: 25px;
+    height: 1px; */
     left: 0;
-    background-color: $bg9;
+    /* background-color: $bg9;
     position: absolute;
     z-index: 15;
-    content: "";
+    content: ""; */
   }
 
   &::before {
-    top: 5px;
+    top: 8px;
   }
 
   &::after {
-    bottom: 5px;
+    bottom: 8px;
   }
 }
 
 .menulist-btn__icon-arrow {
-  width: 8px;
+  @include icon(chevron_right, 8, 4, $bg9);
+  /* width: 8px;
   height: 4px;
 
   mask: url('../images/sprite.svg#icon-chevron_right') center / cover no-repeat;
-  background-color: $bg9;
+  background-color: $bg9; */
 
 
   &--active {
-    mask: url('../images/sprite.svg#icon-chevron_top') center / cover no-repeat;
+    @include icon(chevron_top, 8, 4, $bg9);
+    /* mask: url('../images/sprite.svg#icon-chevron_top') center / cover no-repeat; */
   }
 }
 
@@ -239,24 +432,45 @@
 .search-form {
   position: relative;
   width: 576px;
+  /* width: 100%; */
   background-color: $bw;
   height: 50px;
+
   border-radius: 6px;
   margin-right: 56px;
 
-  position: relative;
-
   &::before {
-    content: "";
-    position: absolute;
+    @include position(1, 0);
+    /*  content: "";
+    position: absolute; */
+    @include icon(search, 20, 20, $bd7);
     left: 13px;
     top: 16px;
-    left: 13px;
-    width: 20px;
+    /* width: 20px;
     height: 20px;
     background-color: $bd7;
 
-    mask: url('../images/sprite.svg#icon-search') center / cover no-repeat;
+    mask: url('../images/sprite.svg#icon-search') center / cover no-repeat; */
+  }
+
+  @media (max-width: $maxWidth) {
+    display: none;
+
+    position: absolute;
+    z-index: 150;
+    right: 0;
+    border: 1px solid $bd8;
+    top: 190px;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  @media (max-width: $md2) {
+    left: 0;
+    top: 118px;
+    width: 100%;
   }
 
   &__input {
@@ -271,6 +485,18 @@
     color: $bd7;
     padding-left: 38px;
 
+    @media (max-width: $md2) {
+      display: none;
+    }
+
+    &--media {
+      display: none;
+
+      @media (max-width: $md2) {
+        display: block;
+      }
+    }
+
     &::placeholder {
       padding-left: 16px;
       color: $bd7;
@@ -282,17 +508,21 @@
 
   &__btn {
     position: absolute;
-    right: 0px;
-    width: 158px;
+    right: 0;
+    top: 0;
+    max-width: 158px;
+    padding: 12px 24px;
     height: 50px;
     border: none;
     background: $bd7;
     border-radius: 0 6px 6px 0;
     color: $bw;
     text-transform: uppercase;
-    outline: transparent;
+
+    @include transition(background-color, color, 0, 0.5, ease);
+    /* outline: transparent;
     transition: background-color 0.5s ease,
-      color 0.5s ease;
+      color 0.5s ease; */
 
     &:focus {
       box-shadow: 0 0 0 4px $bd3;
@@ -315,31 +545,106 @@
   &__item {
     &:not(:last-child) {
       margin-right: 37px;
+
+      @media (max-width: $md2) {
+        margin-right: 7px;
+      }
     }
   }
 
-  &__item {
+  &__link {
     width: 50px;
     height: 50px;
     top: 0;
     right: 0;
+    display: block;
 
     border: 2px solid transparent;
     border-radius: 3px;
 
-    outline: transparent;
-    transition: border-color 0.8s ease,
+    @include transition(background-color, border-color, opacity, 0.8, ease);
+    /* outline: transparent; */
+    /* transition: border-color 0.8s ease,
       opacity 0.8s ease,
-      background-color 0.8s ease;
+      background-color 0.8s ease; */
 
     position: relative;
 
+    &::before {
+      @include position-size(1, 0, 0, 33, $bw);
+      /* position: absolute;
+      content: "";
+      background-color: $bw; */
+      top: 9px;
+      right: 50%;
+      /* height: 32px; */
+      transform: translateX(50%);
+    }
+
+    &:focus,
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: #FFFFFF80;
+      }
+    }
+
+    &--search {
+      &::before {
+        @include icon(search, 33, 0, $bw);
+        /* width: 25px;
+        mask: url('../images/sprite.svg#icon-user') center / cover no-repeat;
+        background-color: $bw; */
+      }
+
+      display: none;
+
+      @media (max-width: $maxWidth) {
+        display: block;
+      }
+    }
+
+    &--user {
+      &::before {
+        @include icon(user, 26, 0, $bw);
+        /* width: 25px;
+        mask: url('../images/sprite.svg#icon-user') center / cover no-repeat;
+        background-color: $bw; */
+      }
+
+      @media (max-width: $md2) {
+        display: none;
+      }
+    }
+
+    &--heart {
+      &::before {
+        @include icon(heart, 37, 0, $bw);
+        /*  width: 36px;
+        mask: url('../images/sprite.svg#icon-heart') center / cover no-repeat; */
+      }
+
+      @media (max-width: $md2) {
+        display: none;
+      }
+    }
+
+    &--cart {
+      &::before {
+        @include icon(cart, 33, 0, $bw);
+        /*  width: 32px;
+        mask: url('../images/sprite.svg#icon-cart') center / cover no-repeat; */
+      }
+    }
 
     &:focus {
-      &::before {
-        background-color: $bd2;
-        box-shadow: inset 0 0 0 3px $bg1;
-      }
+      background-color: $bd2;
+      box-shadow: inset 0 0 0 3px $bg1;
     }
 
     &:hover {
@@ -352,53 +657,10 @@
     }
   }
 
-  &__icon {
-    position: absolute;
-    background-color: $bw;
-    top: 9px;
-    right: 50%;
-    transform: translateX(50%);
-
-    outline: transparent;
-    transition: background-color 0.8s ease,
-      opacity 0.8s ease;
-
-    &:focus,
-    &:hover {
-      background-color: $bw;
-      opacity: 1;
-    }
-
-    &:active {
-      background-color: #FFFFFF80;
-    }
-  }
-
-  &__icon--user {
-    width: 25px;
-    height: 32px;
-
-    mask: url('../images/sprite.svg#icon-user') center / cover no-repeat;
-    background-color: $bw;
-  }
-
-  &__icon--heart {
-    width: 36px;
-    height: 32px;
-
-    mask: url('../images/sprite.svg#icon-heart') center / cover no-repeat;
-  }
-
-  &__icon--cart {
-    width: 32px;
-    height: 32px;
-    mask: url('../images/sprite.svg#icon-cart') center / cover no-repeat;
-  }
-
   &__number {
     @include line-clamp(1);
     position: absolute;
-    z-index: 10;
+    z-index: 5;
     top: 0;
     left: 0;
 
@@ -417,15 +679,26 @@
 }
 
 .cart {
-  width: 475px;
+  min-width: 475px;
+  width: 100%;
   /* height: 1920px; */
   @extend %fOS400;
   letter-spacing: 0.3px;
+
+  @media (max-width: $md3) {
+    max-width: 375px;
+    width: 100%;
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $md3) {
+      max-width: 375px;
+      width: 100%;
+    }
   }
 
   &__top {
@@ -478,71 +751,124 @@
   }
 
   &__full {
-    max-height: 705px;
+    /* max-height: 705px; */
+    max-height: 100vh;
     overflow-y: auto;
     background-color: $bs1;
     padding: 12px;
   }
 
-  /*  &__cards {} */
+  &__item {
+    @media (max-width: $md2) {
+      width: 345px;
+    }
+  }
+
+  &__cards {
+    margin-bottom: 12px;
+  }
 
   &__content {
     display: grid;
-    grid-template-columns: 115px 300px;
-    max-width: 452px;
+    grid-template-columns: 83px 348px;
+    min-width: 452px;
     width: 100%;
     max-height: 84px;
     height: 100%;
     margin-left: 0;
-    margin-bottom: 12px;
+
+    @media (max-width: $md3) {
+      grid-template-columns: 83px 262px;
+      min-width: 262px;
+      width: 100%;
+      min-height: 126px;
+      height: 100%;
+    }
   }
 }
 
 .card {
-  padding-bottom: 14px;
+  &__subline--cart {
+    position: absolute;
+    order: -1;
+  }
 
-  /*  &__box--cart {} */
+  &__box--cart {
+    position: relative;
+  }
 
   &__link--cart {
     &::before {
-      width: 26%;
+      width: 100%;
+      height: 100%;
+      left: 0;
       top: 0;
-      bottom: 0;
     }
   }
 
   &__link-img--cart {
-    width: 81px;
-    height: 60px;
+    width: 83px;
+    height: 84px;
+    padding: 12px 0 12px 1px;
   }
 
   &__link-icon--cart {
-    top: 15px;
-    left: 30px;
+    top: 24px;
+    left: 24px;
   }
 
   &__kodprodukta--cart {
     display: none;
   }
 
-  /* &__content--cart {} */
-
-  &__text--cart {
-    max-width: 170px;
+  &__content--cart {
+    padding-top: 9px;
+    padding-left: 23px;
   }
 
-  /* &__price-info--cart {} */
+  &__text--cart {
+    @include line-clamp(2);
+    min-height: 40px;
+    max-width: 170px;
+    width: 100%;
+  }
+
+  &__bottomline--cart {
+    margin-bottom: 10px;
+    margin-right: 13px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn-box--cart {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md3) {
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+      right: 15px;
+    }
+  }
+
+  &__price-info--cart {
+    color: $bs5;
+    @extend %fOS600;
+    font-size: $sz20;
+  }
 
   &__discount--cart {
     display: none;
   }
 
-  /* &__price--cart {}
-
   &__summprice--cart {
+    color: $bs5;
+    font-size: $sz20;
+    color: $bd5;
+    line-height: $lh1;
+    @extend %fOS600;
   }
-
-  &__inner--cart {} */
 
   &__availability--cart {
     display: none;
@@ -556,23 +882,23 @@
     display: none;
   }
 
-  /* &__stars-one--cart {}
-
-  &__stars-five--cart {} */
-
   &__btn-heart--cart {
     display: none;
   }
 
   &__btn-close--cart {
-    top: -70px;
-    left: 398px;
+    position: absolute;
+    top: 12px;
+    left: 412px;
+
+    @media (max-width: $md3) {
+      left: 310px;
+    }
   }
 
   &__pic--cart {
-    right: 73px;
-    bottom: 14px;
-    /* display: flex; */
+    display: flex;
+    margin-right: 12px;
   }
 
   &__btn-cart--cart {
@@ -583,18 +909,286 @@
 .cart-form {
   position: relative;
   margin-right: 31px;
+  height: 50px;
+
+  @media (max-width: $md2) {
+    margin-right: 0;
+  }
 
   &__form {
-    position: absolute;
-    z-index: 99;
+    @include position-size(1, 1000, 0, 0, $bw);
+    /* position: absolute;
+    z-index: 1000; */
     right: 0;
     top: 50px;
-    background-color: $bw;
-    display: block;
+    /* background-color: $bw; */
     display: none;
+
+    &--active {
+      display: block;
+    }
+
+    @media (max-width: $md3) {
+      width: 375px;
+      right: -115px;
+      top: 60px;
+    }
   }
 }
 
-.cart-form--active .cart-form__form--active {
-  display: block;
+.contact {
+  min-width: 300px;
+  width: 100%;
+
+  &__container {
+    min-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: $bw;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  &__logo {
+
+    &__img {
+      width: 55px;
+      height: 60px;
+      @include img_bg();
+      /*  background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; */
+    }
+  }
+
+  &__logo-text {
+    max-width: 129px;
+    text-transform: uppercase;
+    color: $bg9;
+    @extend %fR600;
+  }
+
+  &__title {
+    font-size: $sz28;
+    line-height: $lh122;
+  }
+
+  &__text {
+    font-size: $sz12;
+    line-height: $lh1;
+  }
+
+  &__exit-btn {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 55px;
+    border-radius: 0%;
+    background-color: $bg9;
+    display: flex;
+    justify-content: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: $lh1;
+    letter-spacing: 0.3px;
+    position: relative;
+
+    @include transition(background-color, 0, 0, 0.5, ease);
+    /* outline: transparent;
+    transition: background-color 0.8s ease; */
+
+    &::before {
+      @include position(1, 0);
+      /* position: absolute;
+      content: "";*/
+      @include icon(user, 32, 25, $bw);
+      /* background-color: $bw; */
+      top: 9px;
+      left: 15px;
+      /* height: 32px;
+      width: 25px; */
+      /*  mask: url('../images/sprite.svg#icon-user') center / cover no-repeat; */
+    }
+
+    &:active {
+      &::before {
+        background-color: #FFFFFF80;
+      }
+    }
+  }
+
+  &__menulist {
+    min-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    background-color: $bw;
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+
+  &__menulist-btn {
+    width: 100%;
+    border-radius: 0;
+    padding-left: 15px;
+    justify-content: start;
+    height: 48px;
+
+    &--active,
+    &:hover {
+      border-radius: 0;
+    }
+  }
+
+  &__menulist-icon {
+    background-color: $bd7;
+
+    &::before,
+    &::after {
+      background-color: $bd7;
+    }
+  }
+
+  &__menulist-name {
+    color: $bd7;
+    font-size: $sz18;
+    line-height: $lh1;
+    letter-spacing: 0.3px;
+    @extend %fOS600;
+    padding-left: 16px;
+  }
+
+  &__menulist-list {
+    width: 100%;
+  }
+
+  &__adress {
+    width: 100%;
+    letter-spacing: 0.45px;
+    margin-bottom: 15px;
+    padding-top: 24px;
+  }
+
+  &__adress-item {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    justify-self: start;
+  }
+
+  &__adress-icon {
+    width: 24px;
+    height: 24px;
+    left: 0;
+
+    &--phone {
+      @include icon(tel_contact, 0, 0, $bd8);
+      /* mask: url('../images/sprite.svg#icon-tel_contact') center / cover no-repeat; */
+    }
+
+    &--map {
+      @include icon(map_contact, 0, 0, $bd8);
+      /*  mask: url('../images/sprite.svg#icon-map_contact') center / cover no-repeat; */
+    }
+  }
+
+  &__adress-link {
+    max-width: 230px;
+    margin-left: 15px;
+    color: $bd7;
+    font-size: $sz18;
+    line-height: $lh12;
+    @extend %fOS400;
+    letter-spacing: 0.3px;
+  }
+
+  &__social {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    padding-bottom: 24px;
+  }
+
+  &__social-item {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__social-link {
+    display: block;
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+
+    @include transition(background-color, opacity, 0, 0.5, ease);
+    /* outline: transparent;
+    transition: opacity 0.5s ease,
+      background-color 0.5s ease; */
+
+    &:focus {
+      box-shadow: 0 0 0 3px $bg9;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-color: $bg9;
+    }
+  }
+
+  &__info {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    color: $bd7;
+    font-size: $sz18;
+    line-height: $lh12;
+    @extend %fOS400;
+    letter-spacing: 0.3px;
+    text-align: left;
+  }
+
+  &__info-item {
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info-link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+.contact-form {
+  position: relative;
+  margin-right: 31px;
+  height: 50px;
+  top: 15px;
+
+  @media (max-width: $md2) {
+    margin-right: 0;
+  }
+
+  &__form {
+    position: absolute;
+    z-index: 1000;
+    right: 60px;
+    top: -16px;
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
 }

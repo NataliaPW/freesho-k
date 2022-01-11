@@ -1,17 +1,37 @@
 .banner {
   padding-top: 0;
 
+  @media (max-width: $md2) {
+    padding-top: 0;
+  }
+
+  @media (max-width: $md3) {
+    padding-top: 0;
+  }
+
+   @media (max-width: $md4) {
+     padding-top: 0;
+   }
+
   &__inner {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 13px;
     width: 100%;
+
+       @media (max-width: $md2) {
+        grid-template-columns: 1fr;
+        &:not(:last-child){
+          margin-bottom: 15px;
+        } 
+       }
   }
 
   &__content {
-   background-position: center;
+   @include img_bg();
+   /* background-position: center;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: cover; */
     text-transform: uppercase;
     color: $bd5;
     @extend %fOS700;
@@ -19,11 +39,20 @@
     padding-bottom: 82px;
     padding-left: 51px;
 
-
     &--fruits {
       padding-left: 35px;
       color: $bw;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: $md2) {
+      max-width: 100%;
+    }
+
+    @media (max-width: $md3) {
+      padding-top: 79px;
+      padding-bottom: 41px;
+      padding-left: 16px;
     }
   }
 
@@ -32,6 +61,10 @@
     line-height: $lh1;
     letter-spacing: 0.9px;
     margin-bottom: 18px;
+
+     @media (max-width: $md3) {
+       margin-bottom: 15px;
+     }
   }
 
   &__content-title {
@@ -43,9 +76,18 @@
     letter-spacing: 0.3px;
     margin-bottom: 7px;
 
+     @media (max-width: $md2) {
+      font-size: $sz24;
+      margin-bottom: 77px;
+     }
+
     &--fruits {
       max-width: 370px;
       text-decoration-line: $bd5 2px;
+
+       @media (max-width: $md3) {
+        max-width: 260px;
+       }
     }
   }
 

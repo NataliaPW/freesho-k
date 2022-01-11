@@ -3,32 +3,32 @@
   border-radius: 6px;
   background-color: $bw;
 
-  position: relative;
-  z-index: 30;
-  padding: 12px 18px 18px;
-
-  &__box {}
-
   &__link {
-    outline: transparent;
-    transition: opacity 0.5s ease;
-
+    position: relative;
+    display: block;
+     @include transition(opacity, 0, 0, 0.5, ease);
+   
     &::before {
-      position: absolute;
-      z-index: 1;
-      content: "";
-      left: 0;
-      right: 0;
-      background-color: $bd11;
+      @include position-size(1, 1, 0, 0, $bd11);
+     /*  z-index: 1; */
+      /* background-color: $bd11; */
       opacity: 0;
     }
 
-    &:hover::before {
-      opacity: 0.1;
+    &:hover .card__link-icon {
+      opacity: 1;
     }
 
-    &:hover::after {
-      opacity: 0;
+    &:hover {
+      &::before {
+        opacity: 0.1;
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
     }
   }
 
@@ -37,92 +37,80 @@
   }
 
   &__link-icon {
-    position: absolute;
-    z-index: 2;
-    content: "";
-    width: 48px;
-    height: 48px;
-    background-color: $bw;
+    @include position-size(1, 2, 48, 48, $bw);
+    /* z-index: 2; */
+    /* width: 48px;
+    height: 48px; */
+    /* background-color: $bw; */
     border-radius: 50%;
     opacity: 0;
 
     &::before {
-      position: absolute;
-      z-index: 4;
-      content: "";
-      width: 24px;
-      height: 24px;
+      @include position(1, 4);
+      /* z-index: 4; */
+      @include icon(search, 24, 24, $bg9);
       top: 12px;
       left: 12px;
-      mask: url('../images/sprite.svg#icon-search') center / cover no-repeat;
-      background-color: $bg9;
-    }
-
-    &:hover .card__link-icon {
-      opacity: 1;
     }
   }
 
   &__content {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    text-align-last: left;
+    text-align: left;
     min-width: 128px;
   }
 
   &__text {
+    @extend %fOS600;
     @include line-clamp(3);
-    max-height: 60px;
+    max-height: 67px;
     text-align: left;
     letter-spacing: 0.5px;
-    padding-right: 18px;
   }
 
   &__kodprodukta {
+    max-width: 104px;
+    width: 100%;
     color: $bs5;
     line-height: $lh12;
     @extend %fOS400;
     letter-spacing: 0.3px;
+    background: $bs1;
+    border-radius: 3px;
   }
 
   &__price-info {
-    display: flex;
-    justify-content: space-between;
     color: $bd5;
     line-height: $lh1;
     @extend %fOS400;
   }
 
-  &__discount {
-    position: absolute;
-    color: $bs5;
-    /* bottom: 37px; */
+  &__discount em{
+    position: relative;
+    color: $bs5; 
 
     &::before {
-      position: absolute;
-      content: "";
+      @include position(1, 0);
       width: 100%;
-
       left: 0px;
       top: 6px;
-
       border: 1px solid $bs5;
       transform: rotate(-14.99deg);
     }
   }
 
-  &__price {}
+  &__summprice {
+    color: $bd5;
+    line-height: $lh1;
+  }
 
   &__iconbox {
     max-width: 70px;
     padding-right: 37px;
     text-align: left;
-
-    position: absolute;
+    font-size: $sz10;
+    line-height: $lh16;
     z-index: 5;
-    top: 6px;
-    left: 12px;
   }
 
   &__badge {
@@ -131,8 +119,7 @@
     border-radius: 6px;
     color: $bw;
     @extend %fOS700;
-    font-size: $sz10;
-    line-height: $lh16;
+
     text-align: center;
     margin: auto 0;
     /* identical to box height, or 10px */
@@ -157,87 +144,64 @@
   }
 
   &__availability {
-    position: absolute;
-    /* top: 265px;
-    left: 18px; */
     z-index: 5;
+    font-size: $sz10;
+    line-height: $lh1;
+    text-transform: uppercase;
   }
 
-   &__availability-text {
-     font-size: $sz10;
-     line-height: $lh1;
-     text-transform: uppercase;
+  &__availability-text {
+    @include line-clamp(1);
 
-     &--green {
-       color: $bg9;
-     }
+    &--green {
+      color: $bg9;
+    }
 
-     &--red {
-       color: $br9;
-     }
+    &--red {
+      color: $br9;
+    }
 
-     &--grey {
-       color: $bs5;
-     }
-   }
-
-  &__stars {}
+    &--grey {
+      color: $bs5;
+    }
+  }
 
   &__stars-one {
     line-height: $lh1;
     @extend %fOS700;
     padding-right: 18px;
     color: $bd5;
-    position: absolute;
-    /* top: 265px;
-      right: 7px; */
+    position: relative; 
 
     &::after {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 16px;
+      @include position(1, 0);
+      @include icon(star_1, 16, 16, $by9);
       bottom: 0;
       right: 0;
-      background-size: contain;
-      mask: url('../images/sprite.svg#icon-star_1') center / cover no-repeat;
-      background-color: $by9;
     }
   }
 
   &__stars-five {
-    position: absolute;
     display: flex;
-    /*  top: -18px;
-    left: 175px; */
   }
 
   &__btn-heart {
-    position: absolute;
-    top: 9px;
-    right: 1px;
+    @include position-size(0, 0, 50, 50, transparent);
+    /* position: relative;
     width: 50px;
-    height: 50px;
+    height: 50px; */
     padding: 9px 6px;
     border-radius: 3px;
-    border-color: transparent;
+    /* border-color: transparent; */
 
-    outline: transparent;
-    transition: background-color 0.5s ease,
-      transform 0.5s ease,
-      background-position 0.5s ease;
+     @include transition(background-color, transform, background-position, 0.5, ease);
 
     &::before {
-      position: absolute;
-      content: "";
+       @include position(1, 0);
       top: 10px;
       right: 50%;
       transform: translateX(50%);
-
-      width: 32px;
-      height: 30px;
-      mask: url('../images/sprite.svg#icon-heart') center / cover no-repeat;
-      background-color: $bs5;
+      @include icon(heart, 33, 30, $bs5);
     }
 
     &:focus {
@@ -280,10 +244,10 @@
     }
 
     50% {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       background-position: right;
-      transform: scale(1.5);
+      transform: scale(0.8);
     }
 
     100% {
@@ -307,35 +271,25 @@
     }
   }
 
-
   &__btn-cart {
-    width: 32px;
+    @include position-size(0, 0, 32, 32, $bg9);
+    /* width: 32px;
     height: 32px;
-    background-color: $bg9;
+    background-color: $bg9; */
     border-radius: 3px;
-    padding: 8px;
-    position: absolute;
-    bottom: 18px;
-    right: 18px;
+    padding: 8px;/* 
+     position: relative; */
 
-    &::before {
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      z-index: 3;
-      content: "";
+      &::before {
+        @include position(1, 3);
+        @include icon(cart_card, 16, 16, $bw);
+      /* z-index: 3; */
       top: 25%;
       left: 25%;
-
-      mask: url('../images/sprite.svg#icon-cart_card') center / cover no-repeat;
-      background-color: $bw;
     }
   }
 
   &__pic {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
     width: 84px;
     height: 24px;
   }
@@ -358,19 +312,21 @@
   }
 
   &__pic-btn {
-    width: 24px;
-    background-color: $bg9;
+    @include position-size(0, 0, 24, 24, $bg9);
+    /* width: 24px;
+    background-color: $bg9; */
     padding: 0;
-    position: relative;
+    /* position: relative; */
 
     &::before {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 2px;
-      background-color: $bw;
-      top: 11px;
-      left: 3px;
+      @include position-size(1, 0, 16, 2, $bw);
+      /* width: 16px;
+      height: 2px; */
+      /* background-color: $bw; */
+      top: 50%;
+      left: 50%;
+      transform: translateY(50%);
+      transform: translateX(-50%);
     }
 
     &--minus {
@@ -382,83 +338,33 @@
       position: relative;
 
       &::after {
-        position: absolute;
-        content: "";
-        width: 16px;
-        height: 2px;
-        background-color: $bw;
-        top: 11px;
-        left: 3px;
+        @include position-size(1, 0, 16, 2, $bw);
+        /* width: 16px;
+        height: 2px; */
+
+        /* background-color: $bw; */
+        top: 50%;
+        left: 15%;
+        transform: translateY(50%);
+        transform: translateX(-50%);
         transform: rotate(90deg);
       }
     }
   }
 
-  &__displaynone {
-    display: none;
-  }
-
   &__displaynone-btn {
     display: none;
-
+   
     &--active {
       display: block;
     }
   }
-}
 
-.simple-rating {
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-}
+  &__btn-text{
+    display: block;
 
-.simple-rating::before {
-  display: block;
-  content: "★★★★★";
-}
-
-.simple-rating__items {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row-reverse;
-  overflow: hidden;
-}
-
-.simple-rating__item {
-  position: absolute;
-  width: 0%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-}
-
-.simple-rating__label {
-  flex: 0 0 20%;
-  height: 100%;
-  cursor: pointer;
-  color: $bs5;
-}
-
-.simple-rating__label::before {
-  content: "★";
-  display: block;
-  transition: color 0.3s ease 0s;
-}
-
-.simple-rating__item:checked,
-.simple-rating__item:checked~.simple-rating__label {
-  color: $by9;
-}
-
-.simple-rating__label:hover,
-.simple-rating__label:hover~.simple-rating__label,
-.simple-rating__label:checked~.simple-rating__label:hover {
-  color: $by8;
+     &--active {
+      display: none;
+    }
+  }
 }

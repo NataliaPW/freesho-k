@@ -1,22 +1,31 @@
 .brands {
-
-  &__items {
+    &__items {
     display: flex;
-    justify-content: space-around;
-    background-position: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 100%;
+    @include img_bg();
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+  }
+
+  &__item{
+    min-width: calc(100% / 6);
   }
 
   &__link {
     background-repeat: no-repeat;
     max-height: 80px;
     opacity: 0.5;
-    outline: transparent;
-    transition: opacity 0.5s ease;
+    @include transition(opacity, 0, 0, 0.5, ease);
 
     &:hover {
       opacity: 1;
+    }
+
+    & img{
+      margin: 0 auto;
     }
   }
 }

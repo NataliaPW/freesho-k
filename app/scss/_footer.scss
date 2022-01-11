@@ -6,15 +6,35 @@
   &__contact {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @media (max-width: $md3) {
+      padding-bottom: 0;
+    }
   }
 
   &__contact-inner {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $md2) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (max-width: $md4) {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &__logo-img {
     margin-bottom: 30px;
+
+    @media (max-width: $md3) {
+      margin: 0 auto;
+      margin-bottom: 25px;
+      text-align: center;
+    }
   }
 
   &__form-title {
@@ -24,13 +44,30 @@
   }
 
   &__form {
-    width: 33%;
+    max-width: 306px;
+    width: 100%;
     margin-right: 10px;
     position: relative;
+
+    @media (max-width: $md2) {
+      margin-bottom: 50px;
+      margin-right: 0;
+    }
+
+    @media (max-width: $md3) {
+      align-items: center;
+      order: 2;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $md4) {
+      margin-left: 0;
+    }
   }
 
   &__form-input {
-    width: 181px;
+    max-width: 181px;
+    width: 100%;
     height: 40px;
     background-color: $bw;
     padding: 12px;
@@ -46,6 +83,21 @@
       line-height: $lh1;
       @extend %fOS400;
     }
+
+    @media (max-width: $md3) {
+      max-width: 182px;
+      width: 100%;
+    }
+  }
+
+  &__form-title {
+    @media (max-width: $md3) {
+      padding-left: 30px;
+    }
+
+    @media (max-width: $md4) {
+      padding-left: 0;
+    }
   }
 
   &__form-btn {
@@ -55,25 +107,68 @@
     @extend %fOS700;
     border-radius: 0 6px 6px 0;
     padding: 12px 17px;
+
+    @media (max-width: $md2) {
+      padding: 12px 12px;
+      max-width: 118px;
+      width: 100%;
+    }
   }
 
   &__info {
     width: calc(100% - 53%);
+    width: 100%;
     column-count: 3;
     column-gap: 15px;
     letter-spacing: 0.46px;
+    text-decoration: none;
+    @extend %fOS400;
+
+    @media (max-width: $md2) {
+      order: 1;
+      max-width: 650px;
+      width: 100%;
+      column-count: 4;
+      margin-right: 0;
+    }
+
+    @media (max-width: $md3) {
+      order: 1;
+      padding-top: 24px;
+      border-top: 1px solid $bd2;
+      padding-bottom: 24px;
+      border-bottom: 1px solid $bd2;
+      margin-bottom: 24px;
+      letter-spacing: -0.7px;
+    }
+
+    @media (max-width: $md4) {
+      column-count: 2;
+      column-gap: 0;
+      padding-left: 44px;
+    }
   }
 
   &__info-item {
+    padding-left: 10px;
+
     &:not(:last-child) {
       margin-bottom: 18px;
+    }
+
+    @media (max-width: $md3) {
+      max-width: 117px;
+      width: 100%;
+      text-align: left;
+      padding-left: 0;
     }
   }
 
   &__info-link {
-    outline: transparent;
+    @include transition(opacity, color, 0, 0.5, ease);
+    /*   outline: transparent;
     transition: opacity 0.5s ease,
-      color 0.5s ease;
+      color 0.5s ease; */
 
     &:focus {
       box-shadow: 0 0 0 3px $bg1;
@@ -94,26 +189,49 @@
     margin-bottom: 18px;
   }
 
+  &__adress-text {
+    @media (max-width: $md3) {
+      margin-bottom: 18px;
+    }
+  }
+
   &__social {
     display: flex;
     flex-wrap: nowrap;
-    background-position: center;
+    @include img_bg();
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     text-align: center;
+
+    @media (max-width: $md3) {
+      width: 100%;
+      padding-bottom: 24px;
+      /*  border-bottom: 1px solid $bd2;
+      margin-bottom: 24px; */
+    }
+
+    @media (max-width: $md3) {
+      justify-content: center;
+    }
   }
 
-  &__social-link {
-    margin-right: 12px;
-    width: 33px;
-    height: 32px;
-    outline: transparent;
-    transition: opacity 0.5s ease,
-      background-color 0.5s ease;
-
+  &__social-item {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  &__social-link {
+    display: block;
+    margin-right: 12px;
+    width: 33px;
+    height: 32px;
+
+    @include transition(background-color, opacity, 0, 0.5, ease);
+    /* outline: transparent;
+    transition: opacity 0.5s ease,
+      background-color 0.5s ease; */
 
     &:focus {
       box-shadow: 0 0 0 3px $bg2;
@@ -147,21 +265,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $md3) {
+      flex-direction: column;
+    }
   }
 
   &__bottom-text {
     text-transform: uppercase;
+
+    @media (max-width: $md3) {
+      text-align: center;
+      display: block;
+      order: 1;
+    }
   }
 
   &__bottom-icons {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $md3) {
+      justify-content: center;
+      order: 0;
+      padding-bottom: 24px;
+    }
   }
 
   &__bottom-img {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     background-size: contain;
     width: 100px;
     height: 29px;

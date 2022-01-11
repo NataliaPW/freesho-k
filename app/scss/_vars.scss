@@ -6,10 +6,15 @@ $sz14: 14px;
 $sz15: 15px;
 $sz16: 16px;
 $sz18: 18px;
+$sz20: 20px;
 $sz24: 24px;
+$sz26: 26px;
+$sz28: 28px;
 $sz30: 30px;
 $sz32: 32px;
+$sz36: 36px;
 $sz42: 42px;
+$sz50: 50px;
 $sz60: 60px;
 
 /*color*/
@@ -50,8 +55,11 @@ $lh16: 1.6;
 $lh14: 1.4;
 $lh138: 1.38;
 $lh136: 1.36;
+$lh134: 1.34;
+$lh133: 1.33;
 $lh13: 1.3;
 $lh128: 1.28;
+$lh122: 1.22;
 $lh12: 1.2;
 $lh1: 1;
 
@@ -116,3 +124,14 @@ $lh1: 1;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+/*переменные media*/
+$minWidth:375px;
+$maxWidth:1920;
+$maxWidthContainer: 1320;
+$maxWidth: 1320px;
+$md1:$maxWidthContainer+15;
+$md2:991.98px;
+$md3:767.98px;
+$md4:479.98px;
+
