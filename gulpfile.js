@@ -3,6 +3,7 @@ var sass = require('gulp-sass')(require('sass'));
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
+var gcmq = require('gulp-group-css-media-queries');
 var {
   src,
   dest,
@@ -38,6 +39,7 @@ function styles() {
       overrideBrowserslist: ['last 10 versions'],
       grid: true
     }))
+    .pipe(gcmq()) // в полученном css группируем множество медиа-выражений в общие.
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
@@ -49,6 +51,8 @@ function scripts() {
       'node_modules/slick-carousel/slick/slick.js',
        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
        'node_modules/rateyo/src/jquery.rateyo.js',
+       'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+       'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
        'node_modules/mixitup/dist/mixitup.js',
       'app/js/main.js'
     ])
