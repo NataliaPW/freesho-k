@@ -1,38 +1,38 @@
 .top {
   text-align: center;
 
+  &__title {
+    margin-bottom: 32px;
+
+    @media (max-width: $md4) {
+      margin-bottom: 25px;
+    }
+  }
+
   &__filter {
     position: relative;
   }
 
   &__full {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 20px;
-    left: -30px;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 15px;
 
-    @media (max-width: $md3) {
-      left: -5px;
+    @media (max-width: $md2) {
+      column-gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $md4) {
       margin-bottom: 5px;
+      column-gap: 5px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
   }
 
   &__item {
-    width: 100%;
-    width: calc(100% / 4 - 30px);
-    height: 100%;
-    margin-left: 30px;
-
-    @media (max-width: $md2) {
-      width: calc(100% / 3 - 15px);
-      margin-left: 15px;
-    }
-
-    @media (max-width: $md4) {
-      width: calc(100% / 2 - 5px);
-      margin-left: 5px;
-    }
+    grid-row: span 1;
   }
 
   &__cards {
@@ -43,7 +43,6 @@
     }
 
     @media (max-width: $md4) {
-      margin-top: 5px;
       margin-bottom: 5px;
     }
   }
@@ -55,10 +54,6 @@
     color: $bg9;
 
     @include transition(background-color, box-shadow, 0, 0.5, ease);
-    /* 
-    outline: transparent;
-    transition: background-color 0.5s ease,
-      box-shadow 0.5s ease; */
 
     &:focus {
       border: 1px solid #63A60E;
@@ -79,18 +74,103 @@
   }
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 51px;
+
+  @media (max-width: $md2) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $md4) {
+    margin-bottom: 4px;
+    min-width: 274px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    @media (max-width: $md4) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &:nth-child(even) {
+        margin-right: 31px;
+      }
+
+      &:first-child {
+        margin-right: 31px;
+      }
+    }
+  }
+
+  &__name {
+    color: $bd5;
+    font-size: $sz15;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    border-bottom: 3px solid transparent;
+    margin-bottom: 3px;
+
+    outline: transparent;
+    transition: color 0.5s ease,
+      border-bottom-color 0.5s ease;
+
+    @media (max-width: $md4) {
+      font-size: $sz14;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $bg2;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: $bg9;
+    }
+
+    &:active {
+      border-bottom-color: $bg8;
+    }
+
+    @media (max-width: $md2) {
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: $md4) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.mixitup-control-active {
+  border-bottom-color: $bg8;
+}
+
 .card {
 
   &__subline--top {
     display: flex;
     justify-content: end;
-    padding-top: 11px;
+    padding-top: 8px;
     padding-bottom: 4px;
     padding-left: 6px;
   }
 
   &__box--top {
     position: relative;
+
+    @media (max-width: $md4) {
+      margin-bottom: 5px;
+    }
   }
 
   &__link--top {
@@ -129,10 +209,12 @@
   }
 
   &__content--top {
-    height: 130px;
+    max-height: 120px;
+    height: 100%;
 
     @media (max-width: $md2) {
-      height: 152px;
+      max-height: 152px;
+      height: 100%;
     }
   }
 
@@ -156,6 +238,10 @@
     min-height: 60px;
     width: 100%;
     margin-bottom: 8px;
+
+    @media (max-width: $md3) {
+      /* @include line-clamp(1); */
+    }
   }
 
   &__bottomline--top {
@@ -164,6 +250,12 @@
     padding-left: 18px;
     padding-right: 18px;
     padding-bottom: 18px;
+
+    @media (max-width: $md4) {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   &__btn-box--top {
@@ -198,7 +290,7 @@
 
   &__iconbox--top {
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 12px;
   }
 
@@ -209,7 +301,6 @@
 
   &__stars-five--top {
     display: none;
-    background-color: yellow;
   }
 
   &__btn-close--top {

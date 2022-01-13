@@ -44,16 +44,15 @@
     align-items: center;
     color: $bg9;
     font-size: $sz14;
-    @extend %fOS700;
+    font-weight: 700;
     letter-spacing: 0.65px;
 
     @include transition(color, border-color, 0, 0.5, ease);
-    /*  outline: transparent;
-    transition: color 0.5s ease,
-      border-color 0.5s ease; */
-    padding-bottom: 6px;
     border-bottom: 2px solid $bg9;
     margin-bottom: -8px;
+    padding-bottom: 2px;
+    padding-right: 6px;
+
     position: relative;
 
     @media (max-width: $md2) {
@@ -68,6 +67,8 @@
     }
 
     @media (max-width: $md4) {
+      padding-right: 0;
+
       &::after {
         left: 0;
       }
@@ -87,16 +88,15 @@
     }
   }
 
-
   &__bottom {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
 
     margin-top: 50px;
 
     @media (max-width: $md2) {
-      justify-content: center;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
       margin-top: 40px;
     }
 
@@ -107,46 +107,18 @@
 
   &__bottom-item {
     position: relative;
-    max-width: calc(100% / 3 - 30px);
-    width: 100%;
-
-    @media (max-width: $md2) {
-      max-width: calc(100% - 30px);
-      width: 100%;
-    }
-
-    @media (max-width: $md4) {
-     width: 100%; 
-    }
-  }
-
-  &__bottom-item {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    @media (max-width: $md2) {
-      width: 100%;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-    }
   }
 
   &__bottom-label {
     @include position-size(1, 2, 65, 76, $bw);
     position: absolute;
-    /*  z-index: 2;
-    width: 65px;
-    height: 76px; */
-    /* background-color: $bw; */
+
     top: 0;
     left: 20px;
     border-radius: 0 0 4px 4px;
     font-size: $sz10;
     line-height: $lh136;
-    @extend %fOS700;
+    font-weight: 700;
     text-align: center;
     display: block;
     padding-top: 18px;
@@ -156,7 +128,8 @@
       display: block;
       font-size: $sz30;
       line-height: $lh1;
-      @extend %fR600;
+      font-family: $fr;
+      font-weight: 600;
     }
 
     @media (max-width: $md2) {
@@ -179,14 +152,11 @@
     box-shadow: 0 3px 3px 0 #00000040;
 
     @media (max-width: $md2) {
-     /*  width: 100%; */
       margin: 0 auto;
       margin-bottom: 30px;
     }
 
     @media (max-width: $md4) {
-      /* width: 345px;
-      width: 100%; */
       margin: 0 auto;
       margin-bottom: 15px;
 
@@ -204,8 +174,6 @@
 
   &__bottom-link {
     @include transition(color, 0, 0, 0.5, ease);
-    /* outline: transparent;
-    transition: color 0.5s ease; */
 
     &:focus {
       color: $bg9;
@@ -216,10 +184,9 @@
     @include line-clamp(2);
     padding: 0 26px 18px 18px;
     font-size: $sz16;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 
     @media (max-width: $md2) {
-    /*   padding: 0 15px 30px 15px; */
       font-size: $sz14;
     }
   }

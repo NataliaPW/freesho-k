@@ -6,12 +6,10 @@
   &__link {
     position: relative;
     display: block;
-     @include transition(opacity, 0, 0, 0.5, ease);
-   
+    @include transition(opacity, 0, 0, 0.5, ease);
+
     &::before {
       @include position-size(1, 1, 0, 0, $bd11);
-     /*  z-index: 1; */
-      /* background-color: $bd11; */
       opacity: 0;
     }
 
@@ -38,16 +36,11 @@
 
   &__link-icon {
     @include position-size(1, 2, 48, 48, $bw);
-    /* z-index: 2; */
-    /* width: 48px;
-    height: 48px; */
-    /* background-color: $bw; */
     border-radius: 50%;
     opacity: 0;
 
     &::before {
       @include position(1, 4);
-      /* z-index: 4; */
       @include icon(search, 24, 24, $bg9);
       top: 12px;
       left: 12px;
@@ -61,7 +54,7 @@
   }
 
   &__text {
-    @extend %fOS600;
+    font-weight: 600;
     @include line-clamp(3);
     max-height: 67px;
     text-align: left;
@@ -73,7 +66,7 @@
     width: 100%;
     color: $bs5;
     line-height: $lh12;
-    @extend %fOS400;
+    font-weight: 400;
     letter-spacing: 0.3px;
     background: $bs1;
     border-radius: 3px;
@@ -82,12 +75,12 @@
   &__price-info {
     color: $bd5;
     line-height: $lh1;
-    @extend %fOS400;
+    font-weight: 400;
   }
 
-  &__discount em{
+  &__discount em {
     position: relative;
-    color: $bs5; 
+    color: $bs5;
 
     &::before {
       @include position(1, 0);
@@ -118,11 +111,10 @@
     text-transform: lowercase;
     border-radius: 6px;
     color: $bw;
-    @extend %fOS700;
+    font-weight: 700;
 
     text-align: center;
     margin: auto 0;
-    /* identical to box height, or 10px */
 
     &--green {
       background-color: $bg9;
@@ -168,10 +160,10 @@
 
   &__stars-one {
     line-height: $lh1;
-    @extend %fOS700;
+    font-weight: 700;
     padding-right: 18px;
     color: $bd5;
-    position: relative; 
+    position: relative;
 
     &::after {
       @include position(1, 0);
@@ -187,21 +179,22 @@
 
   &__btn-heart {
     @include position-size(0, 0, 50, 50, transparent);
-    /* position: relative;
-    width: 50px;
-    height: 50px; */
     padding: 9px 6px;
     border-radius: 3px;
-    /* border-color: transparent; */
 
-     @include transition(background-color, transform, background-position, 0.5, ease);
+    @include transition(background-color, transform, background-position, 0
+    .5, ease);
 
     &::before {
-       @include position(1, 0);
+      @include position(1, 0);
       top: 10px;
       right: 50%;
       transform: translateX(50%);
       @include icon(heart, 33, 30, $bs5);
+
+      @media (max-width: $md4) {
+       @include icon(heart, 33, 25, $bs5);
+      }
     }
 
     &:focus {
@@ -273,17 +266,12 @@
 
   &__btn-cart {
     @include position-size(0, 0, 32, 32, $bg9);
-    /* width: 32px;
-    height: 32px;
-    background-color: $bg9; */
     border-radius: 3px;
-    padding: 8px;/* 
-     position: relative; */
+    padding: 8px;
 
-      &::before {
-        @include position(1, 3);
-        @include icon(cart_card, 16, 16, $bw);
-      /* z-index: 3; */
+    &::before {
+      @include position(1, 3);
+      @include icon(cart_card, 16, 16, $bw);
       top: 25%;
       left: 25%;
     }
@@ -297,7 +285,7 @@
   &__pic-input {
     width: 36px;
     background-color: $bg1;
-    @extend %fOS400;
+    font-weight: 400;
     font-size: $sz14;
     line-height: $lh1;
     color: $bd5;
@@ -313,16 +301,10 @@
 
   &__pic-btn {
     @include position-size(0, 0, 24, 24, $bg9);
-    /* width: 24px;
-    background-color: $bg9; */
     padding: 0;
-    /* position: relative; */
 
     &::before {
       @include position-size(1, 0, 16, 2, $bw);
-      /* width: 16px;
-      height: 2px; */
-      /* background-color: $bw; */
       top: 50%;
       left: 50%;
       transform: translateY(50%);
@@ -339,10 +321,6 @@
 
       &::after {
         @include position-size(1, 0, 16, 2, $bw);
-        /* width: 16px;
-        height: 2px; */
-
-        /* background-color: $bw; */
         top: 50%;
         left: 15%;
         transform: translateY(50%);
@@ -354,16 +332,16 @@
 
   &__displaynone-btn {
     display: none;
-   
+
     &--active {
       display: block;
     }
   }
 
-  &__btn-text{
+  &__btn-text {
     display: block;
 
-     &--active {
+    &--active {
       display: none;
     }
   }

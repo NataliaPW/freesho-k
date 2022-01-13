@@ -49,7 +49,6 @@ $bs1:#F6F6F6;
 $bw:#FFFFFF;
 
 /*line-height*/
-/* $lh22: 2.2; */
 $lh18: 1.8;
 $lh16: 1.6;
 $lh14: 1.4;
@@ -58,65 +57,16 @@ $lh136: 1.36;
 $lh134: 1.34;
 $lh133: 1.33;
 $lh13: 1.3;
+$lh129: 1.29;
 $lh128: 1.28;
 $lh122: 1.22;
 $lh12: 1.2;
 $lh1: 1;
 
 /*font-famili*/
-%fOS300 {
-  font-family: 'OpenSans-Light',
-    sans-serif;
-  font-weight: 300;
-}
-
-%fOS400 {
-  font-family: 'OpenSans-Regular',
-    sans-serif;
-  font-weight: 400;
-}
-
-%fOS600 {
-  font-family: 'OpenSans-SemiBold',
-    sans-serif;
-  font-weight: 600;
-}
-
-%fOS700 {
-  font-family: 'OpenSans-Bold',
-    sans-serif;
-  font-weight: 700;
-}
-
-%fR400 {
-  font-family: 'Ruda-Regular',
-    sans-serif;
-  font-weight: 400;
-}
-
-%fR600 {
-  font-family: 'Ruda-SemiBold',
-    sans-serif;
-  font-weight: 600;
-}
-
-%fR700 {
-  font-family: 'Ruda-Bold',
-    sans-serif;
-  font-weight: 700;
-}
-
-%fR900 {
-  font-family: 'Ruda-Black',
-    sans-serif;
-  font-weight: 900;
-}
-
-%fS700 {
-  font-family: 'Signika-Bold',
-    sans-serif;
-  font-weight: 700;
-}
+$fos:OpenSans;
+$fr:Ruda;
+$fs:Signika;
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
