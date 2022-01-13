@@ -181,7 +181,7 @@ exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, svgSprites, styles, scripts, scripts, browsersync, watching);
+exports.default = parallel(styles, svgSprites, styles, scripts, browsersync, watching);
 
 /*gulp-concat*/
 /* gulp.task('scripts', function() {

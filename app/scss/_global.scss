@@ -7,7 +7,9 @@ body {
   color: $bd9;
   font-size: $sz14;
   line-height: $lh14;
-  @extend %fOS600;
+  font-family: $fos;
+  font-weight: 600;
+
   background-color: $bw;
   display: flex;
   flex-direction: column;
@@ -64,8 +66,8 @@ body {
     padding: 40px 0;
   }
 
-  @media (max-width: $md1) {
-    padding: 48px 0;
+  @media (max-width: $md4) {
+    padding: 50px 0;
   }
 }
 
@@ -73,7 +75,8 @@ body {
   font-size: $sz32;
   letter-spacing: 0.9px;
   margin-bottom: 30px;
-  @extend %fR600;
+  font-family: $fr;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
 
@@ -85,7 +88,7 @@ body {
     font-size: $sz28;
   }
 
-  @media (max-width: $md1) {
+  @media (max-width: $md4) {
     font-size: $sz24;
   }
 }
@@ -103,7 +106,7 @@ body {
   &__item {
     color: $bd5;
     line-height: $lh12;
-    @extend %fOS400;
+    font-weight: 400;
     letter-spacing: 0.3px;
   }
 
@@ -170,11 +173,11 @@ body {
     &--active {
       border-color: $bd5;
     }
-    
-    &--hidden{
-@media (max-width: $md4) {
- display: none;
-}
+
+    &--hidden {
+      @media (max-width: $md4) {
+        display: none;
+      }
     }
   }
 
@@ -183,7 +186,7 @@ body {
     font-size: $sz18;
     line-height: $lh1;
     letter-spacing: 0.3px;
-    @extend %fOS400;
+    font-weight: 400;
   }
 
   &__arrows {
@@ -222,65 +225,11 @@ body {
   }
 }
 
-.filter {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  margin-bottom: 51px;
-
-   @media (max-width: $md2) {
-     margin-bottom: 24px;
-   }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
-  }
-
-  &__name {
-    color: $bd5;
-    font-size: $sz15;
-    @extend %fOS700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-    border-bottom: 3px solid transparent;
-    margin-bottom: 3px;
-
-    outline: transparent;
-    transition: color 0.5s ease,
-      border-bottom-color 0.5s ease;
-
-    &:focus {
-      box-shadow: 0 0 0 3px $bg2;
-      border-radius: 3px;
-    }
-
-    &:hover {
-      color: $bg9;
-    }
-
-    &:active {
-      border-bottom-color: $bg8;
-    }
-
-    @media (max-width: $md2) {
-      margin-bottom: 18px;
-    }
-  }
-}
-
-.mixitup-control-active {
-  border-bottom-color: $bg8;
-}
-
 .btn {
   color: $bw;
   font-size: $sz18;
   line-height: $lh13;
-  @extend %fOS400;
+  font-weight: 400;
 
   background-color: $bg9;
   border-radius: 6px;
@@ -290,6 +239,10 @@ body {
   outline: transparent;
   transition: background-color 0.5s ease,
     box-shadow 0.5s ease;
+
+      @media (max-width: $md4) {
+        font-size: $sz14;
+      }
 
   &:focus {
     box-shadow: 0 0 0 4px $bg2;

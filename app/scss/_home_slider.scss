@@ -6,11 +6,28 @@
     @include img_bg();
     width: 100%;
     min-height: 599px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
+
+     @media (max-width: $md3) {
+       min-height: 322px;
+       padding-top: 0;
+       padding-bottom: 0;
+     }
+  }
+
+  &__body {
+    background-color: transparent;
+  /*   padding-top: 15px;
+    padding-bottom: 15px; */
+
+    @media (max-width: $md3) {
+      background-color: $bd1;
+    }
   }
 
   &__inner {
@@ -21,10 +38,10 @@
     margin: 0 auto;
     padding: 0 15px;
 
-     @media (max-width: $md3) {
-      padding: 0;
-      border-radius: 0;
-     }
+    @media (max-width: $md3) {
+      background-color: transparent;
+      padding: 0 0;
+    }
   }
 
   &__info {
@@ -32,62 +49,64 @@
     display: flex;
     flex-direction: column;
     color: $bd5;
-    padding-left: 24px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-left: 14px;
+    padding-top: 22px;
+    padding-bottom: 22px;
 
-     @media (max-width: $md3) {
+    @media (max-width: $md3) {
       padding-left: 15px;
-     }
+    }
 
-     @media (max-width: $md4) {
-     padding-left: 0;
-     }
+    @media (max-width: $md4) {
+      padding-left: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
 
   &__title {
     font-size: $sz60;
-    line-height: $lh13;
-    @extend %fR900;
+    line-height: $lh129;
+    font-family: $fr;
+    font-weight: 900;
     text-transform: uppercase;
     max-width: 765px;
+    margin-bottom: 10px;
 
     &--action {
-      @extend %fS700;
+      font-weight: 700;
       color: $br9;
-      margin-bottom: 10px;
-      letter-spacing: -1px;
+      letter-spacing: 0.3px;
     }
 
     @media (max-width: $md2) {
       font-size: $sz50;
-       max-width: 650px;
-       margin-bottom: 40px;
+      max-width: 650px;
+      margin-bottom: 40px;
     }
 
     @media (max-width: $md3) {
       font-size: $sz32;
-       max-width: 450px;
-       margin-bottom: 30px;
+      max-width: 450px;
+      margin-bottom: 30px;
     }
 
     @media (max-width: $md4) {
       font-size: $sz20;
       max-width: 270px;
       margin-bottom: 15px;
+      letter-spacing: -0.65px;
+      line-height: $lh12;
     }
   }
 
   &__text {
-    /* @include line-clamp(1); */
     font-size: $sz16;
-    @extend %fOS400;
-    margin-bottom: 32px;
-    letter-spacing: 0.45px;
+    font-weight: 400;
+    margin-bottom: 40px;
     padding-right: 5px;
 
     @media (max-width: $md3) {
-      /* @include line-clamp(2); */
       max-width: 500px;
       height: 40px;
     }
@@ -97,32 +116,31 @@
       width: 100%;
       padding-right: 0;
       letter-spacing: normal;
+      margin-bottom: 25px;
+      height: 47px;
     }
   }
 
   &__link {
     width: 181px;
+
+    @media (max-width: $md4) {
+      width: 152px;
+    }
   }
 }
 
 .slick-btn {
   @include position-size(1, 3, 60, 60, $bd1);
- /*  position: absolute; */
   top: 45%;
-  /* z-index: 3;
-  width: 60px;
-  height: 60px; */
   background-color: $bd1;
   border-radius: 6px;
 
   @include transition(background-color, 0, 0, 0.5, ease);
 
   &::before {
-     @include position-size(1, 4, 23, 23, transparent);
-   /*  z-index: 4; */
+    @include position-size(1, 4, 23, 23, transparent);
     top: 30%;
-    /* width: 23px;
-    height: 23px; */
     border-top: 3px solid $bd5;
     border-right: 3px solid $bd5;
 

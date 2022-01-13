@@ -19,22 +19,7 @@
 /* @include line-clamp(3); */
 
 /*подключение шрифтов*/
-@mixin font-face($font-family, $url, $weight) {
-  @font-face {
-    font-family: "#{$font-family}";
-    src: url('../fonts/#{$url}.woff2') format("woff2"),
-    url('../fonts/#{$url}.woff') format("woff");
-    font-weight: #{$weight};
-    font-display: swap;
-    font-style: normal;
-  }
-}
-
-// Использование миксина 
-// Используем в файле, где подключаем шрифты (_fonts.scss)
-// Внимательно проверяем название файла в папке, это наш второй параметр - $url
-
-/* @include font-face(OpenSans, OpenSansRegular, 400) @include font-face(OpenSans, OpenSansBold, 700) */
+/* миксин в _font.scss */
 
 /*подключение иконок*/
 @mixin icon($name, $width, $height, $color) {

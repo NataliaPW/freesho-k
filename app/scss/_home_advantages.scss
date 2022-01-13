@@ -9,19 +9,23 @@
     padding: 50px 0;
   }
 
-   @media (max-width: $md3) {
-     padding: 30px 0;
-   }
+  @media (max-width: $md3) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: $md4) {
+    padding: 0 0;
+  }
 
   &__inner {
-     @include flex(2, 0, 0, 0);
+    @include flex(2, 0, 0, 0);
     padding-top: 49px;
     padding-bottom: 29px;
 
     @media (max-width: $md3) {
-        @include flex(2, 0, 0, 1);
-        padding-top: 30px;
-        padding-bottom: 30px;
+      @include flex(2, 0, 0, 1);
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
   }
 
@@ -37,6 +41,16 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @media (max-width: $md2) {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    @media (max-width: $md4) {
+      margin-right: 0;
+      margin-left: 0;
     }
 
     &::before {
@@ -63,30 +77,27 @@
       }
     }
 
-     @media (max-width: $md3) {
-         max-width: 100%;
+    @media (max-width: $md3) {
+      max-width: 100%;
 
-         &:not(:last-child) {
-           margin-bottom: 30px;
-         }
-     }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__name {
     font-size: $sz16;
     margin-bottom: 6px;
+
+    @media (max-width: $md3) {
+      margin-bottom: 7px;
+    }
   }
 
   &__text {
     @include line-clamp(2);
     color: $bd5;
-    @extend %fOS400;
+    font-weight: 400;
   }
-
-   @media (max-width: $md2) {
-     &__item {
-       margin-right: 15px;
-       margin-left: 15px;
-     }
-   }
 }
