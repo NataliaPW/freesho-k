@@ -253,13 +253,7 @@
     display: none;
   }
 
-  &__stars-five--productpage-product {
-    background-color: yellow;
-    width: 105px;
-    height: 16px;
-  }
-
-  &__btn-heart--productpage-product {
+    &__btn-heart--productpage-product {
     position: absolute;
     right: 0;
     top: 275px;
@@ -576,11 +570,7 @@
   }
 
   &__review-star {
-    background-color: yellow;
-    height: 16px;
-    width: 104px;
-
-    @media (max-width: $md3) {
+     @media (max-width: $md3) {
       position: absolute;
       right: 15px;
     }
@@ -607,9 +597,9 @@
   }
 
   &__star {
-    background-color: rgb(105, 105, 101);
+    /* background-color: rgb(105, 105, 101);
     height: 16px;
-    width: 105px;
+    width: 105px; */
   }
 
   &__box {

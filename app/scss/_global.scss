@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 body {
   color: $bd9;
   font-size: $sz14;
@@ -227,7 +231,7 @@ body {
 
 .btn {
   color: $bw;
-  font-size: $sz18;
+/*   font-size: $sz18; */
   line-height: $lh13;
   font-weight: 400;
 
@@ -241,7 +245,7 @@ body {
     box-shadow 0.5s ease;
 
       @media (max-width: $md4) {
-        font-size: $sz14;
+       /*  font-size: $sz14; */
       }
 
   &:focus {

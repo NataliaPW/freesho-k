@@ -177,21 +177,21 @@
 
 @mixin transition($name1, $name2, $name3, $time, $anim) {
   outline: transparent;
-
+ 
   @if (($name2==0) and ($name3==0)) {
-    transition: $name1 $time $anim;
+    transition: $name1 #{$time}s $anim;
   }
 
   @if ($name3==0) {
-    transition: $name1 $time $anim,
-      $name2 $time $anim;
+    transition: $name1 #{$time}s $anim,
+      $name2 #{$time}s $anim;
   }
 
   @else {
-    transition: $name1 #{$time} #{$anim},
-    $name2 $time $anim,
-    $name3 $time $anim;
+    transition: $name1 #{$time}s #{$anim},
+    $name2 #{$time}s $anim,
+    $name3 #{$time}s $anim;
   }
 }
 
-/* @include transition(background-color, 0, 0, 0.5, ease); */
+/* @include transition(background-color, 0, 0, 0.5s., ease); */

@@ -37,7 +37,7 @@
     padding-bottom: 82px;
     padding-left: 51px;
 
-    &--fruits {
+    &:first-child {
       padding-left: 35px;
       color: $bw;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
@@ -80,7 +80,7 @@
       margin-bottom: 77px;
     }
 
-    &--fruits {
+    &:first-child {
       max-width: 370px;
       text-decoration-line: $bd5 2px;
 
@@ -94,7 +94,7 @@
     border-bottom: 2px solid $bd5;
     padding-bottom: 6px;
 
-    &--fruits {
+    &:first-child {
       border-bottom-color: $bw;
     }
   }

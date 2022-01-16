@@ -1,4 +1,4 @@
-.top {
+.top-product {
   text-align: center;
 
   &__title {
@@ -13,7 +13,7 @@
     position: relative;
   }
 
-  &__full {
+  &__list {
     display: grid;
     column-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -35,7 +35,7 @@
     grid-row: span 1;
   }
 
-  &__cards {
+  &__card {
     margin-bottom: 30px;
 
     @media (max-width: $md2) {
@@ -153,176 +153,5 @@
 
 .mixitup-control-active {
   border-bottom-color: $bg8;
-}
-
-.card {
-
-  &__subline--top {
-    display: flex;
-    justify-content: end;
-    padding-top: 8px;
-    padding-bottom: 4px;
-    padding-left: 6px;
-  }
-
-  &__box--top {
-    position: relative;
-
-    @media (max-width: $md4) {
-      margin-bottom: 5px;
-    }
-  }
-
-  &__link--top {
-
-    &::before {
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-    }
-  }
-
-  &__link-img--top {
-    width: 264px;
-    height: 225px;
-    margin: 0 auto;
-
-    @media (max-width: $md2) {
-      width: 168px;
-      height: 126px;
-    }
-  }
-
-  &__link-icon--top {
-    top: 88px;
-    left: 108px;
-
-    @media (max-width: $md2) {
-      top: 30px;
-      left: 60px;
-    }
-  }
-
-  &__kodprodukta--top {
-    display: none;
-  }
-
-  &__content--top {
-    max-height: 120px;
-    height: 100%;
-
-    @media (max-width: $md2) {
-      max-height: 152px;
-      height: 100%;
-    }
-  }
-
-  &__topline--top {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    @media (max-width: $md2) {
-      padding-left: 12px;
-      padding-right: 12px;
-      height: 70%;
-    }
-  }
-
-  &__text--top {
-    @include line-clamp(3);
-    max-height: 67px;
-    min-height: 60px;
-    width: 100%;
-    margin-bottom: 8px;
-
-    @media (max-width: $md3) {
-      /* @include line-clamp(1); */
-    }
-  }
-
-  &__bottomline--top {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-bottom: 18px;
-
-    @media (max-width: $md4) {
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-bottom: 10px;
-    }
-  }
-
-  &__btn-box--top {
-    display: flex;
-  }
-
-  &__price-info--top {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
-  &__summprice--top {
-    display: none;
-  }
-
-  &__middleline--top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    order: -1;
-    padding-left: 18px;
-    padding-right: 18px;
-
-    display: none;
-
-    @media (max-width: $md2) {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-  }
-
-  &__iconbox--top {
-    position: absolute;
-    top: 0;
-    left: 12px;
-  }
-
-  &__stars--top {
-    order: 1;
-    text-align: end;
-  }
-
-  &__stars-five--top {
-    display: none;
-  }
-
-  &__btn-close--top {
-    display: none;
-  }
-
-  &__pic--top {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 18px;
-
-    @media (max-width: $md2) {
-      position: absolute;
-      margin-right: 0;
-      bottom: 56px;
-      left: 43px;
-    }
-  }
-
-  &__btn-cart--top {
-    & span {
-      display: none;
-    }
-  }
+  color: $bg9;
 }

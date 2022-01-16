@@ -2,18 +2,20 @@ $(function () {
   /*подключение меню*/
   $('.menu__btn').on('click', function () {
     $('.menu').toggleClass('menu--active');
-    $('.menu__list--right').toggleClass('menu__list--right--active');
+   /*  $('.menu__list--right').toggleClass('menu__list--right--active'); */
     $('.menu__btn').toggleClass('menu__btn--active');
     $('body').toggleClass('hidden');
     $('.menu__link').toggleClass('menu__link--active');
+     $('.contact-form__form').toggleClass('contact-form__form--active');
   });
 
   $('.menu__link').on('click', function () {
     $('.menu').removeClass('menu--active');
-    $('.menu__list--right').removeClass('menu__list--right--active');
+  /*   $('.menu__list--right').removeClass('menu__list--right--active'); */
     $('.menu__btn').removeClass('menu__btn--active');
     $('body').removeClass('hidden');
     $('.menu__link').addClass('menu__link--active');
+  $('.contact-form__form').removeClass('contact-form__form--active');
   });
 
   /*подключение лист меню - выпадашка*/
@@ -79,10 +81,10 @@ $(function () {
 
   /*подключение формы контакты - выпадашка*/
   /*клик вне элемента*/
-  $('.menu__icon--tel').on('click', function () {
-    $(this).next('.contact-form__form').slideToggle();
-    $(this).toggleClass('active');
-  })
+  //$('.menu__icon--tel').on('click', function () {
+    //$(this).next('.contact-form__form').slideToggle();
+    /* $(this).toggleClass('active');
+  })  */
 
   /*подключение mainepage карточек к кнопкам*/
   $('.mainpage__filter-sort').on('click', function () {
@@ -357,78 +359,49 @@ $(function () {
   });
 
   /*звездный рейтинг*/
-  $(".card__stars-one-1").rateYo({
-    starWidth: "40px",
+  $(".card__stars-one").rateYo({
+    starWidth: "16px",
     normalFill: "#C1C1C1",
     ratedFill: "#FFB800",
-    spasing: "5px",
     readOnly: true,
     numStars: 1,
-    "starSvg": '<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24"' +
-      ' height="24" viewBox="0 0 24 24">' +
-      ' <path d="M12.587l3.668 7.568 8.332 1.151-6.064' +
-      ' 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828' +
-      ' 8.332-1.151z" fill="#C1C1C1"/></svg>',
+   starSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"></path></svg>',
   });
 
-  /*  $(".productpage-tab__review-star").rateYo({
-     starWidth: "16px",
-     spacing: "5px",
-     normalFill: "#C1C1C1",
-     ratedFill: "#FFB800",
-     readOnly: true,
-     numStars: 5,
-     "starSvg": '<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24"' +
-       ' height="24" viewBox="0 0 24 24">' +
-       ' <path d="M12.587l3.668 7.568 8.332 1.151-6.064' +
-       ' 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828' +
-       ' 8.332-1.151z" fill="#C1C1C1"/></svg>',
-   }); */
 
   $('.productpage-tab__review-star').rateYo({
-    starWidth: '15px',
-    rating: '4.5',
+     starWidth: "16px",
+    spacing: "2px",
+    normalFill: "#C1C1C1",
     ratedFill: '#ffc000',
-    readOnly: true
-    /* ,
-            normalFill: 'transparent',
-            starSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"></path></svg>', */
+    readOnly: true,
+     numStars: 5,
+            /* normalFill: 'transparent', */
+            starSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"></path></svg>',
   });
+
+   /*  $('.card__stars-five').rateYo({
+    starWidth: "16px",
+    spacing: "2px",
+    ratedFill: '#ffc000',
+    normalFill: "#C1C1C1",
+     numStars: 5,
+    readOnly: true,
+         
+            starSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"></path></svg>',
+  }); */
 
   $(".form__star").rateYo({
     starWidth: "16px",
-    spacing: "5px",
+    spacing: "2px",
+    ratedFill: '#ffc000',
     normalFill: "#C1C1C1",
-    ratedFill: "#FFB800",
-    readOnly: true,
-    numStars: 5,
-    "starSvg": '<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24"' +
-      ' height="24" viewBox="0 0 24 24">' +
-      ' <path d="M12.587l3.668 7.568 8.332 1.151-6.064' +
-      ' 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828' +
-      ' 8.332-1.151z" fill="#C1C1C1"/></svg>',
+     numStars: 5,
+    /* readOnly: true, */   /*блокирует изменение рейтинга*/
+           /*  normalFill: 'transparent', */
+            starSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"></path></svg>',
   });
-
-  /* <div class="card__stars-one-1"></div> */
-
-  /* $(".card__stars-five").rateYo({
-   /*  starWidth: "17px",
-    spacing: "5px",
-    normalFill: "#C1C1C1",
-    ratedFill: "#FFB800",
-    spasing: "5px",
-    readOnly: true,
-    numStars: 5,
-    "starSvg": '<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24"' +
-      ' height="24" viewBox="0 0 24 24">' +
-      ' <path d="M12.587l3.668 7.568 8.332 1.151-6.064' +
-      ' 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828' +
-      ' 8.332-1.151z" fill="#C1C1C1"/></svg>',
-  }); */
-
-  /*добавление товара в корзину*/
-
-
+ 
   /*фильтор цены*/
   $(".mainpage__form-slider").ionRangeSlider({
     type: "double",
@@ -446,8 +419,33 @@ $(function () {
   $('.mainpage__content-select').styler();
 
   /*фильтр*/
-  var Mixer = mixitup('.top__full');
-  var Mixer = mixitup('.promo__full');
+  var Mixer = mixitup('.top-product__list');
+  var Mixer = mixitup('.promo-product__list');
+/* 
+  $("[data-mix]").each(function(){
+  var $self = $(this), // Element with buttons
+      $filt = $self.find("[data-filter]"), // data-filter buttons
+      $sort = $self.find("[data-sort]"),   // data-sort buttons
+      $mix  = $($self.data("mix")); // Container to mix
+  $mix.mixItUp({ 
+    selectors: {
+      filter: $filt,
+      sort: $sort
+    }
+  });
+}); */
+
+  /*  $('#Container').mixItUp({
+    selectors: {
+      filter: '.filter1'
+    }
+  });
+
+  $('#Container2').mixItUp({
+    selectors: {
+      filter: '.filter2'
+    }
+  });  */
 
   $('.mixitup-control-active').on('click', function () {
     $('.card__displaynone-btn').addClass('card__displaynone-btn--active');

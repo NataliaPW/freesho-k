@@ -1,15 +1,9 @@
-body.hidden {
-  overflow: hidden;
-}
-
 .header {
-
   &__top {
-    background: $bd8;
+    background: $bd7;
   }
 
   &__menu {
-
     @media (max-width: $md2) {
       padding-top: 0;
       padding-bottom: 0;
@@ -66,7 +60,7 @@ body.hidden {
   justify-content: space-between;
   align-items: center;
 
-  &--active .menu__list--right--active {
+  &--active .contact-form__form--active {
     transform: translateY(0%);
   }
 
@@ -74,13 +68,13 @@ body.hidden {
     display: none;
     width: 30px;
     height: 20px;
-    margin-left: 7px;
+    margin-left: 5px;
 
     @media (max-width: $md2) {
       display: block;
 
       position: relative;
-      z-index: 310;
+      z-index: 3000;
 
       & span,
       &::before,
@@ -117,11 +111,15 @@ body.hidden {
       }
 
       &--active::before {
+        left: 245px;
+        background-color: $bd7;
         transform: rotate(-225deg);
         top: calc(50% - 1px);
       }
 
       &--active::after {
+        left: 245px;
+        background-color: $bd7;
         transform: rotate(225deg);
         bottom: calc(50% - 1px);
       }
@@ -132,55 +130,26 @@ body.hidden {
     display: flex;
     text-align: center;
     align-items: center;
-
-    &--right {
-      @media (max-width: $md2) {
-        position: absolute;
-        z-index: 200;
-        left: 0;
-        right: 0;
-        top: 0;
-
-        background-color: $bd8;
-        height: 100vh;
-        overflow-y: auto;
-
-        display: block;
-        text-align: center;
-        transform: translateY(-200%);
-        transition: transform 0.3s ease;
-        padding: 81px 0 0 15px;
-      }
-    }
+    padding-top: 17px;
+    padding-bottom: 15px;
   }
 
   &__item {
 
     &:not(:last-child) {
-      margin-right: 28px;
+      margin-right: 24px;
 
       @media (max-width: $md2) {
-        margin-right: 0;
+        @include transition(background-color, 0, 0, 0.5, ease);
       }
     }
 
+    &--tel {
+      padding-left: 24px;
+    }
 
     @media (max-width: $md2) {
-      @include transition(background-color, 0, 0, 0.5, ease);
-    }
-
-    &--icon {
-      &:not(:last-child) {
-        margin-right: 54px;
-
-        @media (max-width: $md2) {
-          margin-right: 30px;
-        }
-
-        @media (max-width: $md4) {
-          margin-right: 10px;
-        }
-      }
+      padding-left: 0;
     }
   }
 
@@ -199,14 +168,6 @@ body.hidden {
     &:active {
       color: $bg2;
     }
-
-    &--right {
-      @media (max-width: $md2) {
-        display: block;
-        padding: 11px 0;
-        transition: background-color 0.2s ease;
-      }
-    }
   }
 
   &__icon {
@@ -224,14 +185,14 @@ body.hidden {
       padding-left: 35px;
 
       @media (max-width: $md2) {
-        padding-left: 25px;
+        padding-left: 20px;
       }
     }
 
     &::before {
       @include position(1, 0);
       left: 0;
-      top: -3px;
+      top: 0;
 
       @media (max-width: $md2) {
         top: 0;
@@ -240,14 +201,20 @@ body.hidden {
 
     &--del {
       &::before {
-        @include icon(del-address, 32, 23, $bw);
+        @include icon(del-address, 40, 22, $bw);
       }
     }
 
     &--tel {
       &::before {
-        @include icon(tel, 23, 23, $bw);
+        @include icon(tel, 23, 22, $bw);
       }
+    }
+  }
+
+  &__list--close {
+    @media (max-width: $md2) {
+      display: none;
     }
   }
 
@@ -259,10 +226,9 @@ body.hidden {
     text-transform: uppercase;
     letter-spacing: 0.3px;
 
-    &--left {
+    &--close {
       @media (max-width: $md2) {
         font-size: 0;
-        padding-left: 2px;
       }
     }
   }
@@ -407,7 +373,7 @@ body.hidden {
     z-index: 150;
     right: 0;
     border: 1px solid $bd8;
-    top: 184px;
+    top: 160px;
 
     &--active {
       display: block;
@@ -565,10 +531,6 @@ body.hidden {
       &::before {
         @include icon(heart, 37, 0, $bw);
       }
-
-      @media (max-width: $md2) {
-        display: none;
-      }
     }
 
     &--cart {
@@ -613,238 +575,18 @@ body.hidden {
   }
 }
 
-.cart {
-  min-width: 475px;
-  width: 100%;
-  /* height: 1920px; */
-  font-weight: 400;
-  letter-spacing: 0.3px;
-
-  @media (max-width: $md3) {
-    max-width: 375px;
-    width: 100%;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @media (max-width: $md3) {
-      max-width: 375px;
-      width: 100%;
-    }
-  }
-
-  &__top {
-    height: 88px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 27px;
-  }
-
-  &__bottom-content {
-    height: 76px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  &__title {
-    color: $bd8;
-    font-size: $sz24;
-    line-height: $lh12;
-
-    &--top {
-      margin-bottom: 12px;
-    }
-  }
-
-  &__text {
-    font-weight: 300;
-  }
-
-  &__price {
-    font-weight: 300;
-    font-size: $sz24;
-    line-height: $lh12;
-
-    & span {
-      font-size: $sz18;
-      color: $bd5;
-    }
-  }
-
-  &__btn {
-    display: block;
-    border-radius: 0;
-    text-align: center;
-  }
-
-  &__full {
-    /* max-height: 705px; */
-    max-height: 100vh;
-    overflow-y: auto;
-    background-color: $bs1;
-    padding: 12px;
-  }
-
-  &__item {
-    @media (max-width: $md2) {
-      width: 345px;
-    }
-  }
-
-  &__cards {
-    margin-bottom: 12px;
-  }
-
-  &__content {
-    display: grid;
-    grid-template-columns: 83px 348px;
-    min-width: 452px;
-    width: 100%;
-    max-height: 84px;
-    height: 100%;
-    margin-left: 0;
-
-    @media (max-width: $md3) {
-      grid-template-columns: 83px 262px;
-      min-width: 262px;
-      width: 100%;
-      min-height: 126px;
-      height: 100%;
-    }
-  }
-}
-
-.card {
-  &__subline--cart {
-    position: absolute;
-    order: -1;
-  }
-
-  &__box--cart {
-    position: relative;
-  }
-
-  &__link--cart {
-    &::before {
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-    }
-  }
-
-  &__link-img--cart {
-    width: 83px;
-    height: 84px;
-    padding: 12px 0 12px 1px;
-  }
-
-  &__link-icon--cart {
-    top: 24px;
-    left: 24px;
-  }
-
-  &__kodprodukta--cart {
-    display: none;
-  }
-
-  &__content--cart {
-    padding-top: 9px;
-    padding-left: 23px;
-  }
-
-  &__text--cart {
-    @include line-clamp(2);
-    min-height: 40px;
-    max-width: 170px;
-    width: 100%;
-  }
-
-  &__bottomline--cart {
-    margin-bottom: 10px;
-    margin-right: 13px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__btn-box--cart {
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: $md3) {
-      position: absolute;
-      bottom: 12px;
-      left: 15px;
-      right: 15px;
-    }
-  }
-
-  &__price-info--cart {
-    color: $bs5;
-    font-weight: 600;
-    font-size: $sz20;
-  }
-
-  &__discount--cart {
-    display: none;
-  }
-
-  &__summprice--cart {
-    color: $bs5;
-    font-size: $sz20;
-    color: $bd5;
-    line-height: $lh1;
-    font-weight: 600;
-  }
-
-  &__availability--cart {
-    display: none;
-  }
-
-  &__iconbox--cart {
-    display: none;
-  }
-
-  &__stars--cart {
-    display: none;
-  }
-
-  &__btn-heart--cart {
-    display: none;
-  }
-
-  &__btn-close--cart {
-    position: absolute;
-    top: 12px;
-    left: 412px;
-
-    @media (max-width: $md3) {
-      left: 310px;
-    }
-  }
-
-  &__pic--cart {
-    display: flex;
-    margin-right: 12px;
-  }
-
-  &__btn-cart--cart {
-    display: none;
-  }
-}
-
 .cart-form {
-  position: relative;
-  margin-right: 31px;
-  height: 50px;
+  position: absolute;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+
+  display: block;
+  text-align: center;
+  transform: translateY(-200%);
+  transition: transform 0.3s ease;
 
   @media (max-width: $md2) {
     margin-right: 0;
@@ -853,7 +595,7 @@ body.hidden {
   &__form {
     @include position-size(1, 1000, 0, 0, $bw);
     right: 0;
-    top: 50px;
+    top: 160px;
     display: none;
 
     &--active {
@@ -862,16 +604,13 @@ body.hidden {
 
     @media (max-width: $md3) {
       width: 375px;
-      right: -115px;
-      top: 60px;
+      right: 0;
+      top: 114px;
     }
   }
 }
 
 .contact {
-  min-width: 300px;
-  width: 100%;
-
   &__container {
     min-width: 300px;
     width: 100%;
@@ -882,7 +621,6 @@ body.hidden {
 
   &__top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-top: 26px;
     padding-bottom: 26px;
@@ -902,6 +640,7 @@ body.hidden {
     text-transform: uppercase;
     color: $bg9;
     font-weight: 600;
+    padding-left: 14px;
   }
 
   &__title {
@@ -1088,7 +827,6 @@ body.hidden {
 
 .contact-form {
   position: relative;
-  margin-right: 31px;
   height: 50px;
   top: 15px;
 
@@ -1098,10 +836,10 @@ body.hidden {
 
   &__form {
     position: absolute;
-    z-index: 1000;
-    right: 60px;
-    top: -16px;
+    z-index: 2000;
     display: none;
+    left: 0;
+    top: 0;
 
     &--active {
       display: block;
